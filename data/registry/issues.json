@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "0.1.0",
+  "publicSite": {
+    "domain": "weeklysignals.ifeed.ie",
+    "canonicalUrl": "https://weeklysignals.ifeed.ie/",
+    "role": "Combined public weekly signal archive"
+  },
+  "operatingSites": {
+    "archive": {
+      "suggestedDomain": "signal19-24.ifeed.ie",
+      "role": "Locked W19-W24 archive source",
+      "folder": "archive-static"
+    },
+    "current": {
+      "suggestedDomain": "signal.ifeed.ie",
+      "role": "W25 onward CMS/rendering workspace",
+      "folder": "data/weeks"
+    }
+  },
+  "templatePolicy": {
+    "defaultTemplate": "week23-standard",
+    "sourceFile": "templates/week23-standard.html",
+    "rule": "W25 onward changes weekly data by default. Template or design changes require a new template version or explicit approval."
+  },
+  "issues": [
+    {
+      "week": "2026-W19",
+      "issueNumber": 19,
+      "publishDate": "2026-05-11",
+      "coverage": "4-10 May 2026",
+      "title": "iFeed Weekly · W19: 4-10 May 2026.",
+      "summary": "Nine updates across bioanalytical, bioequivalence, clinical trials, governance, AI in healthcare and broader. Verified primary sources.",
+      "href": "2026-05-11_weekly-w19.html",
+      "readTime": "~6 min",
+      "topics": ["weekly", "cross-domain", "W19"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W20",
+      "issueNumber": 20,
+      "publishDate": "2026-05-18",
+      "coverage": "11-17 May 2026",
+      "title": "iFeed Weekly · W20: 11-17 May 2026.",
+      "summary": "Nine selected signals across clinical trials, AI governance, IDMP, QMSR, biomarker validation, bioequivalence, non-animal evidence, pharmacovigilance and product-specific BE.",
+      "href": "2026-05-18_weekly-w20.html",
+      "readTime": "~7 min",
+      "topics": ["weekly", "cross-domain", "W20"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W21",
+      "issueNumber": 21,
+      "publishDate": "2026-05-25",
+      "coverage": "18-24 May 2026",
+      "title": "iFeed Weekly · W21: 18-24 May 2026.",
+      "summary": "Nine official-source signals across EU AI Act classification, FDA TEMPO, ACT EU trial metrics, AI in GMP, real-time trials, UDI execution, food-effect evidence, lifecycle quality and oral GLP-1 market movement.",
+      "href": "2026-05-25_weekly-w21.html",
+      "readTime": "~8 min",
+      "topics": ["weekly", "structured evidence", "W21"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W22",
+      "issueNumber": 22,
+      "publishDate": "2026-06-01",
+      "coverage": "25-31 May 2026",
+      "title": "iFeed Weekly · W22: 25-31 May 2026.",
+      "summary": "Nine source-backed signals across structured protocols, real-time clinical trials, AI Act classification, real-world evidence, QMSR readiness, device data, ML-enabled device lifecycle control, and the first iFeed Regulations artifact.",
+      "href": "2026-06-01_weekly-w22.html",
+      "readTime": "~8 min",
+      "topics": ["weekly", "evidence-readiness", "W22"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W23",
+      "issueNumber": 23,
+      "publishDate": "2026-06-08",
+      "coverage": "1-7 June 2026",
+      "title": "iFeed Weekly · W23: 1-7 June 2026.",
+      "summary": "Nine source-backed signals across healthcare AI, regulatory evidence, QMS and GMP controls, clinical operations, market access, and inspection-ready operating infrastructure.",
+      "href": "2026-06-08_weekly-w23.html",
+      "readTime": "~10 min",
+      "topics": ["weekly", "operating infrastructure", "W23"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W24",
+      "issueNumber": 24,
+      "publishDate": "2026-06-15",
+      "coverage": "8-13 June 2026",
+      "title": "iFeed Weekly · W24: AI continuity, evidence, and quality become strategy.",
+      "summary": "Nine source-backed stories across AI continuity, QMS enforcement, regulatory sandboxes, AI-device evidence, medtech records, clinical-trial AI, and HTA routing.",
+      "href": "2026-06-15_weekly-w24.html",
+      "readTime": "~11 min",
+      "topics": ["weekly", "AI infrastructure", "W24"],
+      "source": "archive-static",
+      "locked": true
+    },
+    {
+      "week": "2026-W25",
+      "issueNumber": 25,
+      "publishDate": "2026-06-22",
+      "coverage": "15-21 June 2026",
+      "title": "iFeed Weekly · W25: intelligence needs an operating file.",
+      "summary": "A test W25 issue proving the new CMS workflow: structured weekly data, Week 23 template, generated public page, and source-ledger discipline.",
+      "href": "2026-06-22_weekly-w25.html",
+      "readTime": "~10 min",
+      "topics": ["weekly", "CMS pilot", "W25"],
+      "source": "data/weeks/2026-W25.json",
+      "locked": false,
+      "testMode": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://weeklysignals.ifeed.ie/sitemap.xml

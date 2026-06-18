@@ -1,0 +1,90 @@
+/* ════════════════════════════════════════════════════
+   iFeed master mark — locked
+   NN11 neural-network glyph + Newsreader italic wordmark
+   nodes = neurons · connections = nerves · halo = focused firing
+   ════════════════════════════════════════════════════ */
+
+/* ── NN11 glyph ── */
+.nn11 { display: inline-block; line-height: 0; flex-shrink: 0; }
+.nn11 svg { display: block; overflow: visible; }
+
+/* nerves · the connections firing across layers · light, not overpowering */
+.nn11 svg .nerve {
+  stroke: var(--ink-3);
+  stroke-width: 1;
+  stroke-linecap: round;
+  fill: none;
+  opacity: 0.55;
+}
+
+/* neurons · the firing nodes */
+.nn11 svg .neuron-in   { fill: var(--accent); }
+.nn11 svg .neuron-mid  { fill: var(--ink); opacity: 0.95; }
+.nn11 svg .neuron-out  { fill: var(--accent); }
+
+/* halo · two concentric rings around the output, focused firing */
+.nn11 svg .halo-ring {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  opacity: 0.85;
+}
+
+/* dark mode · lift nerves enough to read against Midnight Teal but stay subtle */
+:root[data-theme="dark"] .nn11 svg .nerve { stroke: oklch(78% 0.018 200); opacity: 0.55; }
+:root[data-theme="dark"] .nn11 svg .neuron-mid { fill: oklch(88% 0.018 200); opacity: 1; }
+
+/* halo pulse animation · firing rhythm */
+@keyframes nn11HaloPulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 0.95; transform: scale(1.12); }
+}
+.nn11 svg .halo-a {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nn11HaloPulse 3.2s ease-in-out infinite;
+}
+.nn11 svg .halo-b {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nn11HaloPulse 3.2s ease-in-out infinite 1.6s;
+}
+
+/* ── Wordmark (Newsreader italic) ── */
+.if-mark {
+  font-family: 'Newsreader', serif;
+  font-weight: 500; font-style: italic;
+  letter-spacing: -0.02em; line-height: 1;
+  display: inline-block;
+}
+.if-mark .i { color: var(--accent); }
+
+.if-mark.xs { font-size: 16px; }
+.if-mark.sm { font-size: 26px; }
+.if-mark.md { font-size: 38px; }
+.if-mark.lg { font-size: 64px; }
+.if-mark.xl { font-size: 104px; }
+
+.if-lockup { display: inline-flex; align-items: center; gap: 16px; }
+.if-lockup .nn11 { width: 64px; }
+.if-lockup.lg .nn11 { width: 100px; gap: 18px; }
+.if-lockup.xl .nn11 { width: 148px; gap: 22px; }
+.if-lockup.sm .nn11 { width: 48px; }
+.if-lockup.xs .nn11 { width: 32px; gap: 10px; }
+
+.if-mark .desc {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal; font-weight: 500;
+  font-size: 0.32em; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-2);
+  margin-left: 0.5em; vertical-align: 0.18em;
+}
+
+.if-tagged { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.if-tagged .if-rule { width: 80px; height: 1px; background: currentColor; opacity: 0.4; }
+.if-tagged .if-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.if-tagged .if-tag em { font-style: italic; text-transform: none; letter-spacing: 0.04em; color: var(--accent); }

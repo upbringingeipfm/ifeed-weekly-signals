@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>iFeed Weekly Signals</title>
+<meta name="description" content="iFeed Weekly Signals · source-backed healthcare intelligence across regulation, quality, AI, evidence, markets, and operations." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css?v=20260504au" />
+<link rel="stylesheet" href="mark.css?v=20260504au" />
+<script src="site.js?v=20260504au" defer></script>
+<style>
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  .nav .nav-inner { max-width: 1180px; margin: 0 auto; padding: 22px 32px 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .nav .brand { display: inline-flex; align-items: center; gap: 12px; }
+  .nav .brand .nn11 { width: 88px; }
+  .nav .brand .if-mark { font-size: 42px; }
+  .nav .links { display: flex; gap: 2px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink-2); }
+  .nav .links a { padding: 6px 0; border-bottom: 1px solid transparent; }
+  .nav .links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav .links a.current { color: var(--accent); }
+
+  .hero { padding: 70px 0 48px; border-bottom: 1px solid var(--rule); }
+  .hero .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .hero h1 { font-family: 'Source Serif 4', serif; font-size: clamp(38px, 4.6vw, 56px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 20px; max-width: 22ch; }
+  .hero h1 em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .hero .lede { font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.55; color: var(--ink-2); max-width: 64ch; margin: 0; }
+  .hero .lede em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  /* Hero 2-column with banner viz on the right (round 2.27 · adds the
+     "small artifact in banner" pattern that other top-level pages have) */
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 28px; } .hero-viz { max-width: 320px; margin: 8px auto 0; justify-self: center; } }
+  .hero-viz { width: 100%; max-width: 460px; justify-self: end; }
+  .hero-viz svg { width: 100%; height: auto; display: block; overflow: visible; }
+  /* Weekly Signals banner artifact · five weekly releases, one current issue */
+  .signal-map .sm-panel { fill: color-mix(in srgb, var(--hero-bg) 44%, transparent); stroke: var(--hero-fg); stroke-width: 1; opacity: 0.72; }
+  .signal-map .sm-orbit { fill: none; stroke: var(--hero-fg); stroke-width: 0.8; opacity: 0.34; }
+  .signal-map .sm-path { fill: none; stroke: var(--hero-em); stroke-width: 1.2; opacity: 0.78; }
+  .signal-map .sm-path-soft { fill: none; stroke: var(--hero-fg); stroke-width: 0.9; opacity: 0.42; }
+  .signal-map .sm-node { fill: var(--hero-fg); opacity: 0.86; }
+  .signal-map .sm-node-current { fill: var(--hero-em); stroke: var(--hero-fg); stroke-width: 1.5; }
+  .signal-map .sm-label { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; fill: var(--hero-fg); opacity: 0.88; }
+  .signal-map .sm-title { font-family: 'Source Serif 4', serif; font-size: 19px; font-weight: 500; fill: var(--hero-fg); }
+  .signal-map .sm-current { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; fill: var(--hero-em); }
+  .signal-map .sm-rule { stroke: var(--hero-fg); stroke-width: 0.7; opacity: 0.44; }
+
+  /* Featured note */
+  .feature { padding: 30px 0 16px; }
+  .feature-card { padding: 36px 40px; background: var(--surface); border: 1px solid var(--accent); display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; transition: transform 0.18s; color: inherit; }
+  .feature-card:hover { }
+  @media (max-width: 760px) { .feature-card { grid-template-columns: 1fr; } }
+  .feature-card .lab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .feature-card h2 { font-family: 'Source Serif 4', serif; font-size: 30px; font-weight: 500; letter-spacing: -0.018em; line-height: 1.15; margin: 0 0 14px; }
+  .feature-card h2 em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .feature-card p { font-family: 'Source Serif 4', serif; font-size: 15.5px; color: var(--ink-2); line-height: 1.55; margin: 0 0 16px; }
+  .feature-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--ink-3); }
+  .feature-card .meta b { color: var(--ink); font-weight: 500; }
+  .feature-arrow { font-family: 'Newsreader', serif; font-style: italic; font-size: 32px; color: var(--accent); white-space: nowrap; }
+
+  /* Notes gallery · iFeed-distinctive card-grid */
+  .timeline { padding: 50px 0 80px; }
+  .tl-h { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 28px; padding-bottom: 12px; border-bottom: 1px solid var(--rule-2); display: flex; align-items: center; gap: 12px; }
+  .tl-h::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
+  /* ───── Notes redesign · GLASS card · all-corner rounded · light folder icon ─────
+     Single-piece card: fully rounded 16px, glass gradient + backdrop blur + dashed inner ring.
+     Date sits inside as a light folder-icon + label, NOT an overhanging tab. */
+  .gallery { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 20px !important; padding: 24px 0 16px !important; margin: 0 !important; }
+  @media (max-width: 1080px) { .gallery { grid-template-columns: repeat(2, 1fr) !important; } }
+  @media (max-width: 720px) { .gallery { grid-template-columns: 1fr !important; } }
+
+  /* Card · single glass piece, all corners curved */
+  .note-row {
+    position: relative;
+    display: flex; flex-direction: column !important;
+    padding: 22px 24px 20px !important;
+    background: linear-gradient(135deg,
+      color-mix(in srgb, var(--accent-bg) 50%, var(--surface)) 0%,
+      color-mix(in srgb, var(--surface) 92%, transparent) 100%) !important;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 30%, var(--rule)) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+      0 1px 0 color-mix(in srgb, var(--accent) 14%, transparent) inset,
+      0 18px 36px -22px color-mix(in srgb, var(--accent) 22%, transparent);
+    transition: transform 0.22s, box-shadow 0.22s, border-color 0.18s !important;
+    color: inherit; text-decoration: none;
+    min-height: 0 !important; gap: 0 !important;
+  }
+  .note-row::before {
+    content: ""; position: absolute; inset: 7px; border-radius: 11px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 20%, transparent);
+    pointer-events: none; z-index: 0;
+  }
+  .note-row::after { display: none !important; box-shadow: none !important; }
+  .note-row > * { position: relative; z-index: 1; }
+  .note-row:hover {
+    transform: translateY(-3px) !important;
+    border-color: var(--accent) !important;
+    box-shadow:
+      0 1px 0 color-mix(in srgb, var(--accent) 22%, transparent) inset,
+      0 26px 52px -24px color-mix(in srgb, var(--accent) 32%, transparent) !important;
+  }
+
+  /* TOP META ROW · light folder icon + date + read-time pill */
+  .note-row .visual {
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; justify-content: space-between !important;
+    aspect-ratio: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    isolation: auto !important;
+    gap: 10px !important;
+    height: auto !important;
+  }
+  .note-row .visual::before, .note-row .visual::after { display: none !important; }
+  .note-row .visual .glyph, .note-row .visual .if-stamp, .note-row .visual .pulse { display: none !important; }
+  /* Date label · plain accent text, bold, no icon */
+  .note-row .visual .yr {
+    position: static !important;
+    padding: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: var(--accent) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-style: normal !important;
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+    backdrop-filter: none !important;
+    white-space: nowrap;
+  }
+  .note-row .visual .yr::after { display: none !important; }
+  /* Read-time pill · soft light grey */
+  .note-row .visual .right {
+    position: static !important;
+    padding: 3px 9px !important;
+    background: color-mix(in srgb, var(--surface) 50%, transparent) !important;
+    backdrop-filter: none !important;
+    color: color-mix(in srgb, var(--ink-3) 65%, var(--surface)) !important;
+    border: 1px solid color-mix(in srgb, var(--rule-2) 55%, transparent) !important;
+    border-radius: 999px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 8.5px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 1 !important;
+  }
+
+  /* BODY · glass content (all sits inside the single card) */
+  .note-row .body {
+    position: static !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    display: flex !important; flex-direction: column !important;
+    gap: 8px !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: visible !important;
+  }
+  .note-row .body::before { display: none !important; }
+
+  @media (max-width: 540px) {
+    .note-row { padding: 20px 20px 18px !important; }
+  }
+  .note-row::after { content: ""; position: absolute; inset: 0; border-radius: 14px; pointer-events: none; box-shadow: inset 0 0 0 1px transparent; transition: box-shadow 0.28s; }
+  .note-row:hover { transform: translateY(-2px) !important; border-color: var(--accent) !important; box-shadow: 0 18px 36px -22px color-mix(in srgb, var(--accent) 30%, transparent) !important; }
+  .note-row:hover::after { box-shadow: none !important; }
+  .note-row .visual { position: relative; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; overflow: hidden; isolation: isolate; }
+  .note-row .visual::before { content: ""; position: absolute; inset: 0; opacity: 1; z-index: 1; }
+  /* iFeed-distinctive: faint neural-network silhouette in banner */
+  .note-row .visual::after { content: ""; position: absolute; inset: 0; z-index: 2; background-image:
+    radial-gradient(circle at 18% 32%, var(--banner-pattern-a) 1.6px, transparent 2px),
+    radial-gradient(circle at 18% 56%, var(--banner-pattern-a) 1.6px, transparent 2px),
+    radial-gradient(circle at 18% 80%, var(--banner-pattern-a) 1.6px, transparent 2px),
+    radial-gradient(circle at 50% 32%, var(--banner-pattern-b) 1.6px, transparent 2px),
+    radial-gradient(circle at 50% 56%, var(--banner-pattern-b) 1.6px, transparent 2px),
+    radial-gradient(circle at 50% 80%, var(--banner-pattern-b) 1.6px, transparent 2px),
+    radial-gradient(circle at 82% 56%, var(--banner-pattern-c) 2.6px, transparent 3px),
+    linear-gradient(110deg, transparent 35%, var(--banner-pattern-a) 50%, transparent 65%);
+    pointer-events: none; mix-blend-mode: screen; }
+  .note-row .glyph { position: relative; z-index: 3; font-family: 'Newsreader', serif; font-style: italic; font-size: 60px; color: var(--banner-fg); line-height: 1; text-shadow: 0 2px 18px color-mix(in srgb, var(--ink) 50%, transparent); letter-spacing: -0.02em; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1); }
+  .note-row:hover .glyph { transform: scale(1.08) translateX(-2px); }
+  /* iFeed brand mark · top-right corner */
+  .note-row .visual .if-stamp { position: absolute; top: 14px; right: 14px; z-index: 3; width: 22px; height: 22px; border: 1px solid var(--banner-stamp-bd); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Newsreader', serif; font-style: italic; font-size: 13px; color: var(--banner-fg); opacity: 0.85; backdrop-filter: blur(6px); background: var(--banner-stamp-bg); }
+  .note-row .visual .yr { position: absolute; bottom: 14px; left: 16px; z-index: 3; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--banner-fg); text-transform: uppercase; opacity: 0.96; padding: 4px 10px; background: var(--banner-overlay); border-radius: 999px; backdrop-filter: blur(6px); }
+  .note-row .visual .right { position: absolute; bottom: 14px; right: 16px; z-index: 3; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--banner-fg); text-transform: uppercase; opacity: 0.96; padding: 4px 10px; background: var(--banner-overlay); border-radius: 999px; backdrop-filter: blur(6px); }
+  .note-row .body .topics { order: 1; margin-bottom: 2px; flex-wrap: wrap; gap: 4px !important; }
+  .note-row .body .topics .chip { font-size: 8.5px !important; padding: 2px 7px !important; }
+  .note-row .body h3 { order: 2 !important; margin: 0 !important; font-size: 16.5px !important; line-height: 1.28 !important; letter-spacing: -0.012em !important; }
+  .note-row .body p { order: 3 !important; font-size: 13px !important; line-height: 1.55 !important; }
+  /* Newsreader-italic accent stripe at top of body — iFeed-distinctive */
+  .note-row .body::before { content: ""; position: absolute; top: 0; left: 24px; right: 24px; height: 1px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.28s; }
+  .note-row:hover .body::before { opacity: 1; }
+  .note-row .body .topics { display: flex; gap: 6px; flex-wrap: wrap; order: 1; }
+  .note-row .body .topics .chip { font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 3px 9px; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--accent); color: var(--accent); background: var(--accent-bg); border-radius: 999px; transition: background 0.18s; }
+  .note-row:hover .body .topics .chip { background: color-mix(in srgb, var(--accent-bg) 80%, var(--accent)); }
+  .note-row .body h3 { order: 2; font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 500; margin: 0; letter-spacing: -0.008em; line-height: 1.3; color: var(--ink); transition: color 0.22s; }
+  .note-row .body h3 em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .note-row .body p { display: block !important; font-family: 'Source Serif 4', serif; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; margin: 0 !important; order: 3; }
+  .note-row:hover h3 { color: var(--accent); }
+  /* Subtle visual band line · pulses on hover */
+  .note-row .visual .pulse { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); transform: translateX(-100%); transition: transform 0.6s ease; z-index: 4; }
+  .note-row:hover .visual .pulse { transform: translateX(100%); }
+  /* Topic-coloured visual banners */
+  .note-row[data-topics*="eu-ai-act"] .visual::before { background: linear-gradient(135deg, #3F6D7E 0%, #1F3F4D 100%); }
+  .note-row[data-topics*="fda"] .visual::before { background: linear-gradient(135deg, #5A6F8A 0%, #2D3A4B 100%); }
+  .note-row[data-topics*="gmp"] .visual::before { background: linear-gradient(135deg, #6B7D5A 0%, #3D4A2D 100%); }
+  .note-row[data-topics*="bioanalytical"] .visual::before { background: linear-gradient(135deg, #7A6C4F 0%, #4A3F2D 100%); }
+  .note-row[data-topics*="bioequivalence"] .visual::before { background: linear-gradient(135deg, #8A6B6B 0%, #4F3838 100%); }
+  .note-row[data-topics*="clinical"] .visual::before { background: linear-gradient(135deg, #6F7C8A 0%, #3D4754 100%); }
+  .note-row[data-topics*="governance"] .visual::before { background: linear-gradient(135deg, #5C7470 0%, #2F4441 100%); }
+  .note-row[data-topics*="methodology"] .visual::before { background: linear-gradient(135deg, #7A5A75 0%, #422E40 100%); }
+  /* Default fallback for any unmatched */
+  .note-row .visual::before { background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, var(--ink)) 100%); }
+  .note-row.ph { opacity: 0.55; pointer-events: none; }
+  .note-row.ph .visual::before { background: linear-gradient(135deg, var(--ink-3) 0%, var(--rule-2) 100%); }
+  .note-row.subscribe-card .visual::before { background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 100%); }
+  .note-row.subscribe-card { border-color: var(--accent); }
+
+  footer { padding: 40px 0 80px; }
+  footer .credits { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.12em; text-transform: uppercase; text-align: center; }
+
+  /* Responsive · banner + card adjustments for narrow viewports */
+  @media (max-width: 540px) {
+    .note-row .visual { aspect-ratio: 16 / 9; }
+    .note-row .glyph { font-size: 48px; }
+    .note-row .body { padding: 18px 18px 22px; }
+    .note-row .body h3 { font-size: 17px; }
+    .gallery { gap: 16px; grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .feature-card { padding: 28px 26px; }
+    .feature-card h2 { font-size: 24px; }
+    .filter-strip .chips { gap: 6px; }
+  }
+
+  /* hero · banner · contrast-with-page (light page → dark banner, dark page → light banner) */
+  .hero-banner-canvas {
+    position: relative; overflow: hidden; isolation: isolate;
+    background:
+      radial-gradient(ellipse 80% 60% at 80% 30%, var(--hero-glow-a) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 0% 100%, var(--hero-glow-b) 0%, transparent 55%),
+      linear-gradient(135deg, var(--hero-base) 0%, var(--hero-mid) 50%, var(--hero-end) 100%);
+    border-bottom: 1px solid var(--hero-border);
+    color: var(--hero-fg);
+  }
+  .hero-banner-canvas::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      radial-gradient(circle at 12% 20%, var(--hero-pat-a) 1.4px, transparent 2px),
+      radial-gradient(circle at 12% 50%, var(--hero-pat-a) 1.4px, transparent 2px),
+      radial-gradient(circle at 12% 80%, var(--hero-pat-a) 1.4px, transparent 2px),
+      radial-gradient(circle at 30% 30%, var(--hero-pat-b) 1.6px, transparent 2px),
+      radial-gradient(circle at 30% 70%, var(--hero-pat-b) 1.6px, transparent 2px),
+      radial-gradient(circle at 50% 50%, var(--hero-pat-b) 1.8px, transparent 2px),
+      radial-gradient(circle at 70% 35%, var(--hero-pat-a) 1.4px, transparent 2px),
+      radial-gradient(circle at 70% 65%, var(--hero-pat-a) 1.4px, transparent 2px),
+      radial-gradient(circle at 90% 50%, var(--hero-pat-c) 3px, transparent 4px);
+  }
+  .hero-banner-canvas > .wrap, .hero-banner-canvas > * { position: relative; z-index: 1; }
+  /* In-banner typography overrides */
+  .hero-banner-canvas .eyebrow { color: var(--hero-eyebrow-fg) !important; display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px; border: 1px solid var(--hero-eyebrow-bd); border-radius: 999px; backdrop-filter: blur(6px); background: var(--hero-eyebrow-bg); }
+  .hero-banner-canvas .eyebrow .signal-mark { background: var(--hero-signal) !important; box-shadow: 0 0 0 4px var(--hero-signal-halo) !important; }
+  .hero-banner-canvas h1 { color: var(--hero-fg) !important; }
+  .hero-banner-canvas h1 em { color: var(--hero-em) !important; }
+  .hero-banner-canvas .lede { color: var(--hero-fg-soft) !important; }
+  .hero-banner-canvas .lede em { color: var(--hero-em) !important; }
+  .hero-banner-canvas p { color: var(--hero-fg-soft); }
+  .hero-banner-canvas p em { color: var(--hero-em); }
+  .hero-banner-canvas .meta, .hero-banner-canvas .meta-strip { color: var(--hero-meta-fg) !important; border-top: 1px solid var(--hero-meta-rule); }
+  .hero-banner-canvas .meta b, .hero-banner-canvas .meta-strip b { color: var(--hero-meta-strong) !important; }
+  .hero-banner-canvas .meta a, .hero-banner-canvas .meta-strip a { color: var(--hero-em) !important; }
+  .hero-banner-canvas a { color: var(--hero-em); }
+  .hero-banner-canvas .cta-btn, .hero-banner-canvas .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 999px; transition: transform 0.2s, background 0.2s, border-color 0.2s, color 0.2s; }
+  .hero-banner-canvas .cta-btn.primary, .hero-banner-canvas .btn.primary { background: var(--hero-cta1-bg); color: var(--hero-cta1-fg); border: 1px solid var(--hero-cta1-bg); }
+  .hero-banner-canvas .cta-btn.primary:hover, .hero-banner-canvas .btn.primary:hover { transform: translateY(-2px); background: var(--hero-cta1-bg-h); border-color: var(--hero-cta1-bg-h); }
+  .hero-banner-canvas .cta-btn.secondary, .hero-banner-canvas .btn.secondary { background: transparent; color: var(--hero-cta2-fg); border: 1px solid var(--hero-cta2-bd); }
+  .hero-banner-canvas .cta-btn.secondary:hover, .hero-banner-canvas .btn.secondary:hover { transform: translateY(-2px); background: var(--hero-cta2-bg-h); }
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260504au" />
+<!-- Open Graph · share preview metadata (LinkedIn, WhatsApp, Slack, FB) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="iFeed Weekly Signals" />
+<meta property="og:description" content="iFeed Weekly Signals · source-backed healthcare intelligence across regulation, quality, AI, evidence, markets, and operations." />
+<meta property="og:url" content="https://weeklysignals.ifeed.ie/" />
+<meta property="og:image" content="https://iFeed.ie/favicon.svg" />
+<meta property="og:site_name" content="iFeed" />
+<meta property="og:locale" content="en_IE" />
+<!-- Twitter Card · share preview metadata (X / Twitter) -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="iFeed Weekly Signals" />
+<meta name="twitter:description" content="iFeed Weekly Signals · source-backed healthcare intelligence across regulation, quality, AI, evidence, markets, and operations." />
+<meta name="twitter:image" content="https://iFeed.ie/favicon.svg" />
+
+<link rel="canonical" href="https://weeklysignals.ifeed.ie/" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="nn11" viewBox="0 0 100 80">
+    <g class="net-edge"><line x1="20" y1="20" x2="50" y2="20"/><line x1="20" y1="20" x2="50" y2="40"/><line x1="20" y1="20" x2="50" y2="60"/><line x1="20" y1="40" x2="50" y2="20"/><line x1="20" y1="40" x2="50" y2="40"/><line x1="20" y1="40" x2="50" y2="60"/><line x1="20" y1="60" x2="50" y2="20"/><line x1="20" y1="60" x2="50" y2="40"/><line x1="20" y1="60" x2="50" y2="60"/><line x1="50" y1="20" x2="80" y2="40"/><line x1="50" y1="40" x2="80" y2="40"/><line x1="50" y1="60" x2="80" y2="40"/></g>
+    <circle class="node-input" cx="20" cy="20" r="3.6"/><circle class="node-input" cx="20" cy="40" r="3.6"/><circle class="node-input" cx="20" cy="60" r="3.6"/>
+    <circle class="node-mid" cx="50" cy="20" r="3.2"/><circle class="node-mid" cx="50" cy="40" r="3.2"/><circle class="node-mid" cx="50" cy="60" r="3.2"/>
+    <circle class="halo halo-a" cx="80" cy="40" r="6"/><circle class="halo halo-b" cx="80" cy="40" r="7.5"/>
+    <circle class="node-out" cx="80" cy="40" r="4.4"/>
+  </symbol>
+</svg>
+
+<div class="theme-toggle" role="group" aria-label="theme toggle">
+  <button type="button" id="t-light" class="active" aria-label="light theme">Light</button>
+  <button type="button" id="t-dark" aria-label="dark theme">Dark</button>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class='brand' href='https://ifeed.ie/'>
+      <div class="nn11"><svg viewBox="0 0 100 80" style="width:100%;height:auto;display:block;overflow:visible" aria-label="iFeed neural network mark">
+    <g class="nerve">
+      <line x1="20" y1="20" x2="50" y2="20"/><line x1="20" y1="20" x2="50" y2="40"/><line x1="20" y1="20" x2="50" y2="60"/>
+      <line x1="20" y1="40" x2="50" y2="20"/><line x1="20" y1="40" x2="50" y2="40"/><line x1="20" y1="40" x2="50" y2="60"/>
+      <line x1="20" y1="60" x2="50" y2="20"/><line x1="20" y1="60" x2="50" y2="40"/><line x1="20" y1="60" x2="50" y2="60"/>
+      <line x1="50" y1="20" x2="80" y2="40"/><line x1="50" y1="40" x2="80" y2="40"/><line x1="50" y1="60" x2="80" y2="40"/>
+    </g>
+    <circle class="neuron-in" cx="20" cy="20" r="3.6"/><circle class="neuron-in" cx="20" cy="40" r="3.6"/><circle class="neuron-in" cx="20" cy="60" r="3.6"/>
+    <circle class="neuron-mid" cx="50" cy="20" r="3.2"/><circle class="neuron-mid" cx="50" cy="40" r="3.2"/><circle class="neuron-mid" cx="50" cy="60" r="3.2"/>
+    <circle class="halo-ring halo-a" cx="80" cy="40" r="6"/>
+    <circle class="halo-ring halo-b" cx="80" cy="40" r="7.5"/>
+    <circle class="neuron-out" cx="80" cy="40" r="4.4"/>
+  </svg></div>
+      <span class="if-mark sm"><span class="i">i</span>Feed</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-label="toggle nav" aria-expanded="false"><span class="bar"></span></button>
+    <div class="links">
+      <a href='https://ifeed.ie/'>Home</a>
+      <a href="https://ifeed.ie/methodology.html">Methodology</a>
+      <span class="has-dropdown"><a href="https://library.ifeed.ie/">Library<span class="caret">▾</span></a><div class="dropdown" role="menu"><a href="https://library.ifeed.ie/library/bioanalytical.html"><span class="d-name">Bio-Analytical Trials</span></a><a href="https://library.ifeed.ie/library/bioequivalence.html"><span class="d-name">Bio-Equivalence Trials</span></a><a href="https://library.ifeed.ie/library/clinical-trials.html"><span class="d-name">Clinical Trials</span></a><a href="https://library.ifeed.ie/library/governance.html"><span class="d-name">Governance</span></a><div class="d-sep"></div><a class="d-all" href="https://library.ifeed.ie/"><span class="d-name">All · Library hub →</span></a></div></span>
+      <span class="has-dropdown"><a href="https://regulations.ifeed.ie/">Regulations<span class="caret">▾</span></a><div class="dropdown" role="menu"><a href="https://regulations.ifeed.ie/regulations/eu-ai-act.html"><span class="d-name">EU AI Act</span></a><a href="https://regulations.ifeed.ie/regulations/fda-qmsr.html"><span class="d-name">FDA QMSR</span></a><a href="https://regulations.ifeed.ie/regulations/fda-csa.html"><span class="d-name">FDA CSA</span></a><a href="https://regulations.ifeed.ie/regulations/gamp5-ai-validation.html"><span class="d-name">GAMP 5 / AI validation</span></a><a href="https://regulations.ifeed.ie/regulations/ich-e6-r3.html"><span class="d-name">ICH E6(R3)</span></a><a href="https://regulations.ifeed.ie/regulations/good-ai-practice.html"><span class="d-name">FDA/EMA Good AI Practice</span></a><a href="https://regulations.ifeed.ie/regulations/iso-iec-42001.html"><span class="d-name">ISO/IEC 42001</span></a><a href="https://regulations.ifeed.ie/regulations/ai-medtech-samd.html"><span class="d-name">AI-enabled MedTech / SaMD</span></a><div class="d-sep"></div><a class="d-all" href="https://regulations.ifeed.ie/"><span class="d-name">All · Regulations hub →</span></a></div></span>
+      <a href="https://ifeed.ie/services.html">Collaborate</a>
+      <a href="https://ai.ifeed.ie/">AI</a>
+      <a class='current' href='/'>Signals</a>
+      <a href="https://ifeed.ie/academy.html">Academy</a>
+      <a href="https://ifeed.ie/community.html">Community</a>
+      <a href="https://ifeed.ie/founder.html">Founder</a>
+      <a href="https://ifeed.ie/connect.html">Connect</a>
+      <a href="https://ifeed.ie/register.html">Register</a>
+    </div>
+  </div>
+</nav>
+<main>
+
+<header class="hero hero-banner-canvas">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow"><span class="signal-mark"></span>weekly signals &middot; healthcare intelligence &middot; six-issue archive</div>
+        <h1>Nine source-backed signals, <em>every week</em>.</h1>
+        <p class="lede">iFeed Weekly Signals tracks the regulatory, quality, AI, clinical, research, market, and operating shifts that matter in healthcare. Each issue selects nine signals, explains why they matter, and keeps the source trail close enough for serious reading.</p>
+        <div style="margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--rule-2); display: flex; gap: 14px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--ink-3);">
+          <span style="color: var(--ink); font-weight: 500;">Current:</span>
+          <a href='/2026-06-15_weekly-w24' style='color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 1px;'>W24 · 8-13 June 2026 &rarr;</a>
+          <span>Archive: W19-W24</span>
+        </div>
+      </div>
+      <div class="hero-viz">
+        <svg class="banner-art signal-map" viewBox="0 0 380 360" preserveAspectRatio="xMidYMid meet" aria-label="Weekly Signals map showing six weekly issues and the current W24 issue">
+          <rect class="sm-panel" x="54" y="46" width="272" height="272" rx="28"/>
+          <circle class="sm-orbit" cx="190" cy="178" r="96"/>
+          <circle class="sm-orbit" cx="190" cy="178" r="56"/>
+          <path class="sm-path-soft" d="M104 216 C128 126 248 112 292 176"/>
+          <path class="sm-path" d="M92 166 C128 96 248 92 306 132"/>
+          <path class="sm-path" d="M126 274 C174 222 236 228 292 256"/>
+          <circle class="sm-node" cx="92" cy="166" r="7"/>
+          <circle class="sm-node" cx="126" cy="274" r="6"/>
+          <circle class="sm-node" cx="306" cy="132" r="6"/>
+          <circle class="sm-node" cx="292" cy="256" r="6"/>
+          <circle class="sm-node-current" cx="190" cy="178" r="34"/>
+          <text class="sm-current" x="190" y="172" text-anchor="middle">W24</text>
+          <text class="sm-label" x="190" y="192" text-anchor="middle">current</text>
+          <text class="sm-label" x="82" y="144">W19</text>
+          <text class="sm-label" x="108" y="296">W20</text>
+          <text class="sm-label" x="284" y="112">W21</text>
+          <text class="sm-label" x="276" y="280">W22</text>
+          <line class="sm-rule" x1="94" y1="70" x2="286" y2="70"/>
+          <text class="sm-title" x="190" y="96" text-anchor="middle">Signals archive</text>
+          <text class="sm-label" x="190" y="306" text-anchor="middle">regulatory · quality · AI · market</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- Featured note -->
+  <section class="feature">
+    <a class='feature-card' href='/2026-06-15_weekly-w24'>
+      <div>
+        <div class="lab">/ Current issue &middot; W24</div>
+        <h2>iFeed Weekly &middot; <em>W24</em>: AI continuity, evidence, and quality become strategy.</h2>
+        <p>Nine source-backed stories from 8-13 June 2026 across AI continuity, QMS enforcement, regulatory sandboxes, AI-device evidence, medtech records, clinical-trial AI, and HTA routing.</p>
+        <div class="meta"><b>Published:</b> 2026-06-15 &middot; <b>Read:</b> ~11 min &middot; <b>Filed:</b> weekly signals · AI operating infrastructure · W24</div>
+      </div>
+      <span class="feature-arrow">read &rarr;</span>
+    </a>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline">
+    <div class="tl-h">/ Weekly issue archive &middot; W19-W24</div>
+    <div class="gallery">
+
+    <a class='note-row' data-domain='cross' data-topics='weekly clinical ai-governance medtech qms regulatory evidence-readiness market' href='/2026-06-15_weekly-w24'>
+  <div class="visual"><span class="glyph">W24</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-06-15</div><div class="right">~11 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">AI infrastructure</span><span class="chip">W24</span></div>
+    <h3>iFeed Weekly &middot; <em>W24</em>: 8&ndash;13 June 2026.</h3>
+    <p>Nine source-backed stories across AI continuity, QMS enforcement, regulatory sandboxes, AI-device evidence, medtech records, clinical-trial AI, and HTA routing.</p>
+  </div>
+</a>
+    <a class='note-row' data-domain='cross' data-topics='weekly clinical ai-governance medtech qms regulatory evidence-readiness market' href='/2026-06-08_weekly-w23'>
+  <div class="visual"><span class="glyph">W23</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-06-08</div><div class="right">~10 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">operating infrastructure</span><span class="chip">W23</span></div>
+    <h3>iFeed Weekly &middot; <em>W23</em>: 1&ndash;7 June 2026.</h3>
+    <p>Nine source-backed signals across healthcare AI, regulatory evidence, QMS and GMP controls, clinical operations, market access, and inspection-ready operating infrastructure.</p>
+  </div>
+</a>
+
+
+
+    <a class='note-row' data-domain='cross' data-topics='weekly clinical ai-governance medtech qms regulatory evidence-readiness' href='/2026-06-01_weekly-w22'>
+  <div class="visual"><span class="glyph">W22</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-06-01</div><div class="right">~8 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">evidence-readiness</span><span class="chip">W22</span></div>
+    <h3>iFeed Weekly &middot; <em>W22</em>: 25&ndash;31 May 2026.</h3>
+    <p>Nine source-backed signals across structured protocols, real-time clinical trials, AI Act classification, real-world evidence, QMSR readiness, device data, ML-enabled device lifecycle control, and the first iFeed Regulations artifact.</p>
+  </div>
+</a>
+
+    <a class='note-row' data-domain='cross' data-topics='weekly clinical ai-governance medtech qms regulatory' href='/2026-05-25_weekly-w21'>
+  <div class="visual"><span class="glyph">W21</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-05-25</div><div class="right">~8 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">structured evidence</span><span class="chip">W21</span></div>
+    <h3>iFeed Weekly &middot; <em>W21</em>: 18&ndash;24 May 2026.</h3>
+    <p>Nine official-source signals across EU AI Act classification, FDA TEMPO, ACT EU trial metrics, AI in GMP, real-time trials, UDI execution, food-effect evidence, lifecycle quality and oral GLP-1 market movement.</p>
+  </div>
+</a>
+
+    <a class='note-row' data-domain='cross' data-topics='weekly clinical ai-governance bioanalytical bioequivalence qms' href='/2026-05-18_weekly-w20'>
+  <div class="visual"><span class="glyph">W20</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-05-18</div><div class="right">~7 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">cross-domain</span><span class="chip">W20</span></div>
+    <h3>iFeed Weekly &middot; <em>W20</em>: 11&ndash;17 May 2026.</h3>
+    <p>Nine selected signals across clinical trials, AI governance, IDMP, QMSR, biomarker validation, bioequivalence, non-animal evidence, pharmacovigilance and product-specific BE.</p>
+  </div>
+</a>
+
+    <a class='note-row' data-domain='cross' data-topics='weekly bioanalytical bioequivalence clinical governance' href='/2026-05-11_weekly-w19'>
+  <div class="visual"><span class="glyph">W19</span><span class="if-stamp">i</span><span class="pulse"></span><div class="yr">2026-05-11</div><div class="right">~6 min</div></div>
+  <div class="body">
+    <div class="topics"><span class="chip">weekly</span><span class="chip">cross-domain</span><span class="chip">W19</span></div>
+    <h3>iFeed Weekly &middot; <em>W19</em>: 4&ndash;10 May 2026.</h3>
+    <p>Nine updates across bioanalytical, bioequivalence, clinical trials, governance, AI in healthcare and broader. Verified primary sources. Click to open the full week &mdash; nine cards in a grid, full explanation below each.</p>
+  </div>
+</a>
+
+    </div>
+  </section>
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="credits">iFeed &middot; Intellectual Feeds &middot; Galway &middot; Pune &middot; Global &middot; <a href="https://ifeed.ie/privacy.html" style="color: inherit; border-bottom: 1px solid currentColor; padding-bottom: 1px;">privacy</a></div>
+  </div>
+</footer>
+
+<script>
+  const root = document.documentElement;
+  const tLight = document.getElementById('t-light');
+  const tDark = document.getElementById('t-dark');
+  const saved = localStorage.getItem('ifeed-theme');
+  if (saved === 'dark') { root.setAttribute('data-theme','dark'); tDark.classList.add('active'); tLight.classList.remove('active'); }
+  tLight.addEventListener('click', () => { root.setAttribute('data-theme','light'); tLight.classList.add('active'); tDark.classList.remove('active'); localStorage.setItem('ifeed-theme','light'); });
+  tDark.addEventListener('click', () => { root.setAttribute('data-theme','dark'); tDark.classList.add('active'); tLight.classList.remove('active'); localStorage.setItem('ifeed-theme','dark'); });
+
+</script>
+
+</body>
+</html>

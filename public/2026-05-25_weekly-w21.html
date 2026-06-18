@@ -1,0 +1,1538 @@
+<!doctype html>
+<html lang="en" data-theme="light" class="w21-signal-room">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>iFeed Weekly · W21 · The Structured Evidence Week</title>
+<meta name="description" content="iFeed Weekly W21 · The Structured Evidence Week · source-backed signals across AI Act classification, FDA TEMPO, ACT EU trial metrics, AI in GMP, real-time trials, UDI, food-effect evidence, lifecycle quality, and oral GLP-1 market movement." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css?v=20260504au" />
+<link rel="stylesheet" href="mark.css?v=20260504au" />
+<script src="site.js?v=20260504au" defer></script>
+<style>
+  :root {
+    --w21-amber: #C18A2C;
+    --w21-amber-bg: #F5E8C4;
+    --w21-red: #C45E3E;
+    --w21-green: #4F8051;
+    --w21-blue: #277899;
+    --w21-violet: #78579E;
+    --w21-panel: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+    --w21-card: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 72% 8%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 28rem),
+      radial-gradient(circle at 7% 42%, color-mix(in srgb, var(--w21-amber) 12%, transparent), transparent 26rem),
+      var(--bg);
+  }
+
+  .weekly-nav {
+    position: sticky;
+    top: 10px;
+    z-index: 400;
+    width: min(1250px, calc(100% - 24px));
+    margin: 12px auto 0;
+    padding: 14px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    background: color-mix(in srgb, var(--bg) 91%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--rule));
+    border-radius: 16px;
+    box-shadow: 0 20px 42px -32px color-mix(in srgb, var(--ink) 42%, transparent);
+    backdrop-filter: blur(12px);
+  }
+
+  .weekly-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .weekly-brand .nn11 { width: 58px; flex: 0 0 auto; }
+  .weekly-brand .if-mark {
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-size: 34px;
+    color: var(--accent);
+  }
+
+  .weekly-nav-title {
+    justify-self: center;
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(17px, 2vw, 24px);
+    font-weight: 600;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .weekly-nav-title em {
+    font-family: "Newsreader", serif;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .weekly-nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .weekly-nav .theme-toggle {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    z-index: auto !important;
+    box-shadow: none !important;
+    flex: 0 0 auto;
+  }
+
+  .mini-link,
+  .signal-jump {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+
+  .mini-link:hover,
+  .signal-jump:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .page {
+    width: min(1250px, calc(100% - 24px));
+    margin: 0 auto;
+    padding: 20px 32px 48px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 460px);
+    gap: 34px;
+    align-items: stretch;
+    margin: 18px 0 26px;
+    padding: clamp(26px, 4vw, 48px);
+    border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--rule));
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--surface) 86%, var(--accent) 14%), var(--surface));
+    min-height: 720px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--w21-amber);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--w21-amber) 22%, transparent);
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(46px, 6.4vw, 88px);
+    line-height: 0.96;
+    letter-spacing: -0.018em;
+    font-weight: 600;
+    max-width: 780px;
+  }
+
+  h1 em {
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .lede {
+    margin: 22px 0 0;
+    max-width: 780px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(17px, 1.55vw, 21px);
+    line-height: 1.55;
+  }
+
+  .hero-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    max-width: 810px;
+  }
+
+  .metric {
+    padding: 13px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 76%, var(--bg) 24%);
+  }
+
+  .metric .label {
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .metric .value {
+    margin-top: 5px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .signal-map {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 500px;
+    width: 100%;
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--rule));
+    border-radius: 18px;
+    background:
+      linear-gradient(160deg, color-mix(in srgb, var(--accent) 20%, var(--surface)), var(--surface) 64%);
+    overflow: hidden;
+  }
+
+  .signal-map::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 22%, transparent);
+    border-radius: 14px;
+  }
+
+  .map-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+  }
+
+  .map-core {
+    z-index: 2;
+    width: 148px;
+    height: 148px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+    border: 1.5px solid var(--accent);
+    box-shadow: 0 0 0 12px color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .map-core strong {
+    display: block;
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  .map-core span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .node {
+    position: absolute;
+    z-index: 3;
+    min-width: 118px;
+    padding: 9px 11px;
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 90%, var(--accent) 10%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .node.n1 { top: 58px; left: 42px; }
+  .node.n2 { top: 72px; right: 44px; }
+  .node.n3 { top: 220px; left: 34px; }
+  .node.n4 { top: 220px; right: 34px; }
+  .node.n5 { bottom: 74px; left: 48px; }
+  .node.n6 { bottom: 62px; right: 48px; }
+
+  .section-label {
+    margin: 34px 0 14px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .thesis-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .thesis-card {
+    padding: 18px 18px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    background: var(--w21-card);
+  }
+
+  .thesis-card .k {
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .thesis-card p {
+    margin: 9px 0 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .signal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .signal-grid.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.985);
+    height: 0;
+    overflow: hidden;
+  }
+
+  .signal-card {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--accent) 21%, var(--rule));
+    border-radius: 15px;
+    background: var(--surface);
+    box-shadow: 0 16px 32px -28px color-mix(in srgb, var(--ink) 34%, transparent);
+    cursor: pointer;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .signal-card.is-active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent), 0 28px 48px -34px color-mix(in srgb, var(--accent) 44%, transparent);
+  }
+
+  .signal-card:hover,
+  .signal-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 28px 48px -34px color-mix(in srgb, var(--accent) 44%, transparent);
+    outline: none;
+  }
+
+  .signal-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .signal-num {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 0.9;
+  }
+
+  .horizon {
+    padding: 4px 8px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule));
+    border-radius: 999px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .horizon.now { color: var(--w21-red); border-color: color-mix(in srgb, var(--w21-red) 44%, var(--rule)); }
+  .horizon.next { color: var(--w21-blue); border-color: color-mix(in srgb, var(--w21-blue) 44%, var(--rule)); }
+  .horizon.watch { color: var(--w21-violet); border-color: color-mix(in srgb, var(--w21-violet) 44%, var(--rule)); }
+
+  .signal-card h2 {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .signal-card h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .signal-card .fact {
+    margin: 12px 0 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14.5px;
+    line-height: 1.48;
+  }
+
+  .decision-box {
+    margin: 14px 0 0;
+    padding: 12px 13px;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--accent-bg) 38%, var(--surface));
+  }
+
+  .decision-box .decision-label {
+    margin-bottom: 5px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .decision-box p {
+    margin: 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .source-line {
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9.5px;
+    line-height: 1.55;
+    letter-spacing: 0.05em;
+  }
+
+  .source-line a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+
+  .open-slide {
+    margin-top: 12px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .carousel-deck {
+    display: none;
+  }
+
+  .source-only-label {
+    display: none;
+  }
+
+  .expanded {
+    display: none;
+    position: relative;
+    margin-top: 0;
+    scroll-margin-top: 154px;
+  }
+
+  .expanded.is-visible {
+    display: block;
+  }
+
+  .expanded .carousel-slide {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 460px);
+    align-items: stretch;
+    min-height: 720px;
+    width: calc(100% - 24px);
+    margin: 18px auto 26px;
+    padding: clamp(24px, 3.4vw, 42px);
+    border-radius: 18px;
+  }
+
+  .exp-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink-2);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .exp-close:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  body.expanded-open .hero,
+  body.expanded-open #signals,
+  body.expanded-open .thesis-strip,
+  body.expanded-open .readout,
+  body.expanded-open .source-ledger-label,
+  body.expanded-open .source-table,
+  body.expanded-open footer {
+    display: none !important;
+  }
+
+  .carousel-slide {
+    scroll-margin-top: 136px;
+    min-height: 720px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(390px, 0.82fr);
+    gap: 34px;
+    align-items: center;
+    padding: clamp(28px, 4vw, 54px);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 22px;
+    background:
+      radial-gradient(circle at 72% 22%, color-mix(in srgb, var(--accent) 19%, transparent), transparent 24rem),
+      linear-gradient(135deg, color-mix(in srgb, var(--surface) 86%, var(--accent) 14%), var(--surface));
+    box-shadow: 0 24px 54px -42px color-mix(in srgb, var(--ink) 44%, transparent);
+  }
+
+  .carousel-slide:target {
+    box-shadow:
+      0 0 0 2px color-mix(in srgb, var(--accent) 44%, transparent),
+      0 24px 54px -42px color-mix(in srgb, var(--ink) 44%, transparent);
+  }
+
+  .carousel-slide .slide-copy {
+    min-width: 0;
+  }
+
+  .slide-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .slide-kicker::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--w21-amber);
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--w21-amber) 18%, transparent);
+  }
+
+  .carousel-slide h2 {
+    margin: 20px 0 16px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(36px, 4.8vw, 68px);
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    line-height: 0.98;
+  }
+
+  .expanded .carousel-slide h2 {
+    margin: 16px 0 12px;
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1;
+  }
+
+  .expanded .slide-summary {
+    max-width: 640px;
+    font-size: clamp(16px, 1.28vw, 19px);
+    line-height: 1.48;
+  }
+
+  .expanded .slide-meta-grid {
+    margin-top: 18px;
+  }
+
+  .expanded .slide-explainer {
+    margin-top: 14px;
+  }
+
+  .expanded .exp-tile {
+    padding: 11px 12px;
+  }
+
+  .expanded .exp-tile span {
+    font-size: 13.5px;
+    line-height: 1.36;
+  }
+
+  .expanded .slide-source {
+    margin-top: 14px;
+  }
+
+  .expanded .visual-card {
+    min-height: 490px;
+    border-radius: 18px;
+  }
+
+  .carousel-slide h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .slide-summary {
+    max-width: 680px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.54;
+  }
+
+  .slide-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .slide-meta {
+    padding: 12px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 76%, var(--bg) 24%);
+  }
+
+  .slide-meta .m-label {
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .slide-meta .m-value {
+    margin-top: 5px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .slide-explainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .exp-tile {
+    padding: 13px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+  }
+
+  .exp-tile strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .exp-tile span {
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .slide-source {
+    display: inline-flex;
+    margin-top: 18px;
+    padding: 9px 13px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 999px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .visual-card {
+    position: relative;
+    min-height: 500px;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 36%, var(--rule));
+    border-radius: 22px;
+    background:
+      linear-gradient(155deg, color-mix(in srgb, var(--accent) 22%, var(--surface)), color-mix(in srgb, var(--surface) 86%, var(--accent) 14%));
+    overflow: hidden;
+  }
+
+  .visual-card::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 26%, transparent);
+    border-radius: 16px;
+  }
+
+  .visual-card::after {
+    content: attr(data-insight);
+    position: absolute;
+    z-index: 4;
+    left: 34px;
+    right: 34px;
+    bottom: 26px;
+    padding: 12px 16px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14px;
+    line-height: 1.32;
+    text-align: center;
+  }
+
+  .visual-card svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .visual-label {
+    position: absolute;
+    z-index: 2;
+    padding: 9px 12px;
+    border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .visual-label.a { top: 56px; left: 54px; }
+  .visual-label.b { top: 118px; right: 44px; }
+  .visual-label.c { bottom: 118px; left: 52px; }
+  .visual-label.d { bottom: 58px; right: 54px; }
+
+  .visual-core {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    width: 158px;
+    height: 158px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border: 1.8px solid var(--accent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
+    box-shadow: 0 0 0 16px color-mix(in srgb, var(--accent) 11%, transparent);
+  }
+
+  .visual-core strong {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .visual-core span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .readout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .readout-panel,
+  .pipeline-panel {
+    padding: 24px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule));
+    border-radius: 16px;
+    background: var(--w21-panel);
+  }
+
+  .readout-panel h2,
+  .pipeline-panel h2 {
+    margin: 0 0 12px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 28px;
+    line-height: 1.12;
+    font-weight: 600;
+  }
+
+  .readout-panel h2 em,
+  .pipeline-panel h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .readout-panel p,
+  .pipeline-panel p {
+    margin: 0 0 12px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+    line-height: 1.56;
+  }
+
+  .pipeline-list {
+    display: grid;
+    gap: 9px;
+    margin-top: 16px;
+  }
+
+  .pipeline-item {
+    display: grid;
+    grid-template-columns: 122px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px dashed var(--rule);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pipeline-item strong { color: var(--accent); }
+  .pipeline-item span { color: var(--ink-3); }
+
+  .source-table {
+    margin-top: 34px;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .source-row {
+    display: grid;
+    grid-template-columns: 0.65fr 1fr 0.45fr 0.35fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .source-row:first-child { border-top: 0; }
+
+  .source-row > div {
+    padding: 12px 14px;
+    border-left: 1px solid var(--rule);
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .source-row > div:first-child { border-left: 0; }
+
+  .source-row.header > div {
+    background: color-mix(in srgb, var(--accent-bg) 42%, var(--surface));
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .source-row a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+
+  footer {
+    padding: 28px 0 12px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 980px) {
+    .weekly-nav {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      top: 32px;
+    }
+    .hero,
+    .readout,
+    .carousel-slide {
+      grid-template-columns: 1fr;
+    }
+    .signal-map { min-height: 420px; max-width: 560px; justify-self: center; }
+    .thesis-strip,
+    .signal-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-metadata {
+      grid-template-columns: 1fr;
+    }
+    .source-row {
+      grid-template-columns: 1fr;
+    }
+    .source-row > div {
+      border-left: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .source-row > div:first-child { border-top: 0; }
+    .visual-card { min-height: 420px; max-width: 560px; width: 100%; justify-self: center; }
+  }
+
+  @media (max-width: 640px) {
+    .weekly-nav { position: static; padding: 14px; }
+    .page { padding: 16px 12px 38px; }
+    .hero { padding: 22px; min-height: auto; }
+    .signal-map { min-height: 390px; }
+    .carousel-slide, .expanded .carousel-slide { min-height: auto; padding: 22px; }
+    .slide-meta-grid, .slide-explainer { grid-template-columns: 1fr; }
+    .visual-card { min-height: 390px; }
+    .visual-label { transform: scale(0.82); }
+    .visual-label.a { left: 14px; top: 44px; }
+    .visual-label.b { right: 14px; top: 106px; }
+    .visual-label.c { left: 16px; bottom: 106px; }
+    .visual-label.d { right: 16px; bottom: 48px; }
+    .node { transform: scale(0.84); min-width: 96px; }
+    .node.n1 { left: 12px; }
+    .node.n2 { right: 14px; }
+    .node.n3 { left: 10px; }
+    .node.n4 { right: 10px; }
+    .node.n5 { left: 18px; }
+    .node.n6 { right: 18px; }
+    .pipeline-item { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+<link rel="canonical" href="https://weeklysignals.ifeed.ie/2026-05-25_weekly-w21.html" /></head>
+<body>
+<nav class="weekly-nav" aria-label="iFeed weekly navigation">
+  <a class='weekly-brand' href='https://ifeed.ie/' title='iFeed home'>
+    <svg class="nn11" viewBox="0 0 100 80" aria-hidden="true">
+      <g stroke="#167e8a" stroke-width="0.6" stroke-opacity="0.6">
+        <line x1="20" y1="20" x2="50" y2="20"/><line x1="20" y1="20" x2="50" y2="40"/><line x1="20" y1="20" x2="50" y2="60"/>
+        <line x1="20" y1="40" x2="50" y2="20"/><line x1="20" y1="40" x2="50" y2="40"/><line x1="20" y1="40" x2="50" y2="60"/>
+        <line x1="20" y1="60" x2="50" y2="20"/><line x1="20" y1="60" x2="50" y2="40"/><line x1="20" y1="60" x2="50" y2="60"/>
+        <line x1="50" y1="20" x2="80" y2="40"/><line x1="50" y1="40" x2="80" y2="40"/><line x1="50" y1="60" x2="80" y2="40"/>
+      </g>
+      <circle cx="20" cy="20" r="3.6" fill="#167e8a"/><circle cx="20" cy="40" r="3.6" fill="#167e8a"/><circle cx="20" cy="60" r="3.6" fill="#167e8a"/>
+      <circle cx="50" cy="20" r="3.2" fill="#167e8a" fill-opacity="0.7"/><circle cx="50" cy="40" r="3.2" fill="#167e8a" fill-opacity="0.7"/><circle cx="50" cy="60" r="3.2" fill="#167e8a" fill-opacity="0.7"/>
+      <circle cx="80" cy="40" r="6" fill="none" stroke="#167e8a" stroke-opacity="0.4"/><circle cx="80" cy="40" r="7.5" fill="none" stroke="#167e8a" stroke-opacity="0.2"/><circle cx="80" cy="40" r="4.4" fill="#167e8a"/>
+    </svg>
+    <span class="if-mark">iFeed</span>
+  </a>
+  <div class="weekly-nav-title">W21 · <em>The Structured Evidence Week</em></div>
+  <div class="weekly-nav-actions">
+    <a class='mini-link' href='/'>Notes</a>
+    <a class="signal-jump" href="#signals">Signals</a>
+    <div class="theme-toggle" role="group" aria-label="theme toggle">
+      <button type="button" id="t-light" class="active" aria-label="light theme">Light</button>
+      <button type="button" id="t-dark" aria-label="dark theme">Dark</button>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+  <section class="hero" aria-labelledby="weekly-title">
+    <div>
+      <div class="eyebrow">2026-05-18 · Weekly · W21 of 2026</div>
+      <h1 id="weekly-title">The <em>structured evidence</em> week.</h1>
+      <p class="lede">
+        Nine source-backed signals show one pattern: regulated life sciences is moving from documents and periodic review toward structured, monitored, reusable evidence systems. The week connects EU AI Act classification, FDA digital-health pilots, EU trial metrics, AI in GMP, real-time clinical trials, UDI execution, food-effect evidence, lifecycle quality, and market movement.
+      </p>
+      <div class="hero-metadata" aria-label="Digest status">
+        <div class="metric">
+          <div class="label">Perspective</div>
+          <div class="value">Analyst Note</div>
+        </div>
+        <div class="metric">
+          <div class="label">Source Base</div>
+          <div class="value">Official-led</div>
+        </div>
+        <div class="metric">
+          <div class="label">Review Standard</div>
+          <div class="value">Source-checked</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="signal-map" aria-label="Structured evidence map">
+      <svg class="map-svg" viewBox="0 0 520 520" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M95 105 C190 75 255 120 260 260 C266 390 360 440 432 392" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-opacity="0.55"/>
+        <path d="M420 104 C310 150 288 214 260 260 C220 328 155 338 88 410" fill="none" stroke="var(--w21-amber)" stroke-width="2" stroke-opacity="0.55"/>
+        <path d="M74 262 C150 208 216 212 260 260 C308 315 382 304 452 246" fill="none" stroke="var(--w21-blue)" stroke-width="1.8" stroke-opacity="0.5"/>
+        <circle cx="260" cy="260" r="86" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="5 8" stroke-opacity="0.4"/>
+      </svg>
+      <div class="node n1">AI Classification</div>
+      <div class="node n2">Digital Health</div>
+      <div class="node n3">Trial Metrics</div>
+      <div class="node n4">AI in GMP</div>
+      <div class="node n5">UDI / Supply</div>
+      <div class="node n6">Lifecycle Quality</div>
+      <div class="map-core"><strong>iFeed</strong><span>trace</span></div>
+    </aside>
+  </section>
+
+  <div class="section-label">The Analyst Frame</div>
+  <section class="thesis-strip" aria-label="Weekly thesis">
+    <article class="thesis-card">
+      <div class="k">What changed</div>
+      <p>Regulators are publishing more structured expectations: classification logic, pilot criteria, performance metrics, exception pathways, and lifecycle change frameworks.</p>
+    </article>
+    <article class="thesis-card">
+      <div class="k">What it means</div>
+      <p>The winning capability is no longer just reading guidance. It is converting guidance into evidence objects, owners, timelines, controls, and update loops.</p>
+    </article>
+    <article class="thesis-card">
+      <div class="k">iFeed edge</div>
+      <p>This is exactly where iFeed can become useful: source-backed interpretation that turns regulation, AI, and quality into practical evidence-readiness surfaces.</p>
+    </article>
+  </section>
+
+  <div id="signals" class="section-label">Nine Decision Signals</div>
+  <section class="signal-grid" aria-label="W21 signal cards">
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-01" aria-label="Open EU AI Act classification signal brief">
+      <div class="signal-top"><div class="signal-num">01</div><div class="horizon now">Now</div></div>
+      <h2>EU asks: <em>is your AI system high-risk?</em></h2>
+      <p class="fact">The European Commission opened a targeted consultation on draft guidelines for classifying high-risk AI systems under the AI Act. The consultation runs from 2026-05-19 to 2026-06-23 and is directly relevant to AI providers, deployers, public authorities, researchers, and organisations using AI systems.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Health-tech and regulated life-sciences teams need classification evidence before they can plan obligations, documentation, and governance controls.</p></div>
+      <div class="source-line">Official source · 2026-05-19 · <a href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">European Commission</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-02" aria-label="Open FDA TEMPO signal brief">
+      <div class="signal-top"><div class="signal-num">02</div><div class="horizon now">Now</div></div>
+      <h2>FDA TEMPO makes digital health <em>evidence-operational</em>.</h2>
+      <p class="fact">FDA’s Technology-Enabled Meaningful Patient Outcomes (TEMPO) FAQ for digital health devices linked to the CMMI ACCESS model is current as of 2026-05-18. It can request quality-system, real-world data, monitoring, statistical, interim-reporting, and marketing-submission information.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Digital-health access pilots are being framed around patient safety, QMSR considerations, and real-world performance evidence, not only product novelty.</p></div>
+      <div class="source-line">Official source · 2026-05-18 · <a href="https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions">FDA TEMPO FAQ</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-03" aria-label="Open ACT EU clinical trial metrics signal brief">
+      <div class="signal-top"><div class="signal-num">03</div><div class="horizon next">6 Months</div></div>
+      <h2>Europe turns clinical-trial ambition into <em>monthly metrics</em>.</h2>
+      <p class="fact">EMA, the European Commission, and the Heads of Medicines Agencies (HMA) published the first tracking report for EU clinical-trial targets toward 2030. It reports 19 additional multinational trials above the historical average and 40.5% recruiting within 200 days.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Trial placement decisions now have a clearer performance benchmark for EU competitiveness, start-up speed, and multinational execution.</p></div>
+      <div class="source-line">Official source · 2026-05-20 · <a href="https://www.ema.europa.eu/en/news/eu-tracks-progress-towards-2030-clinical-trial-targets">EMA</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-04" aria-label="Open EMA Annex 22 AI in GMP signal brief">
+      <div class="signal-top"><div class="signal-num">04</div><div class="horizon next">6 Months</div></div>
+      <h2>EMA puts <em>AI in GMP</em> on the table.</h2>
+      <p class="fact">EMA announced a 2026-06-30/2026-07-01 multistakeholder workshop for Annex 22, the EU guidance on artificial intelligence in medicines manufacturing. EMA notes feedback suggesting potential generative AI and large language model use in manufacturing, with guardrails.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Manufacturers and AI vendors should prepare for evidence around guardrail validation, human oversight, supplier qualification, and lifecycle control.</p></div>
+      <div class="source-line">Official source · event 2026-06-30/07-01 · <a href="https://www.ema.europa.eu/en/events/good-manufacturing-practice-multistakeholder-workshop-expert-contributions-artificial-intelligence-guidance-development-annex-22">EMA Annex 22 workshop</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-05" aria-label="Open FDA real-time clinical trials signal brief">
+      <div class="signal-top"><div class="signal-num">05</div><div class="horizon now">Deadline</div></div>
+      <h2>FDA real-time trials push evidence from packet to <em>stream</em>.</h2>
+      <p class="fact">FDA’s Real-Time Clinical Trials initiative announced proof-of-concept studies and a request for information (RFI) for a proposed pilot. FDA says AI and data science may support safety monitoring and efficiency; comments are accepted until 2026-05-29.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Clinical operations, biometrics, data management, and safety teams need to think in live-review workflows, not only database lock and retrospective submission packages.</p></div>
+      <div class="source-line">Official source · 2026-04-28 / active W21 · <a href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">FDA</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-06" aria-label="Open TGA UDI signal brief">
+      <div class="signal-top"><div class="signal-num">06</div><div class="horizon now">Now</div></div>
+      <h2>TGA makes device-identity nonconformity a <em>controlled exception</em>.</h2>
+      <p class="fact">Australia’s TGA published a guide for consent applications where medical devices do not meet Unique Device Identification (UDI)-related Essential Principles. The guide covers UDI-related requirements, a reduced fee structure from 2026-07-01, and when standard consent-to-supply still applies.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Device sponsors need clean master data, labelling controls, and exception governance before UDI becomes a supply continuity problem.</p></div>
+      <div class="source-line">Official source · 2026-05-20 · <a href="https://www.tga.gov.au/resources/resources/user-guide/completing-application-consent-import-supply-or-export-medical-devices-do-not-meet-udi-related-essential-principles">TGA</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-07" aria-label="Open FDA food-effect guidance signal brief">
+      <div class="signal-top"><div class="signal-num">07</div><div class="horizon next">6 Months</div></div>
+      <h2>FDA separates food-effect evidence from <em>fed-BE logic</em>.</h2>
+      <p class="fact">FDA’s May 2026 final guidance covers food-effect studies for orally administered drugs under Investigational New Drug applications, New Drug Applications, and supplements. It separates this pathway from generic-drug fed bioequivalence expectations.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Clinical pharmacology, formulation, and bioequivalence teams should avoid mixing new-drug food-effect strategy with generic-drug fed-bioequivalence expectations.</p></div>
+      <div class="source-line">Official source · 2026-05-20 · <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology-considerations">FDA guidance</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-08" aria-label="Open Health Canada lifecycle quality signal brief">
+      <div class="signal-top"><div class="signal-num">08</div><div class="horizon next">6 Months</div></div>
+      <h2>Health Canada brings Q12 into <em>biologic lifecycle change</em>.</h2>
+      <p class="fact">Health Canada published revised post-Notice of Compliance quality guidance for biologic and Schedule C drugs. The change log identifies initial ICH Q12 implementation, Post-Approval Change Management Protocol logic, and a new Level III immediate notification category.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Quality and regulatory teams should map planned-change logic, change categories, and notification discipline into lifecycle product governance.</p></div>
+      <div class="source-line">Official source · 2026-05-15 · <a href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/post-notice-compliance-changes/overall-quality-document-biologic-schedule-c-drugs-human-use.html">Health Canada</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-09" aria-label="Open oral GLP-1 market signal brief">
+      <div class="signal-top"><div class="signal-num">09</div><div class="horizon watch">Market</div></div>
+      <h2>Oral GLP-1 shifts the market problem from injection to <em>scale</em>.</h2>
+      <p class="fact">EMA’s Committee for Medicinal Products for Human Use recommended adding a daily oral tablet formulation to Wegovy during its 18-21 May 2026 meeting highlights, describing it as the first oral glucagon-like peptide-1 receptor agonist for weight management.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Commercial, manufacturing, clinical, and pharmacovigilance teams should re-baseline assumptions around patient uptake, supply design, and real-world adherence evidence.</p></div>
+      <div class="source-line">Official source · 2026-05-22 · <a href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">EMA CHMP highlights</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+  </section>
+
+  <section class="expanded" id="expanded" aria-live="polite">
+    <button type="button" class="exp-close" id="exp-close" aria-label="close expanded signal">×</button>
+    <div id="expanded-content"></div>
+  </section>
+
+  <div class="section-label source-only-label">Expanded Signal Briefs</div>
+  <section class="carousel-deck" aria-label="Expanded signal briefs">
+    <article class="carousel-slide" id="slide-01">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 01 of 09 · EU AI Act · High-Risk Classification</div>
+        <h2>Classification becomes an <em>evidence decision</em>.</h2>
+        <p class="slide-summary">The EU AI Office consultation is a practical reminder: teams cannot treat “high-risk” as a vague label. They need traceable logic for intended purpose, actor role, AI Act pathway, health or safety impact, and why obligations do or do not apply.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">EU Commission</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-19</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Classification evidence should become a controlled record, not an informal discussion.</span></div>
+          <div class="exp-tile"><strong>Practical use</strong><span>Start with an AI inventory, intended-use statement, actor map, and obligation rationale.</span></div>
+        </div>
+        <a class="slide-source" href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Decision path: intended use -> actor role -> risk logic -> evidence file." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M80 105 C175 78 240 126 258 246 C275 356 358 415 438 370" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.64"/>
+          <path d="M92 408 C154 336 215 316 258 246 C299 175 354 122 432 102" fill="none" stroke="var(--w21-amber)" stroke-width="2.4" stroke-opacity="0.58"/>
+          <circle cx="260" cy="260" r="88" fill="none" stroke="var(--accent)" stroke-dasharray="7 10" stroke-opacity="0.38"/>
+        </svg>
+        <div class="visual-label a">Intended Purpose</div><div class="visual-label b">Actor Role</div><div class="visual-label c">Risk Logic</div><div class="visual-label d">Evidence File</div>
+        <div class="visual-core"><div><strong>AI Act</strong><span>Decision</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-02">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 02 of 09 · FDA TEMPO · Digital Health Evidence</div>
+        <h2>Access pilots now ask for <em>operational evidence</em>.</h2>
+        <p class="slide-summary">FDA’s Technology-Enabled Meaningful Patient Outcomes (TEMPO) pilot frames digital health participation around real-world data plans, monitoring, statistics, interim reporting, and quality-system considerations.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-18</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Quality Management System Regulation (QMSR) readiness becomes part of pilot planning.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Manufacturers need real-world data (RWD) pipelines that can support pilots and future submissions.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Pilot readiness depends on outcome evidence, monitoring, quality-system planning, and future submission logic." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M98 122 C176 90 256 108 260 260 C264 394 346 422 430 388" fill="none" stroke="var(--w21-blue)" stroke-width="3" stroke-opacity="0.62"/>
+          <path d="M76 286 C152 226 215 222 260 260 C312 306 372 302 452 236" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-opacity="0.55"/>
+          <circle cx="260" cy="260" r="92" fill="none" stroke="var(--accent)" stroke-dasharray="6 10" stroke-opacity="0.34"/>
+        </svg>
+        <div class="visual-label a">Device Pilot</div><div class="visual-label b">Real-world Data</div><div class="visual-label c">Quality System</div><div class="visual-label d">Submission</div>
+        <div class="visual-core"><div><strong>TEMPO</strong><span>Outcomes</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-03">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 03 of 09 · ACT EU · Trial Metrics</div>
+        <h2>Trial competitiveness becomes <em>measurable</em>.</h2>
+        <p class="slide-summary">The European Medicines Agency (EMA), European Commission (EC), and Heads of Medicines Agencies (HMA) have started tracking progress toward 2030 clinical-trial targets through published performance metrics.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">EMA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-20</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>EU trial policy is turning into visible performance accountability.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Trial teams can compare placement decisions against recruitment and authorisation metrics.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.ema.europa.eu/en/news/eu-tracks-progress-towards-2030-clinical-trial-targets">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Clinical-trial policy becomes operational when targets are tracked through visible performance metrics." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M90 390 C170 320 206 300 260 260 C322 214 360 156 434 106" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.62"/>
+          <path d="M82 284 C152 244 210 230 260 260 C312 292 380 286 452 230" fill="none" stroke="var(--w21-amber)" stroke-width="2.4" stroke-opacity="0.55"/>
+          <circle cx="260" cy="260" r="86" fill="none" stroke="var(--accent)" stroke-dasharray="5 9" stroke-opacity="0.36"/>
+        </svg>
+        <div class="visual-label a">Targets</div><div class="visual-label b">Recruitment</div><div class="visual-label c">200 Days</div><div class="visual-label d">Placement</div>
+        <div class="visual-core"><div><strong>ACT EU</strong><span>Metrics</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-04">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 04 of 09 · EMA Annex 22 · AI in GMP</div>
+        <h2>AI in GMP moves from ban/no-ban to <em>guardrail evidence</em>.</h2>
+        <p class="slide-summary">EMA’s Annex 22 workshop asks the harder manufacturing question: if generative AI (GenAI) or large language models (LLMs) are used, what evidence makes guardrails, oversight, supplier controls, and lifecycle validation credible?</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">EMA</div></div>
+          <div class="slide-meta"><div class="m-label">Event</div><div class="m-value">2026-06-30</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Good Manufacturing Practice (GMP) evidence may need AI supplier oversight and auditability.</span></div>
+          <div class="exp-tile"><strong>AI use</strong><span>Guardrail validation is the bridge between AI pilots and regulated manufacturing use.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.ema.europa.eu/en/events/good-manufacturing-practice-multistakeholder-workshop-expert-contributions-artificial-intelligence-guidance-development-annex-22">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Regulated AI in manufacturing needs guardrails, human oversight, supplier control, and auditable records." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M82 110 C162 96 232 138 260 260 C286 370 360 420 442 392" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.64"/>
+          <path d="M438 118 C354 158 306 196 260 260 C216 322 150 352 82 420" fill="none" stroke="var(--w21-violet)" stroke-width="2.4" stroke-opacity="0.55"/>
+          <circle cx="260" cy="260" r="96" fill="none" stroke="var(--accent)" stroke-dasharray="6 9" stroke-opacity="0.34"/>
+        </svg>
+        <div class="visual-label a">Model</div><div class="visual-label b">Guardrail</div><div class="visual-label c">Human Oversight</div><div class="visual-label d">GMP Record</div>
+        <div class="visual-core"><div><strong>Annex 22</strong><span>AI in GMP</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-05">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 05 of 09 · FDA · Real-Time Clinical Trials</div>
+        <h2>Clinical evidence shifts from <em>packet to stream</em>.</h2>
+        <p class="slide-summary">FDA’s Real-Time Clinical Trials (RTCT) request for information (RFI) points toward endpoint and safety signals moving closer to live review. Data quality, monitoring, oversight, and statistical review need to work while the trial is moving.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA</div></div>
+          <div class="slide-meta"><div class="m-label">Deadline</div><div class="m-value">2026-05-29</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Continuous review needs controlled data, safety, and endpoint decision records.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Clinical operations and biometrics must plan for streaming evidence, not only database lock.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Real-time review turns endpoint, safety, and data quality into active operating loops." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M76 260 C146 180 216 178 260 260 C308 350 374 340 452 256" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.64"/>
+          <path d="M96 108 C168 140 216 190 260 260 C302 326 352 380 430 414" fill="none" stroke="var(--w21-amber)" stroke-width="2.4" stroke-opacity="0.55"/>
+          <circle cx="260" cy="260" r="88" fill="none" stroke="var(--accent)" stroke-dasharray="4 8" stroke-opacity="0.38"/>
+        </svg>
+        <div class="visual-label a">Endpoint</div><div class="visual-label b">Safety Signal</div><div class="visual-label c">Live Data</div><div class="visual-label d">Review Loop</div>
+        <div class="visual-core"><div><strong>RTCT</strong><span>Live trial</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-06">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 06 of 09 · TGA · UDI Execution</div>
+        <h2>UDI becomes a <em>supply continuity</em> issue.</h2>
+        <p class="slide-summary">Australia’s Therapeutic Goods Administration (TGA) consent guide shows Unique Device Identification (UDI) moving from policy to operating reality. Sponsors must separate UDI-only nonconformity from wider Essential Principle issues.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">TGA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-20</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Exception decisions need documented scope, rationale, and traceability.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>UDI master data and label control help protect market continuity.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.tga.gov.au/resources/resources/user-guide/completing-application-consent-import-supply-or-export-medical-devices-do-not-meet-udi-related-essential-principles">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="UDI execution links device identity, Essential Principle exceptions, consent route, and supply continuity." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M84 390 C155 330 210 310 260 260 C316 202 360 148 434 100" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.62"/>
+          <path d="M76 240 C152 238 216 240 260 260 C314 285 380 302 452 306" fill="none" stroke="var(--w21-blue)" stroke-width="2.4" stroke-opacity="0.55"/>
+          <circle cx="260" cy="260" r="90" fill="none" stroke="var(--accent)" stroke-dasharray="5 9" stroke-opacity="0.35"/>
+        </svg>
+        <div class="visual-label a">Device Identifier</div><div class="visual-label b">Essential Principles</div><div class="visual-label c">Consent Path</div><div class="visual-label d">Supply</div>
+        <div class="visual-core"><div><strong>UDI</strong><span>Supply</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-07">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 07 of 09 · FDA · Food-Effect Evidence</div>
+        <h2>Food-effect logic separates from <em>fed-BE</em>.</h2>
+        <p class="slide-summary">FDA’s May 2026 guidance clarifies food-effect studies for Investigational New Drug applications (INDs), New Drug Applications (NDAs), and supplements. Generic-drug ANDA fed-bioequivalence studies sit under separate guidance.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-20</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Teams need the right evidence pathway before protocol design begins.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Clinical pharmacology and bioequivalence teams should not collapse two distinct logics.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology-considerations">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Food-effect evidence and generic fed-bioequivalence are related but separate planning pathways." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M98 112 C170 88 232 136 260 260 C286 370 352 420 430 388" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.64"/>
+          <path d="M74 282 C140 232 210 224 260 260 C316 296 374 300 450 252" fill="none" stroke="var(--w21-amber)" stroke-width="2.4" stroke-opacity="0.56"/>
+          <circle cx="260" cy="260" r="84" fill="none" stroke="var(--accent)" stroke-dasharray="5 9" stroke-opacity="0.35"/>
+        </svg>
+        <div class="visual-label a">IND / NDA</div><div class="visual-label b">Food Effect</div><div class="visual-label c">Exposure</div><div class="visual-label d">Label Logic</div>
+        <div class="visual-core"><div><strong>Food</strong><span>Pathway</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-08">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 08 of 09 · Health Canada · Lifecycle Quality</div>
+        <h2>Quality change becomes <em>lifecycle-governed</em>.</h2>
+        <p class="slide-summary">Health Canada’s revised post-Notice of Compliance (post-NOC) quality guidance brings ICH Q12 and Post-Approval Change Management Protocol (PACMP) thinking into biologic and Schedule C product change control.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">Health Canada</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-15</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>PACMP logic should connect planned changes, risk, evidence, and notification route.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Quality and regulatory affairs (RA) need shared change taxonomies for lifecycle execution.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/post-notice-compliance-changes/overall-quality-document-biologic-schedule-c-drugs-human-use.html">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="Lifecycle quality connects planned change, risk rationale, supporting evidence, and notification route." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M88 108 C164 132 212 188 260 260 C310 335 358 392 438 414" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.62"/>
+          <path d="M80 392 C148 332 216 322 260 260 C304 198 366 164 438 120" fill="none" stroke="var(--w21-green)" stroke-width="2.4" stroke-opacity="0.58"/>
+          <circle cx="260" cy="260" r="92" fill="none" stroke="var(--accent)" stroke-dasharray="6 9" stroke-opacity="0.35"/>
+        </svg>
+        <div class="visual-label a">Change Protocol</div><div class="visual-label b">Change Type</div><div class="visual-label c">Evidence</div><div class="visual-label d">Notification</div>
+        <div class="visual-core"><div><strong>Q12</strong><span>Change</span></div></div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-09">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 09 of 09 · EMA CHMP · Oral GLP-1</div>
+        <h2>The market shifts from injection to <em>scale</em>.</h2>
+        <p class="slide-summary">EMA’s Committee for Medicinal Products for Human Use (CHMP) recommended an oral glucagon-like peptide-1 (GLP-1) receptor agonist formulation for weight management. The operating question shifts toward scale, adherence, access, and pharmacovigilance.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">EMA CHMP</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-22</div></div>
+          <div class="slide-meta"><div class="m-label">Source Class</div><div class="m-value">Official</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Market meaning</strong><span>Patient convenience changes the competitive baseline for weight-management therapies.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Manufacturing, supply, adherence, and real-world evidence assumptions need a fresh model.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">View official source ↗</a>
+      </div>
+      <div class="visual-card" data-insight="An oral GLP-1 shifts the market question toward manufacturing scale, access, adherence, and real-world follow-up." aria-hidden="true">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none">
+          <path d="M92 386 C152 324 212 318 260 260 C314 196 372 150 438 108" fill="none" stroke="var(--w21-amber)" stroke-width="3" stroke-opacity="0.62"/>
+          <path d="M82 250 C144 204 212 212 260 260 C315 316 384 302 452 250" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-opacity="0.58"/>
+          <circle cx="260" cy="260" r="88" fill="none" stroke="var(--accent)" stroke-dasharray="5 9" stroke-opacity="0.35"/>
+        </svg>
+        <div class="visual-label a">Oral Dose</div><div class="visual-label b">Access</div><div class="visual-label c">Adherence</div><div class="visual-label d">Scale</div>
+        <div class="visual-core"><div><strong>GLP-1</strong><span>Oral scale</span></div></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="readout" aria-label="iFeed weekly synthesis">
+    <article class="readout-panel">
+      <h2>The readout: <em>evidence is becoming infrastructure.</em></h2>
+      <p>The real W21 signal is not one agency notice. It is the convergence. AI classification needs documented logic. Digital-health pilots need real-world monitoring. Trial policy is becoming measured through monthly performance indicators. AI in GMP is being discussed through guardrails. UDI is turning into supply-chain execution. Lifecycle quality is moving through PACMP and change protocols.</p>
+      <p>For regulated teams, this means the practical capability is evidence architecture: knowing what source applies, what obligation follows, who owns the evidence, how it is monitored, and how it survives review.</p>
+    </article>
+    <article class="pipeline-panel">
+      <h2>How this ladders into <em>iFeed work</em>.</h2>
+      <p>This issue connects directly to the Regulatory Evidence-Readiness foundation: EU AI Act classification, AI-in-GMP validation, QMSR/quality-system readiness, and digital-health evidence pipelines.</p>
+      <div class="pipeline-list">
+        <div class="pipeline-item"><strong>Checklist</strong><span>EU AI Act high-risk classification starter map</span></div>
+        <div class="pipeline-item"><strong>Brief</strong><span>Structured evidence readiness for regulated life sciences</span></div>
+        <div class="pipeline-item"><strong>Outreach</strong><span>QA, RA, clinical ops, digital-health, AI governance leads</span></div>
+        <div class="pipeline-item"><strong>Service</strong><span>Completed checklist review + evidence gap report</span></div>
+      </div>
+    </article>
+  </section>
+
+  <div class="section-label source-ledger-label">Source Ledger</div>
+  <section class="source-table" aria-label="Source ledger">
+    <div class="source-row header"><div>Signal</div><div>Source</div><div>Date</div><div>Class</div></div>
+    <div class="source-row"><div>EU high-risk AI classification</div><div><a href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">European Commission consultation</a></div><div>2026-05-19</div><div>Primary</div></div>
+    <div class="source-row"><div>FDA TEMPO</div><div><a href="https://www.fda.gov/medical-devices/digital-health-center-excellence/tempo-digital-health-devices-pilot-frequently-asked-questions">FDA FAQ</a></div><div>2026-05-18</div><div>Primary</div></div>
+    <div class="source-row"><div>ACT EU metrics</div><div><a href="https://www.ema.europa.eu/en/news/eu-tracks-progress-towards-2030-clinical-trial-targets">EMA news</a></div><div>2026-05-20</div><div>Primary</div></div>
+    <div class="source-row"><div>Annex 22 AI in GMP</div><div><a href="https://www.ema.europa.eu/en/events/good-manufacturing-practice-multistakeholder-workshop-expert-contributions-artificial-intelligence-guidance-development-annex-22">EMA event</a></div><div>2026-06-30/07-01</div><div>Primary</div></div>
+    <div class="source-row"><div>Real-time clinical trials</div><div><a href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">FDA announcement</a></div><div>2026-04-28 / active 2026-05-29</div><div>Primary</div></div>
+    <div class="source-row"><div>UDI consent-to-supply</div><div><a href="https://www.tga.gov.au/resources/resources/user-guide/completing-application-consent-import-supply-or-export-medical-devices-do-not-meet-udi-related-essential-principles">TGA guide</a></div><div>2026-05-20</div><div>Primary</div></div>
+    <div class="source-row"><div>Food-effect guidance</div><div><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/assessing-effects-food-drugs-inds-and-ndas-clinical-pharmacology-considerations">FDA guidance</a></div><div>2026-05-20</div><div>Primary</div></div>
+    <div class="source-row"><div>Post-NOC quality guidance</div><div><a href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/post-notice-compliance-changes/overall-quality-document-biologic-schedule-c-drugs-human-use.html">Health Canada guidance</a></div><div>2026-05-15</div><div>Primary</div></div>
+    <div class="source-row"><div>Oral GLP-1 recommendation</div><div><a href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">EMA CHMP highlights</a></div><div>2026-05-22</div><div>Primary</div></div>
+  </section>
+
+  <footer>
+    iFeed Weekly · Sunita Nawale · source-backed analyst note · 2026-W21
+  </footer>
+</main>
+<script>
+  (function () {
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      var href = link.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#') return;
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    var grid = document.querySelector('.signal-grid');
+    var expanded = document.getElementById('expanded');
+    var expandedContent = document.getElementById('expanded-content');
+    var closeBtn = document.getElementById('exp-close');
+    var navTitle = document.querySelector('.weekly-nav-title');
+    var defaultTitle = navTitle ? navTitle.innerHTML : '';
+    var cards = document.querySelectorAll('.signal-card[data-slide]');
+
+    function openSlide(card) {
+      var id = card.getAttribute('data-slide');
+      var source = id && document.getElementById(id);
+      if (!source || !grid || !expanded || !expandedContent) return;
+      expandedContent.innerHTML = '<article class="carousel-slide">' + source.innerHTML + '</article>';
+      grid.classList.add('is-hidden');
+      expanded.classList.add('is-visible');
+      document.body.classList.add('expanded-open');
+      cards.forEach(function (other) { other.classList.toggle('is-active', other === card); });
+      if (navTitle) {
+        var kicker = source.querySelector('.slide-kicker');
+        navTitle.innerHTML = kicker ? kicker.textContent.replace('Slide ', 'Signal ') : defaultTitle;
+      }
+      expanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function closeSlide() {
+      if (!grid || !expanded || !expandedContent) return;
+      expanded.classList.remove('is-visible');
+      grid.classList.remove('is-hidden');
+      document.body.classList.remove('expanded-open');
+      cards.forEach(function (card) { card.classList.remove('is-active'); });
+      if (navTitle) navTitle.innerHTML = defaultTitle;
+      setTimeout(function () { expandedContent.innerHTML = ''; }, 200);
+    }
+
+    cards.forEach(function (card) {
+      card.addEventListener('click', function (event) {
+        if (event.target.closest('a')) return;
+        openSlide(card);
+      });
+
+      card.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        openSlide(card);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeSlide);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && expanded && expanded.classList.contains('is-visible')) closeSlide();
+    });
+    document.addEventListener('click', function (event) {
+      if (!expanded || !expanded.classList.contains('is-visible')) return;
+      if (event.target.closest('#expanded') || event.target.closest('.signal-card')) return;
+      closeSlide();
+    });
+  })();
+</script>
+</body>
+</html>

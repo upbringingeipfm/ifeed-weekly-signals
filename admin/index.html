@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iFeed Signal CMS · W25 Workspace</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #eef6f7;
+  --surface: #ffffff;
+  --ink: #10202a;
+  --muted: #64727c;
+  --rule: #c9d8dd;
+  --accent: #008c95;
+  --accent-soft: #d6f4f1;
+  --warn: #9a432b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+.shell { width: min(1320px, calc(100% - 24px)); margin: 0 auto; padding: 22px 0 40px; }
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+.brand { display: flex; align-items: baseline; gap: 12px; }
+.brand strong { font-family: Georgia, serif; font-style: italic; font-size: 34px; color: var(--accent); }
+.brand span { color: var(--muted); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.btn {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 9px 12px;
+  cursor: pointer;
+}
+.btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+.btn:focus, input:focus, textarea:focus, select:focus { outline: 3px solid #9bc4ff; outline-offset: 2px; }
+.grid { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 16px; align-items: start; }
+.panel {
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 16px;
+}
+.panel-head h1, .panel-head h2 { margin: 0; font-size: 18px; }
+.panel-body { padding: 16px; }
+.status {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.metric { border: 1px solid var(--rule); border-radius: 8px; padding: 12px; background: #f8fbfc; }
+.metric span { display: block; color: var(--muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.metric b { display: block; margin-top: 6px; font-size: 18px; }
+.signal-list { display: grid; gap: 8px; }
+.signal-button {
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: #f8fbfc;
+  color: var(--ink);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.signal-button.active { border-color: var(--accent); background: var(--accent-soft); }
+.signal-button small { display: block; color: var(--muted); margin-bottom: 4px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.field { display: grid; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+label { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+input, textarea, select {
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 11px;
+}
+textarea { min-height: 92px; resize: vertical; line-height: 1.45; }
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 10px 12px;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.warning { border-color: #e9b9a8; background: #fff5f1; color: var(--warn); }
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.hidden-file { display: none; }
+@media (max-width: 920px) {
+  .grid, .form-grid, .status { grid-template-columns: 1fr; }
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .actions { justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div class="brand"><strong>iFeed</strong><span>Signal CMS Workspace</span></div>
+    <div class="actions">
+      <button class="btn" id="loadDefault">Load W25 test JSON</button>
+      <button class="btn" id="importButton">Import JSON</button>
+      <button class="btn primary" id="exportButton">Export updated JSON</button>
+      <input class="hidden-file" id="fileInput" type="file" accept="application/json,.json">
+    </div>
+  </header>
+
+  <section class="status" id="status"></section>
+
+  <section class="grid">
+    <aside class="panel">
+      <div class="panel-head">
+        <h1>Signals</h1>
+        <span id="signalCount">0/9</span>
+      </div>
+      <div class="panel-body">
+        <div class="note warning">
+          This editor changes a browser copy only. Export JSON, replace the file in <code>data/weeks</code>, then run the renderer.
+        </div>
+        <div class="signal-list" id="signalList" style="margin-top:12px"></div>
+      </div>
+    </aside>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 id="editorTitle">Issue Setup</h2>
+        <button class="btn" id="applyButton">Apply changes</button>
+      </div>
+      <div class="panel-body">
+        <div class="form-grid" id="form"></div>
+        <div class="footer-row">
+          <span id="saveState">No data loaded yet.</span>
+          <a href="../docs/WEEKLY_UPDATE_GUIDE.md">Weekly update guide</a>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<script>
+const DEFAULT_JSON = '../data/weeks/2026-W25.json';
+let data = null;
+let selectedIndex = -1;
+
+const fieldGroups = {
+  issue: [
+    ['issue.week', 'Week'],
+    ['issue.issueNumber', 'Issue number'],
+    ['issue.slug', 'Slug'],
+    ['issue.outputFile', 'Output file'],
+    ['issue.publishDate', 'Publish date'],
+    ['issue.coverage.start', 'Coverage start'],
+    ['issue.coverage.end', 'Coverage end'],
+    ['issue.coverage.actualEnd', 'Actual end'],
+    ['issue.title', 'Title', 'textarea'],
+    ['issue.theme', 'Theme'],
+    ['issue.dek', 'Meta description', 'textarea'],
+    ['issue.lede', 'Lede', 'textarea'],
+    ['workflow.status', 'Workflow status'],
+    ['workflow.sourceChecked', 'Source checked', 'checkbox'],
+    ['workflow.claimChecked', 'Claim checked', 'checkbox'],
+    ['workflow.editorApproved', 'Editor approved', 'checkbox'],
+    ['workflow.publishApproved', 'Publish approved', 'checkbox']
+  ],
+  signal: [
+    ['number', 'Number'],
+    ['id', 'ID'],
+    ['lane', 'Domain lane'],
+    ['horizon', 'Horizon'],
+    ['title', 'Title', 'textarea'],
+    ['cardFact', 'Card fact', 'textarea'],
+    ['whyItMatters', 'Decision relevance', 'textarea'],
+    ['sourceTitle', 'Source title', 'textarea'],
+    ['sourceUrl', 'Source URL'],
+    ['sourceDate', 'Source date'],
+    ['sourceType', 'Source type'],
+    ['expandedSummary', 'Expanded summary', 'textarea'],
+    ['claimBoundary', 'Claim boundary', 'textarea'],
+    ['tiles.0.text', 'Tile 1 text', 'textarea'],
+    ['tiles.1.text', 'Tile 2 text', 'textarea'],
+    ['tiles.2.text', 'Tile 3 text', 'textarea'],
+    ['visual.title', 'Visual title'],
+    ['visual.footer', 'Visual footer', 'textarea']
+  ]
+};
+
+function getPath(obj, path) {
+  return path.split('.').reduce((acc, part) => acc == null ? '' : acc[part], obj);
+}
+
+function setPath(obj, path, value) {
+  const parts = path.split('.');
+  let ref = obj;
+  parts.slice(0, -1).forEach(part => {
+    if (ref[part] == null) ref[part] = {};
+    ref = ref[part];
+  });
+  const key = parts[parts.length - 1];
+  const current = ref[key];
+  if (typeof current === 'number') ref[key] = Number(value);
+  else if (typeof current === 'boolean') ref[key] = Boolean(value);
+  else ref[key] = value;
+}
+
+function renderStatus() {
+  if (!data) {
+    document.getElementById('status').innerHTML = '';
+    return;
+  }
+  const signals = data.signals || [];
+  const checked = ['sourceChecked', 'claimChecked', 'editorApproved', 'publishApproved']
+    .filter(key => data.workflow && data.workflow[key]).length;
+  document.getElementById('status').innerHTML = [
+    ['Week', data.issue?.week || '-'],
+    ['Signals', `${signals.length}/9`],
+    ['Workflow', data.workflow?.status || 'draft'],
+    ['Checks', `${checked}/4`]
+  ].map(([label, value]) => `<div class="metric"><span>${label}</span><b>${value}</b></div>`).join('');
+}
+
+function renderList() {
+  const list = document.getElementById('signalList');
+  const signals = data?.signals || [];
+  document.getElementById('signalCount').textContent = `${signals.length}/9`;
+  list.innerHTML = signals.map((signal, index) => `
+    <button class="signal-button ${index === selectedIndex ? 'active' : ''}" data-index="${index}">
+      <small>${String(signal.number).padStart(2, '0')} · ${signal.lane || 'No lane'}</small>
+      ${signal.title || 'Untitled signal'}
+    </button>
+  `).join('');
+  list.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      applyForm();
+      selectedIndex = Number(button.dataset.index);
+      renderAll();
+    });
+  });
+}
+
+function renderForm() {
+  const form = document.getElementById('form');
+  const title = document.getElementById('editorTitle');
+  if (!data) {
+    form.innerHTML = '<div class="note">Load or import a weekly JSON file to begin.</div>';
+    title.textContent = 'Issue Setup';
+    return;
+  }
+  const editingIssue = selectedIndex < 0;
+  const source = editingIssue ? data : data.signals[selectedIndex];
+  const fields = editingIssue ? fieldGroups.issue : fieldGroups.signal;
+  title.textContent = editingIssue ? 'Issue Setup' : `Signal ${String(source.number).padStart(2, '0')}`;
+  form.innerHTML = fields.map(([path, label, type]) => {
+    const value = editingIssue ? getPath(data, path) : getPath(source, path);
+    const id = `field-${path.replace(/[^a-z0-9]/gi, '-')}`;
+    if (type === 'checkbox') {
+      return `<div class="field"><label for="${id}">${label}</label><select id="${id}" data-path="${path}"><option value="false"${!value ? ' selected' : ''}>No</option><option value="true"${value ? ' selected' : ''}>Yes</option></select></div>`;
+    }
+    if (type === 'textarea') {
+      return `<div class="field full"><label for="${id}">${label}</label><textarea id="${id}" data-path="${path}">${escapeHtml(value)}</textarea></div>`;
+    }
+    return `<div class="field"><label for="${id}">${label}</label><input id="${id}" data-path="${path}" value="${escapeHtml(value)}"></div>`;
+  }).join('');
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+  }[char]));
+}
+
+function applyForm() {
+  if (!data) return;
+  const editingIssue = selectedIndex < 0;
+  const source = editingIssue ? data : data.signals[selectedIndex];
+  document.querySelectorAll('[data-path]').forEach(input => {
+    const path = input.dataset.path;
+    const raw = input.tagName === 'SELECT' && ['true', 'false'].includes(input.value) ? input.value === 'true' : input.value;
+    setPath(source, path, raw);
+  });
+  document.getElementById('saveState').textContent = `Applied in browser at ${new Date().toLocaleTimeString()}. Export JSON to save it.`;
+  renderStatus();
+  renderList();
+}
+
+function renderAll() {
+  renderStatus();
+  renderList();
+  renderForm();
+}
+
+async function loadDefault() {
+  const response = await fetch(DEFAULT_JSON, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`Could not load ${DEFAULT_JSON}`);
+  data = await response.json();
+  selectedIndex = -1;
+  document.getElementById('saveState').textContent = 'Loaded W25 test JSON.';
+  renderAll();
+}
+
+function exportJson() {
+  applyForm();
+  const blob = new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = data?.issue?.week ? `${data.issue.week}.json` : 'weekly-signals.json';
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('loadDefault').addEventListener('click', () => loadDefault().catch(error => {
+  document.getElementById('saveState').textContent = error.message;
+}));
+document.getElementById('importButton').addEventListener('click', () => document.getElementById('fileInput').click());
+document.getElementById('fileInput').addEventListener('change', async event => {
+  const [file] = event.target.files;
+  if (!file) return;
+  data = JSON.parse(await file.text());
+  selectedIndex = -1;
+  document.getElementById('saveState').textContent = `Imported ${file.name}.`;
+  renderAll();
+});
+document.getElementById('exportButton').addEventListener('click', exportJson);
+document.getElementById('applyButton').addEventListener('click', () => {
+  applyForm();
+  renderAll();
+});
+
+renderAll();
+</script>
+</body>
+</html>

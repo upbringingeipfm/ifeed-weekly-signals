@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "0.1.0",
+  "publicOutput": "public",
+  "sharedRuntimeDependencies": [
+    {
+      "type": "stylesheet",
+      "path": "public/theme.css",
+      "usedBy": ["index", "W19-W25"]
+    },
+    {
+      "type": "stylesheet",
+      "path": "public/mark.css",
+      "usedBy": ["index", "W19-W25"]
+    },
+    {
+      "type": "script",
+      "path": "public/site.js",
+      "usedBy": ["index", "W19-W25"]
+    },
+    {
+      "type": "asset",
+      "path": "public/favicon.svg",
+      "usedBy": ["index", "W19-W25"]
+    },
+    {
+      "type": "external-font",
+      "path": "https://fonts.googleapis.com/css2",
+      "usedBy": ["index", "W19-W25"]
+    }
+  ],
+  "archivePages": [
+    "archive-static/2026-05-11_weekly-w19.html",
+    "archive-static/2026-05-18_weekly-w20.html",
+    "archive-static/2026-05-25_weekly-w21.html",
+    "archive-static/2026-06-01_weekly-w22.html",
+    "archive-static/2026-06-08_weekly-w23.html",
+    "archive-static/2026-06-15_weekly-w24.html"
+  ],
+  "templateSources": [
+    {
+      "id": "week23-standard",
+      "path": "templates/week23-standard.html",
+      "purpose": "Locked W25+ design source. Renderer imports its inline CSS and interaction script."
+    },
+    {
+      "id": "index-shell",
+      "path": "templates/index-shell.html",
+      "purpose": "Reference shell for public Weekly Signals index design."
+    }
+  ],
+  "generatedOutputs": [
+    {
+      "path": "public/index.html",
+      "source": "data/registry/issues.json",
+      "script": "scripts/render_index.py"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "source": "data/registry/issues.json",
+      "script": "scripts/render_index.py"
+    },
+    {
+      "path": "public/2026-06-22_weekly-w25.html",
+      "source": "data/weeks/2026-W25.json",
+      "script": "scripts/render_week.py"
+    }
+  ]
+}

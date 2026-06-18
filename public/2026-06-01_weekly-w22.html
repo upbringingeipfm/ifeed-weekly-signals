@@ -1,0 +1,3052 @@
+<!doctype html>
+<html lang="en" data-theme="light" class="w20-page w21-signal-room w22-evidence-release">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta name="robots" content="index,follow" />
+<title>iFeed Weekly · W22 · The Evidence-Readiness Release Week</title>
+<meta name="description" content="iFeed Weekly W22: nine source-backed healthcare, AI, regulatory, clinical evidence, device, and market signals on evidence-readiness." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="iFeed Weekly · W22 · Evidence-Readiness Release" />
+<meta property="og:description" content="Nine source-backed healthcare, life-sciences, regulatory, market, and AI signals pointing to evidence-readiness as operating infrastructure." />
+<meta property="og:url" content="https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html" />
+<meta property="og:image" content="https://ifeed.ie/favicon.svg" />
+<meta property="og:site_name" content="iFeed" />
+<meta property="og:locale" content="en_IE" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="iFeed Weekly · W22 · Evidence-Readiness Release" />
+<meta name="twitter:description" content="Nine source-backed signals connecting healthcare AI, regulation, clinical evidence, devices, market movement, and evidence-readiness." />
+<meta name="twitter:image" content="https://ifeed.ie/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css?v=20260504au" />
+<link rel="stylesheet" href="mark.css?v=20260504au" />
+<script src="site.js?v=20260504au" defer></script>
+<style>
+  :root {
+    --w21-amber: #C18A2C;
+    --w21-amber-bg: #F5E8C4;
+    --w21-red: #C45E3E;
+    --w21-green: #4F8051;
+    --w21-blue: #277899;
+    --w21-violet: #78579E;
+    --w21-panel: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+    --w21-card: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 72% 8%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 28rem),
+      radial-gradient(circle at 7% 42%, color-mix(in srgb, var(--w21-amber) 12%, transparent), transparent 26rem),
+      var(--bg);
+  }
+
+  .mini-link,
+  .signal-jump {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+
+  .mini-link:hover,
+  .signal-jump:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* Locked focused-page nav · sourced from W20 iFeed DNA */
+  html.w20-page .nav .links { display: none !important; }
+  html.w20-page .nav .nav-title { flex: 1 1 auto; min-width: 0; text-align: center; padding: 0 18px; }
+  html.w20-page .nav .nav-title .head {
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(15px, 1.7vw, 22px);
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    line-height: 1.2;
+    transition: opacity .22s ease;
+  }
+  html.w20-page .nav .nav-title .head em {
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  html.w20-page .nav .nav-title.swapping .head { opacity: 0; }
+  html.w20-page .nav .nav-right { display: inline-flex; align-items: center; gap: 14px; }
+  html.w20-page .nav .w20-hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color .15s, color .15s;
+    color: var(--ink-2);
+    padding: 0;
+  }
+  html.w20-page .nav .w20-hamburger:hover { border-color: var(--accent); color: var(--accent); }
+  html.w20-page .nav .w20-hamburger span { display: block; width: 16px; height: 1.5px; background: currentColor; position: relative; }
+  html.w20-page .nav .w20-hamburger span::before,
+  html.w20-page .nav .w20-hamburger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
+  }
+  html.w20-page .nav .w20-hamburger span::before { top: -5px; }
+  html.w20-page .nav .w20-hamburger span::after { top: 5px; }
+  html.w20-page .w20-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(320px, 86vw);
+    background: var(--bg);
+    border-left: 1px solid var(--rule);
+    transform: translateX(100%);
+    transition: transform .26s ease;
+    z-index: 250;
+    padding: 72px 28px 28px;
+    overflow-y: auto;
+  }
+  html.w20-page .w20-drawer.open {
+    transform: translateX(0);
+    box-shadow: -20px 0 60px -20px color-mix(in srgb, var(--ink) 35%, transparent);
+  }
+  html.w20-page .w20-drawer a {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--rule);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  html.w20-page .w20-drawer a:hover,
+  html.w20-page .w20-drawer a.current { color: var(--accent); }
+  html.w20-page .w20-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: color-mix(in srgb, var(--ink) 40%, transparent);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .22s ease;
+    z-index: 240;
+  }
+  html.w20-page .w20-drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+  html.w20-page .w20-drawer .close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    color: var(--ink-2);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .page {
+    width: min(1250px, calc(100% - 24px));
+    margin: 0 auto;
+    padding: 20px 32px 48px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 460px);
+    gap: 34px;
+    align-items: stretch;
+    margin: 18px 0 26px;
+    padding: clamp(26px, 4vw, 48px);
+    border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--rule));
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--surface) 86%, var(--accent) 14%), var(--surface));
+    min-height: 720px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--w21-amber);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--w21-amber) 22%, transparent);
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(46px, 6.4vw, 88px);
+    line-height: 0.96;
+    letter-spacing: -0.018em;
+    font-weight: 600;
+    max-width: 780px;
+  }
+
+  h1 em {
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .lede {
+    margin: 22px 0 0;
+    max-width: 780px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(17px, 1.55vw, 21px);
+    line-height: 1.55;
+  }
+
+  .hero-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    max-width: 810px;
+  }
+
+  .metric {
+    padding: 13px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 76%, var(--bg) 24%);
+  }
+
+  .metric .label {
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .metric .value {
+    margin-top: 5px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .signal-map {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 500px;
+    width: 100%;
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--rule));
+    border-radius: 18px;
+    background:
+      linear-gradient(160deg, color-mix(in srgb, var(--accent) 20%, var(--surface)), var(--surface) 64%);
+    overflow: hidden;
+  }
+
+  .signal-map::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 22%, transparent);
+    border-radius: 14px;
+  }
+
+  .map-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+  }
+
+  .map-core {
+    z-index: 2;
+    width: 148px;
+    height: 148px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+    border: 1.5px solid var(--accent);
+    box-shadow: 0 0 0 12px color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .map-core strong {
+    display: block;
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  .map-core span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .node {
+    position: absolute;
+    z-index: 3;
+    min-width: 118px;
+    padding: 9px 11px;
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 90%, var(--accent) 10%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .node.n1 { top: 58px; left: 42px; }
+  .node.n2 { top: 72px; right: 44px; }
+  .node.n3 { top: 220px; left: 34px; }
+  .node.n4 { top: 220px; right: 34px; }
+  .node.n5 { bottom: 74px; left: 48px; }
+  .node.n6 { bottom: 62px; right: 48px; }
+
+  .section-label {
+    margin: 34px 0 14px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .thesis-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .thesis-card {
+    padding: 18px 18px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    background: var(--w21-card);
+  }
+
+  .thesis-card .k {
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .thesis-card p {
+    margin: 9px 0 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .signal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .signal-grid.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.985);
+    height: 0;
+    overflow: hidden;
+  }
+
+  .signal-card {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--accent) 21%, var(--rule));
+    border-radius: 15px;
+    background: var(--surface);
+    box-shadow: 0 16px 32px -28px color-mix(in srgb, var(--ink) 34%, transparent);
+    cursor: pointer;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .signal-card.is-active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent), 0 28px 48px -34px color-mix(in srgb, var(--accent) 44%, transparent);
+  }
+
+  .signal-card:hover,
+  .signal-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 28px 48px -34px color-mix(in srgb, var(--accent) 44%, transparent);
+    outline: none;
+  }
+
+  .signal-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .signal-num {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 0.9;
+  }
+
+  .horizon {
+    padding: 4px 8px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule));
+    border-radius: 999px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .horizon.now { color: var(--w21-red); border-color: color-mix(in srgb, var(--w21-red) 44%, var(--rule)); }
+  .horizon.next { color: var(--w21-blue); border-color: color-mix(in srgb, var(--w21-blue) 44%, var(--rule)); }
+  .horizon.watch { color: var(--w21-violet); border-color: color-mix(in srgb, var(--w21-violet) 44%, var(--rule)); }
+
+  .signal-card h2 {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .signal-card h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .signal-card .fact {
+    margin: 12px 0 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14.5px;
+    line-height: 1.48;
+  }
+
+  .decision-box {
+    margin: 14px 0 0;
+    padding: 12px 13px;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--accent-bg) 38%, var(--surface));
+  }
+
+  .decision-box .decision-label {
+    margin-bottom: 5px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .decision-box p {
+    margin: 0;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .source-line {
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9.5px;
+    line-height: 1.55;
+    letter-spacing: 0.05em;
+  }
+
+  .source-line a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+
+  .open-slide {
+    margin-top: 12px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .carousel-deck {
+    display: none;
+  }
+
+  .source-only-label {
+    display: none;
+  }
+
+  .expanded {
+    display: none;
+    position: relative;
+    margin-top: 0;
+    scroll-margin-top: 154px;
+  }
+
+  .expanded.is-visible {
+    display: block;
+  }
+
+  .expanded .carousel-slide {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 500px);
+    align-items: start;
+    min-height: 0;
+    width: calc(100% - 24px);
+    margin: 18px auto 26px;
+    padding: clamp(24px, 3.4vw, 42px);
+    border-radius: 18px;
+  }
+
+  .exp-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink-2);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .exp-close:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  body.expanded-open .hero,
+  body.expanded-open #signals,
+  body.expanded-open .thesis-strip,
+  body.expanded-open .readout,
+  body.expanded-open .source-ledger-label,
+  body.expanded-open .source-table,
+  body.expanded-open footer {
+    display: none !important;
+  }
+
+  .carousel-slide {
+    scroll-margin-top: 136px;
+    min-height: 720px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(390px, 0.82fr);
+    gap: 34px;
+    align-items: center;
+    padding: clamp(28px, 4vw, 54px);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 22px;
+    background:
+      radial-gradient(circle at 72% 22%, color-mix(in srgb, var(--accent) 19%, transparent), transparent 24rem),
+      linear-gradient(135deg, color-mix(in srgb, var(--surface) 86%, var(--accent) 14%), var(--surface));
+    box-shadow: 0 24px 54px -42px color-mix(in srgb, var(--ink) 44%, transparent);
+  }
+
+  .carousel-slide:target {
+    box-shadow:
+      0 0 0 2px color-mix(in srgb, var(--accent) 44%, transparent),
+      0 24px 54px -42px color-mix(in srgb, var(--ink) 44%, transparent);
+  }
+
+  .carousel-slide .slide-copy {
+    min-width: 0;
+  }
+
+  .slide-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .slide-kicker::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--w21-amber);
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--w21-amber) 18%, transparent);
+  }
+
+  .carousel-slide h2 {
+    margin: 20px 0 16px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(36px, 4.8vw, 68px);
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    line-height: 0.98;
+  }
+
+  .expanded .carousel-slide h2 {
+    margin: 16px 0 12px;
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1;
+  }
+
+  .expanded .slide-summary {
+    max-width: 640px;
+    font-size: clamp(16px, 1.28vw, 19px);
+    line-height: 1.48;
+    text-align: left;
+    word-spacing: normal;
+    hyphens: none;
+  }
+
+  .expanded .slide-meta-grid {
+    margin-top: 18px;
+  }
+
+  .expanded .slide-explainer {
+    margin-top: 14px;
+  }
+
+  .expanded .exp-tile {
+    padding: 11px 12px;
+  }
+
+  .expanded .exp-tile span {
+    font-size: 13.5px;
+    line-height: 1.36;
+  }
+
+  .expanded .slide-source {
+    margin-top: 14px;
+  }
+
+  .expanded .visual-card {
+    min-height: 0;
+    height: clamp(500px, 62vh, 620px);
+    border-radius: 18px;
+    align-self: start;
+  }
+
+  .carousel-slide h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .slide-summary {
+    max-width: 680px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.54;
+    text-align: left;
+    word-spacing: normal;
+    hyphens: none;
+  }
+
+  .slide-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .slide-meta {
+    padding: 12px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 76%, var(--bg) 24%);
+  }
+
+  .slide-meta .m-label {
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .slide-meta .m-value {
+    margin-top: 5px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .slide-explainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .exp-tile {
+    padding: 13px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+  }
+
+  .exp-tile strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .exp-tile span {
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .slide-source {
+    display: inline-flex;
+    margin-top: 18px;
+    padding: 9px 13px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 999px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .visual-card {
+    position: relative;
+    min-height: 500px;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 36%, var(--rule));
+    border-radius: 22px;
+    background:
+      linear-gradient(155deg, color-mix(in srgb, var(--accent) 22%, var(--surface)), color-mix(in srgb, var(--surface) 86%, var(--accent) 14%));
+    overflow: hidden;
+  }
+
+  .visual-card::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 26%, transparent);
+    border-radius: 16px;
+  }
+
+  .visual-card::after {
+    content: attr(data-insight);
+    position: absolute;
+    z-index: 4;
+    left: 34px;
+    right: 34px;
+    bottom: 26px;
+    padding: 12px 16px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14px;
+    line-height: 1.32;
+    text-align: center;
+  }
+
+  .visual-card svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .visual-label {
+    position: absolute;
+    z-index: 2;
+    padding: 9px 12px;
+    border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .visual-label.a { top: 56px; left: 54px; }
+  .visual-label.b { top: 118px; right: 44px; }
+  .visual-label.c { bottom: 118px; left: 52px; }
+  .visual-label.d { bottom: 58px; right: 54px; }
+
+  .visual-core {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    width: 158px;
+    height: 158px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border: 1.8px solid var(--accent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
+    box-shadow: 0 0 0 16px color-mix(in srgb, var(--accent) 11%, transparent);
+  }
+
+  .visual-core strong {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .visual-core span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .visual-card.v-diagram {
+    min-height: 500px;
+    padding: 36px 34px 108px;
+    display: grid;
+    align-content: center;
+    gap: 18px;
+  }
+
+  .visual-card.v-diagram::before {
+    inset: 24px;
+    border-style: solid;
+    border-color: color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+
+  .diagram-kicker {
+    position: absolute;
+    z-index: 4;
+    top: 38px;
+    left: 42px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .diagram-stage,
+  .diagram-node,
+  .diagram-chip {
+    position: relative;
+    z-index: 3;
+    border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--rule));
+    background: color-mix(in srgb, var(--surface) 87%, var(--accent) 13%);
+  }
+
+  .diagram-stage {
+    padding: 14px 15px;
+    border-radius: 12px;
+  }
+
+  .diagram-stage strong,
+  .diagram-node strong,
+  .diagram-chip strong {
+    display: block;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 17px;
+    line-height: 1.05;
+  }
+
+  .diagram-stage span,
+  .diagram-node span,
+  .diagram-chip span {
+    display: block;
+    margin-top: 4px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.13em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .flow-row,
+  .bridge-row,
+  .stack-row,
+  .pipeline-row,
+  .scale-row {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 12px;
+  }
+
+  .flow-row > *,
+  .bridge-row > *,
+  .stack-row > *,
+  .pipeline-row > *,
+  .scale-row > * {
+    min-width: 0;
+  }
+
+  .flow-row { grid-template-columns: repeat(4, 1fr); }
+  .bridge-row { grid-template-columns: 1fr 1.1fr 1fr; align-items: center; }
+  .stack-row { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+  .pipeline-row { grid-template-columns: repeat(4, 1fr); align-items: center; }
+  .scale-row { grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; }
+
+  .connector-line {
+    position: relative;
+    z-index: 2;
+    height: 1px;
+    background: color-mix(in srgb, var(--accent) 42%, transparent);
+  }
+
+  .connector-line::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid color-mix(in srgb, var(--accent) 58%, transparent);
+    border-right: 1px solid color-mix(in srgb, var(--accent) 58%, transparent);
+    transform: rotate(45deg);
+  }
+
+  .loop-board {
+    position: relative;
+    z-index: 3;
+    min-height: 310px;
+  }
+
+  .loop-board svg,
+  .tree-board svg,
+  .data-board svg,
+  .lifecycle-board svg,
+  .market-board svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .loop-node,
+  .tree-node,
+  .metric-node {
+    position: absolute;
+    z-index: 3;
+    padding: 10px 12px;
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .loop-core,
+  .tree-core,
+  .lifecycle-core {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    width: 140px;
+    height: 140px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border: 1.8px solid var(--accent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 86%, var(--accent) 14%);
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .loop-core strong,
+  .tree-core strong,
+  .lifecycle-core strong {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 31px;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  .loop-core span,
+  .tree-core span,
+  .lifecycle-core span {
+    display: block;
+    margin-top: 6px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .tree-board,
+  .data-board,
+  .lifecycle-board,
+  .market-board {
+    position: relative;
+    z-index: 3;
+    min-height: 330px;
+  }
+
+  .tree-node.a { left: 8%; top: 14%; }
+  .tree-node.b { right: 8%; top: 14%; }
+  .tree-node.c { left: 9%; bottom: 22%; }
+  .tree-node.d { right: 8%; bottom: 22%; }
+
+  .bridge-center {
+    min-height: 230px;
+    display: grid;
+    place-items: center;
+    border: 1px dashed color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 18px;
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-size: 46px;
+    font-style: italic;
+  }
+
+  .metric-board {
+    position: relative;
+    z-index: 3;
+    min-height: 310px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: end;
+  }
+
+  .metric-tower {
+    height: 250px;
+    display: flex;
+    align-items: end;
+    gap: 12px;
+    padding: 18px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 22%, transparent);
+    border-radius: 16px;
+  }
+
+  .bar {
+    flex: 1;
+    min-width: 34px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 12px 12px 4px 4px;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 20%, var(--surface)), color-mix(in srgb, var(--w21-amber) 18%, var(--surface)));
+  }
+
+  .bar.b1 { height: 32%; }
+  .bar.b2 { height: 52%; }
+  .bar.b3 { height: 72%; }
+  .bar.b4 { height: 90%; }
+
+  .metric-callouts {
+    display: grid;
+    gap: 12px;
+  }
+
+  .evidence-stack {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 10px;
+    width: min(380px, 100%);
+    margin: 0 auto;
+  }
+
+  .stack-layer {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--rule));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+  }
+
+  .stack-layer b {
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .stack-layer span {
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+  }
+
+  .data-rail {
+    position: absolute;
+    z-index: 3;
+    left: 8%;
+    right: 8%;
+    top: 48%;
+    height: 2px;
+    background: color-mix(in srgb, var(--accent) 44%, transparent);
+  }
+
+  .data-node {
+    position: absolute;
+    z-index: 4;
+    width: 102px;
+    padding: 11px 8px;
+    border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--rule));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    text-align: center;
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .data-node:nth-of-type(2) { left: 4%; top: 34%; }
+  .data-node:nth-of-type(3) { left: 31%; top: 56%; }
+  .data-node:nth-of-type(4) { right: 31%; top: 34%; }
+  .data-node:nth-of-type(5) { right: 4%; top: 56%; }
+
+  .lifecycle-step {
+    position: absolute;
+    z-index: 4;
+    width: 112px;
+    padding: 11px 9px;
+    border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--rule));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .lifecycle-step.a { left: 11%; top: 14%; }
+  .lifecycle-step.b { right: 11%; top: 14%; }
+  .lifecycle-step.c { right: 9%; bottom: 18%; }
+  .lifecycle-step.d { left: 11%; bottom: 18%; }
+
+  .market-lane {
+    position: absolute;
+    z-index: 2;
+    left: 8%;
+    right: 8%;
+    top: 52%;
+    height: 72px;
+    border-top: 2px solid color-mix(in srgb, var(--w21-amber) 58%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+    border-radius: 999px;
+  }
+
+  .v-glp .market-board {
+    min-height: 360px;
+  }
+
+  .v-glp .scale-row {
+    left: 4% !important;
+    right: 4% !important;
+    top: 40% !important;
+    gap: 6px;
+  }
+
+  .v-glp .diagram-stage {
+    padding: 12px 8px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .v-glp .diagram-stage strong {
+    font-size: clamp(12.5px, 1.1vw, 14px);
+    line-height: 1.02;
+  }
+
+  .v-glp .diagram-stage span {
+    font-size: 7px;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+  }
+
+  .readout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .readout-panel,
+  .pipeline-panel {
+    padding: 24px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule));
+    border-radius: 16px;
+    background: var(--w21-panel);
+  }
+
+  .readout-panel h2,
+  .pipeline-panel h2 {
+    margin: 0 0 12px;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: 28px;
+    line-height: 1.12;
+    font-weight: 600;
+  }
+
+  .readout-panel h2 em,
+  .pipeline-panel h2 em {
+    color: var(--accent);
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .readout-panel p,
+  .pipeline-panel p {
+    margin: 0 0 12px;
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+    line-height: 1.56;
+  }
+
+  .pipeline-list {
+    display: grid;
+    gap: 9px;
+    margin-top: 16px;
+  }
+
+  .pipeline-item {
+    display: grid;
+    grid-template-columns: 122px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px dashed var(--rule);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pipeline-item strong { color: var(--accent); }
+  .pipeline-item span { color: var(--ink-3); }
+
+  .source-table {
+    margin-top: 34px;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .source-row {
+    display: grid;
+    grid-template-columns: 0.65fr 1fr 0.45fr 0.35fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .source-row:first-child { border-top: 0; }
+
+  .source-row > div {
+    padding: 12px 14px;
+    border-left: 1px solid var(--rule);
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .source-row > div:first-child { border-left: 0; }
+
+  .source-row.header > div {
+    background: color-mix(in srgb, var(--accent-bg) 42%, var(--surface));
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .source-row a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+
+  footer {
+    padding: 28px 0 12px;
+    color: var(--ink-3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 980px) {
+    .hero,
+    .readout,
+    .carousel-slide {
+      grid-template-columns: 1fr;
+    }
+    .signal-map { min-height: 420px; max-width: 560px; width: 100%; min-width: 0; justify-self: center; }
+    .thesis-strip,
+    .signal-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-metadata {
+      grid-template-columns: 1fr;
+    }
+    .source-row {
+      grid-template-columns: 1fr;
+    }
+    .source-row > div {
+      border-left: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .source-row > div:first-child { border-top: 0; }
+    .visual-card { min-height: 420px; max-width: 560px; width: 100%; justify-self: center; }
+    .visual-card.v-diagram { min-height: 430px; padding: 34px 30px 104px; }
+    .flow-row,
+    .pipeline-row,
+    .scale-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .bridge-row,
+    .metric-board { grid-template-columns: 1fr; }
+    .bridge-center { min-height: 120px; font-size: 40px; }
+    .metric-tower { height: 170px; }
+  }
+
+  @media (max-width: 640px) {
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    html.w20-page .nav {
+      position: sticky;
+      top: 8px;
+      width: min(100% - 18px, 560px);
+      max-width: calc(100vw - 18px);
+      margin: 10px auto 0;
+      border-radius: 14px;
+      overflow: visible;
+    }
+    html.w20-page .nav .nav-inner {
+      min-height: 54px;
+      gap: 8px;
+      padding: 0 10px;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+    }
+    html.w20-page .nav .brand { gap: 6px; min-width: 0; }
+    html.w20-page .nav .brand .nn11 { width: 34px; }
+    html.w20-page .nav .brand .if-mark { font-size: 24px; }
+    html.w20-page .nav .nav-title { padding: 0 4px; }
+    html.w20-page .nav .nav-title .head {
+      font-size: 14px;
+      line-height: 1.1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    html.w20-page .nav .nav-right { gap: 6px; }
+    html.w20-page .nav .nav-right .theme-toggle {
+      transform: scale(0.72);
+      transform-origin: right center;
+      max-width: 112px;
+    }
+    html.w20-page .nav .w20-hamburger {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      flex: 0 0 auto;
+    }
+    .mini-link,
+    .signal-jump { font-size: 9px; padding: 7px 10px; }
+    .page {
+      width: 100%;
+      max-width: 100%;
+      padding: 16px 12px 38px;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .hero {
+      display: block !important;
+      grid-template-columns: minmax(0, 1fr) !important;
+      width: auto;
+      max-width: calc(100vw - 24px);
+      padding: 22px;
+      min-height: auto;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .hero > *,
+    .readout > *,
+    .carousel-slide > *,
+    .signal-card,
+    .thesis-card,
+    .pipeline-panel,
+    .readout-panel {
+      min-width: 0;
+      max-width: 100%;
+    }
+    .hero h1 {
+      font-size: clamp(30px, 8.6vw, 38px);
+      line-height: 1.02;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+    .hero .lede { font-size: 16px; line-height: 1.48; }
+    .lede,
+    .fact,
+    .slide-summary,
+    .thesis-card p,
+    .readout p {
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+    .signal-map {
+      margin-top: 22px;
+      min-height: 390px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .signal-map .map-svg { width: 100%; max-width: 100%; }
+    #expanded .carousel-slide {
+      display: block !important;
+      grid-template-columns: minmax(0, 1fr) !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: auto;
+      margin: 14px auto 24px;
+      padding: 20px 54px 20px 20px;
+      overflow: hidden;
+    }
+    #expanded .slide-kicker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      max-width: 100%;
+      font-size: 8.5px;
+      letter-spacing: 0.13em;
+      line-height: 1.45;
+    }
+    #expanded .slide-copy {
+      width: 100%;
+      min-width: 0;
+      max-width: calc(100vw - 94px);
+    }
+    #expanded .carousel-slide h2 {
+      font-size: clamp(28px, 9.8vw, 38px);
+      line-height: 1.02;
+      max-width: calc(100vw - 116px);
+      overflow-wrap: break-word;
+    }
+    #expanded .slide-summary {
+      font-size: 15.5px;
+      line-height: 1.46;
+    }
+    #expanded .visual-card {
+      width: 100% !important;
+      max-width: calc(100vw - 94px) !important;
+      min-width: 0 !important;
+      height: auto;
+      margin-top: 20px;
+    }
+    .slide-meta-grid, .slide-explainer { grid-template-columns: 1fr; }
+    .visual-card { min-height: 390px; }
+    .visual-card.v-diagram {
+      min-height: 430px;
+      padding: 58px 20px 116px;
+      gap: 12px;
+      overflow: hidden;
+    }
+    .visual-card.v-diagram::before { inset: 14px; border-radius: 14px; }
+    .visual-card::after {
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+    }
+    .diagram-kicker {
+      top: 30px;
+      left: 24px;
+      right: 24px;
+      font-size: 8px;
+      letter-spacing: 0.14em;
+    }
+    .diagram-stage,
+    .diagram-chip { padding: 10px 11px; border-radius: 10px; }
+    .diagram-stage strong,
+    .diagram-node strong,
+    .diagram-chip strong { font-size: 15px; }
+    .diagram-stage span,
+    .diagram-node span,
+    .diagram-chip span { font-size: 7.5px; }
+    .flow-row,
+    .pipeline-row,
+    .scale-row,
+    .bridge-row,
+    .metric-board { grid-template-columns: 1fr; gap: 9px; }
+    .loop-board,
+    .tree-board,
+    .data-board,
+    .lifecycle-board,
+    .market-board { min-height: 300px; }
+    .loop-node,
+    .tree-node,
+    .lifecycle-step,
+    .data-node {
+      padding: 8px 9px;
+      font-size: 7.5px;
+      letter-spacing: 0.1em;
+    }
+    .loop-core,
+    .tree-core,
+    .lifecycle-core { width: 116px; height: 116px; box-shadow: 0 0 0 10px color-mix(in srgb, var(--accent) 9%, transparent); }
+    .loop-core strong,
+    .tree-core strong,
+    .lifecycle-core strong { font-size: 25px; }
+    .loop-node[style*="left:7%"] { left: 2% !important; }
+    .loop-node[style*="right:8%"] { right: 2% !important; }
+    .loop-node[style*="left:9%"] { left: 2% !important; }
+    .loop-node[style*="right:7%"] { right: 2% !important; }
+    .tree-node.a { left: 2%; top: 11%; }
+    .tree-node.b { right: 2%; top: 11%; }
+    .tree-node.c { left: 2%; bottom: 18%; }
+    .tree-node.d { right: 2%; bottom: 18%; }
+    .bridge-center { min-height: 86px; font-size: 34px; }
+    .metric-tower { height: 132px; padding: 14px; }
+    .stack-layer { grid-template-columns: 1fr; gap: 4px; padding: 10px 12px; }
+    .stack-layer span { font-size: 14px; }
+    .data-node { width: 86px; }
+    .data-node:nth-of-type(2) { left: 0; top: 28%; }
+    .data-node:nth-of-type(3) { left: 17%; top: 58%; }
+    .data-node:nth-of-type(4) { right: 17%; top: 28%; }
+    .data-node:nth-of-type(5) { right: 0; top: 58%; }
+    .lifecycle-step { width: 96px; }
+    .lifecycle-step.a { left: 1%; top: 12%; }
+    .lifecycle-step.b { right: 1%; top: 12%; }
+    .lifecycle-step.c { right: 1%; bottom: 18%; }
+    .lifecycle-step.d { left: 1%; bottom: 18%; }
+    .v-glp .scale-row {
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      margin-top: 54px;
+    }
+    .visual-label { transform: scale(0.82); }
+    .visual-label.a { left: 14px; top: 44px; }
+    .visual-label.b { right: 14px; top: 106px; }
+    .visual-label.c { left: 16px; bottom: 106px; }
+    .visual-label.d { right: 16px; bottom: 48px; }
+    .node { transform: scale(0.84); min-width: 96px; }
+    .node.n1 { left: 12px; }
+    .node.n2 { right: 14px; }
+    .node.n3 { left: 10px; }
+    .node.n4 { right: 10px; }
+    .node.n5 { left: 18px; }
+    .node.n6 { right: 18px; }
+    .pipeline-item { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* W22 capture polish: keeps the public page and screenshot carousel composed on narrow viewports. */
+  html.w22-evidence-release .hero,
+  html.w22-evidence-release .carousel-slide,
+  html.w22-evidence-release .signal-card,
+  html.w22-evidence-release .thesis-card,
+  html.w22-evidence-release .readout-panel,
+  html.w22-evidence-release .pipeline-panel {
+    box-shadow:
+      0 1px 0 color-mix(in srgb, var(--surface) 74%, transparent) inset,
+      0 26px 56px -44px color-mix(in srgb, var(--ink) 46%, transparent);
+  }
+
+  html.w22-evidence-release .metric,
+  html.w22-evidence-release .slide-meta,
+  html.w22-evidence-release .exp-tile,
+  html.w22-evidence-release .diagram-stage,
+  html.w22-evidence-release .diagram-node,
+  html.w22-evidence-release .diagram-chip,
+  html.w22-evidence-release .loop-node,
+  html.w22-evidence-release .tree-node,
+  html.w22-evidence-release .metric-node,
+  html.w22-evidence-release .data-node,
+  html.w22-evidence-release .lifecycle-step,
+  html.w22-evidence-release .stack-layer {
+    border-color: color-mix(in srgb, var(--accent) 28%, var(--rule));
+    background: color-mix(in srgb, var(--surface) 90%, var(--accent) 10%);
+    border-radius: 13px;
+  }
+
+  html.w22-evidence-release .visual-card {
+    border-color: color-mix(in srgb, var(--accent) 32%, var(--rule));
+    background:
+      radial-gradient(circle at 72% 18%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 17rem),
+      linear-gradient(155deg, color-mix(in srgb, var(--surface) 88%, var(--accent) 12%), color-mix(in srgb, var(--surface) 95%, var(--w21-amber) 5%));
+  }
+
+  html[data-theme="dark"].w22-evidence-release .visual-card,
+  html[data-theme="dark"].w22-evidence-release .signal-map {
+    background:
+      radial-gradient(circle at 70% 18%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 18rem),
+      linear-gradient(155deg, color-mix(in srgb, var(--surface) 82%, var(--accent) 18%), color-mix(in srgb, var(--bg) 82%, var(--surface) 18%));
+  }
+
+  html[data-theme="dark"].w22-evidence-release .diagram-stage,
+  html[data-theme="dark"].w22-evidence-release .diagram-node,
+  html[data-theme="dark"].w22-evidence-release .diagram-chip,
+  html[data-theme="dark"].w22-evidence-release .loop-node,
+  html[data-theme="dark"].w22-evidence-release .tree-node,
+  html[data-theme="dark"].w22-evidence-release .metric-node,
+  html[data-theme="dark"].w22-evidence-release .data-node,
+  html[data-theme="dark"].w22-evidence-release .lifecycle-step,
+  html[data-theme="dark"].w22-evidence-release .stack-layer,
+  html[data-theme="dark"].w22-evidence-release .node,
+  html[data-theme="dark"].w22-evidence-release .metric,
+  html[data-theme="dark"].w22-evidence-release .slide-meta,
+  html[data-theme="dark"].w22-evidence-release .exp-tile {
+    color: var(--ink-2);
+    background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
+  }
+
+  html.w22-evidence-release .diagram-stage strong,
+  html.w22-evidence-release .diagram-node strong,
+  html.w22-evidence-release .diagram-chip strong,
+  html.w22-evidence-release .metric .value,
+  html.w22-evidence-release .slide-meta .m-value,
+  html.w22-evidence-release .stack-layer span {
+    color: var(--ink);
+  }
+
+  @media (max-width: 640px) {
+    html.w22-evidence-release body {
+      background:
+        radial-gradient(circle at 78% 8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 17rem),
+        var(--bg);
+    }
+
+    html.w22-evidence-release .page {
+      padding: 12px 12px 34px;
+    }
+
+    html.w22-evidence-release .hero {
+      width: min(100%, calc(100vw - 24px));
+      margin: 12px auto 18px;
+      padding: 16px;
+      border-radius: 18px;
+    }
+
+    html.w22-evidence-release .eyebrow {
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 10px;
+      letter-spacing: 0.17em;
+      line-height: 1.45;
+    }
+
+    html.w22-evidence-release .hero h1 {
+      font-size: clamp(27px, 7.8vw, 32px);
+      line-height: 1;
+      letter-spacing: -0.014em;
+    }
+
+    html.w22-evidence-release .hero .lede {
+      margin-top: 14px;
+      font-size: 13.7px;
+      line-height: 1.35;
+    }
+
+    html.w22-evidence-release .hero-metadata {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    html.w22-evidence-release .metric {
+      padding: 8px 7px;
+      border-radius: 12px;
+      min-height: 64px;
+    }
+
+    html.w22-evidence-release .metric .label {
+      font-size: 7.2px;
+      letter-spacing: 0.13em;
+      line-height: 1.35;
+    }
+
+    html.w22-evidence-release .metric .value {
+      margin-top: 5px;
+      font-size: 12.5px;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+
+    html.w22-evidence-release .signal-map {
+      min-height: 214px;
+      margin-top: 14px;
+      border-radius: 18px;
+    }
+
+    html.w22-evidence-release .signal-map::before {
+      inset: 15px;
+      border-radius: 14px;
+    }
+
+    html.w22-evidence-release .map-core {
+      width: 84px;
+      height: 84px;
+      box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+
+    html.w22-evidence-release .map-core strong {
+      font-size: 21px;
+    }
+
+    html.w22-evidence-release .map-core span {
+      font-size: 7px;
+      letter-spacing: 0.15em;
+    }
+
+    html.w22-evidence-release .node {
+      min-width: 68px;
+      padding: 5px 6px;
+      font-size: 5.8px;
+      letter-spacing: 0.09em;
+      transform: none;
+    }
+
+    html.w22-evidence-release .node.n1 { top: 30px; left: 12px; }
+    html.w22-evidence-release .node.n2 { top: 36px; right: 12px; }
+    html.w22-evidence-release .node.n3 { top: 98px; left: 10px; }
+    html.w22-evidence-release .node.n4 { top: 98px; right: 10px; }
+    html.w22-evidence-release .node.n5 { bottom: 30px; left: 14px; }
+    html.w22-evidence-release .node.n6 { bottom: 26px; right: 14px; }
+
+    html.w22-evidence-release #expanded .carousel-slide {
+      width: min(100%, calc(100vw - 24px)) !important;
+      margin: 10px auto 16px;
+      padding: 16px !important;
+      border-radius: 18px;
+    }
+
+    html.w22-evidence-release .exp-close {
+      top: 10px;
+      right: 10px;
+      width: 31px;
+      height: 31px;
+      font-size: 17px;
+    }
+
+    html.w22-evidence-release #expanded .slide-copy,
+    html.w22-evidence-release #expanded .carousel-slide h2,
+    html.w22-evidence-release #expanded .visual-card {
+      max-width: 100% !important;
+    }
+
+    html.w22-evidence-release #expanded .slide-kicker {
+      padding-right: 34px;
+      font-size: 7.2px;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    html.w22-evidence-release #expanded .carousel-slide h2 {
+      margin: 9px 0 7px;
+      font-size: clamp(24px, 7.2vw, 30px);
+      line-height: 1;
+    }
+
+    html.w22-evidence-release #expanded .slide-summary {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 12.8px;
+      line-height: 1.28;
+    }
+
+    html.w22-evidence-release #expanded .slide-meta-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    html.w22-evidence-release #expanded .slide-meta {
+      padding: 7px 6px;
+      border-radius: 11px;
+    }
+
+    html.w22-evidence-release #expanded .slide-meta .m-label {
+      font-size: 6.8px;
+      letter-spacing: 0.1em;
+      line-height: 1.25;
+    }
+
+    html.w22-evidence-release #expanded .slide-meta .m-value {
+      font-size: 10.8px;
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    html.w22-evidence-release #expanded .slide-explainer {
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 9px;
+    }
+
+    html.w22-evidence-release #expanded .exp-tile {
+      padding: 8px 8px;
+      border-radius: 11px;
+    }
+
+    html.w22-evidence-release #expanded .exp-tile strong {
+      margin-bottom: 4px;
+      font-size: 6.8px;
+      letter-spacing: 0.1em;
+      line-height: 1.25;
+    }
+
+    html.w22-evidence-release #expanded .exp-tile span {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 11.2px;
+      line-height: 1.24;
+    }
+
+    html.w22-evidence-release #expanded .slide-source {
+      margin-top: 9px;
+      padding: 8px 10px;
+      font-size: 7.3px;
+      letter-spacing: 0.11em;
+    }
+
+    html.w22-evidence-release #expanded .visual-card {
+      margin-top: 14px;
+      min-height: 178px;
+      height: 178px;
+      border-radius: 18px;
+    }
+
+    html.w22-evidence-release .visual-card.v-diagram {
+      min-height: 178px;
+      height: 178px;
+      padding: 33px 11px 50px;
+      gap: 5px;
+    }
+
+    html.w22-evidence-release .visual-card.v-diagram::before,
+    html.w22-evidence-release .visual-card::before {
+      inset: 12px;
+      border-radius: 14px;
+    }
+
+    html.w22-evidence-release .visual-card::after {
+      left: 13px;
+      right: 13px;
+      bottom: 8px;
+      padding: 6px 8px;
+      border-radius: 11px;
+      font-size: 8.8px;
+      line-height: 1.18;
+    }
+
+    html.w22-evidence-release .diagram-kicker {
+      top: 18px;
+      left: 19px;
+      right: 19px;
+      font-size: 6px;
+      letter-spacing: 0.11em;
+      line-height: 1.25;
+    }
+
+    html.w22-evidence-release .flow-row,
+    html.w22-evidence-release .pipeline-row,
+    html.w22-evidence-release .scale-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    html.w22-evidence-release .bridge-row,
+    html.w22-evidence-release .metric-board {
+      grid-template-columns: 1fr;
+      gap: 7px;
+    }
+
+    html.w22-evidence-release .diagram-stage,
+    html.w22-evidence-release .diagram-chip,
+    html.w22-evidence-release .diagram-node {
+      padding: 5px 6px;
+      border-radius: 9px;
+    }
+
+    html.w22-evidence-release .diagram-stage strong,
+    html.w22-evidence-release .diagram-node strong,
+    html.w22-evidence-release .diagram-chip strong {
+      font-size: 9.8px;
+      line-height: 1.05;
+    }
+
+    html.w22-evidence-release .diagram-stage span,
+    html.w22-evidence-release .diagram-node span,
+    html.w22-evidence-release .diagram-chip span {
+      font-size: 6px;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+    }
+
+    html.w22-evidence-release .loop-board,
+    html.w22-evidence-release .tree-board,
+    html.w22-evidence-release .data-board,
+    html.w22-evidence-release .lifecycle-board,
+    html.w22-evidence-release .market-board {
+      min-height: 105px;
+    }
+
+    html.w22-evidence-release .loop-core,
+    html.w22-evidence-release .tree-core,
+    html.w22-evidence-release .lifecycle-core {
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+
+    html.w22-evidence-release .loop-core strong,
+    html.w22-evidence-release .tree-core strong,
+    html.w22-evidence-release .lifecycle-core strong {
+      font-size: 15px;
+    }
+
+    html.w22-evidence-release .loop-core span,
+    html.w22-evidence-release .tree-core span,
+    html.w22-evidence-release .lifecycle-core span {
+      font-size: 5.8px;
+      letter-spacing: 0.12em;
+    }
+
+    html.w22-evidence-release .loop-node,
+    html.w22-evidence-release .tree-node,
+    html.w22-evidence-release .lifecycle-step,
+    html.w22-evidence-release .data-node {
+      padding: 5px 6px;
+      font-size: 5.9px;
+      letter-spacing: 0.08em;
+      border-radius: 999px;
+    }
+
+    html.w22-evidence-release .tree-node.a { left: 1%; top: 7%; }
+    html.w22-evidence-release .tree-node.b { right: 1%; top: 7%; }
+    html.w22-evidence-release .tree-node.c { left: 1%; bottom: 16%; }
+    html.w22-evidence-release .tree-node.d { right: 1%; bottom: 16%; }
+
+    html.w22-evidence-release .metric-board {
+      min-height: 112px;
+    }
+
+    html.w22-evidence-release .metric-tower {
+      height: 58px;
+      padding: 6px;
+      gap: 5px;
+      border-radius: 13px;
+    }
+
+    html.w22-evidence-release .bar {
+      min-width: 18px;
+      border-radius: 8px 8px 3px 3px;
+    }
+
+    html.w22-evidence-release .metric-callouts {
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    html.w22-evidence-release .evidence-stack {
+      gap: 6px;
+    }
+
+    html.w22-evidence-release .stack-layer {
+      grid-template-columns: 58px 1fr;
+      gap: 7px;
+      padding: 7px 8px;
+      border-radius: 11px;
+    }
+
+    html.w22-evidence-release .stack-layer b {
+      font-size: 5.9px;
+      letter-spacing: 0.08em;
+    }
+
+    html.w22-evidence-release .stack-layer span {
+      font-size: 11px;
+      line-height: 1.16;
+    }
+
+    html.w22-evidence-release .data-node {
+      width: 70px;
+      border-radius: 11px;
+    }
+
+    html.w22-evidence-release .lifecycle-step {
+      width: 74px;
+    }
+
+    html.w22-evidence-release .v-glp .market-board {
+      min-height: 108px;
+    }
+
+    html.w22-evidence-release .v-glp .scale-row {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 3px;
+      margin-top: 42px;
+    }
+
+    html.w22-evidence-release .v-glp .diagram-stage {
+      padding: 7px 3px;
+    }
+
+    html.w22-evidence-release .v-glp .diagram-stage strong {
+      font-size: 8.3px;
+    }
+
+    html.w22-evidence-release .v-glp .diagram-stage span {
+      font-size: 5px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  html.w22-evidence-release .visual-card.is-polished {
+    display: block;
+    min-height: 420px;
+    height: clamp(420px, 56vh, 520px);
+    padding: 0;
+    background:
+      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 12rem),
+      radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--w21-amber) 10%, transparent), transparent 16rem),
+      linear-gradient(145deg, color-mix(in srgb, var(--surface) 92%, var(--accent) 8%), color-mix(in srgb, var(--surface) 82%, var(--bg) 18%));
+  }
+
+  html.w22-evidence-release .visual-card.is-polished::before {
+    inset: 26px;
+    border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--rule));
+    border-radius: 16px;
+  }
+
+  html.w22-evidence-release .visual-card.is-polished::after {
+    display: none;
+  }
+
+  html.w22-evidence-release .artifact-mini {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 18px;
+    padding: 42px 42px 32px;
+  }
+
+  html.w22-evidence-release .artifact-label {
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  html.w22-evidence-release .artifact-core {
+    align-self: center;
+    justify-self: center;
+    width: min(270px, 72%);
+    min-height: 150px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 48%, var(--rule));
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 90%, var(--accent) 10%);
+    box-shadow:
+      0 0 0 12px color-mix(in srgb, var(--accent) 8%, transparent),
+      0 20px 38px -32px color-mix(in srgb, var(--ink) 40%, transparent);
+  }
+
+  html.w22-evidence-release .artifact-core strong {
+    display: block;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1;
+    font-weight: 650;
+  }
+
+  html.w22-evidence-release .artifact-core span {
+    display: block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  html.w22-evidence-release .artifact-route {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  html.w22-evidence-release .artifact-route span {
+    display: grid;
+    place-items: center;
+    min-height: 56px;
+    padding: 9px 10px;
+    border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--rule));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--accent) 12%);
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  html.w22-evidence-release .artifact-insight {
+    margin: 0;
+    padding: 13px 16px;
+    border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--rule));
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--surface) 90%, var(--accent) 10%);
+    color: var(--ink-2);
+    font-family: "Source Serif 4", serif;
+    font-size: 14px;
+    line-height: 1.28;
+    text-align: center;
+  }
+
+  html[data-theme="dark"].w22-evidence-release .visual-card.is-polished {
+    background:
+      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 19%, transparent), transparent 12rem),
+      radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--w21-amber) 10%, transparent), transparent 16rem),
+      linear-gradient(145deg, color-mix(in srgb, var(--surface) 80%, var(--accent) 20%), color-mix(in srgb, var(--bg) 78%, var(--surface) 22%));
+  }
+
+  html[data-theme="dark"].w22-evidence-release .artifact-core,
+  html[data-theme="dark"].w22-evidence-release .artifact-route span,
+  html[data-theme="dark"].w22-evidence-release .artifact-insight {
+    background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
+  }
+
+  @media (max-width: 640px) {
+    html.w22-evidence-release .visual-card.is-polished {
+      min-height: 162px;
+      height: 162px;
+      padding: 0;
+    }
+
+    html.w22-evidence-release .visual-card.is-polished::before {
+      inset: 11px;
+      border-radius: 14px;
+    }
+
+    html.w22-evidence-release .artifact-mini {
+      gap: 6px;
+      padding: 16px 17px 12px;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    html.w22-evidence-release .artifact-label {
+      font-size: 6.6px;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+    }
+
+    html.w22-evidence-release .artifact-core {
+      width: min(168px, 72%);
+      min-height: 56px;
+      border-radius: 16px;
+      box-shadow:
+        0 0 0 6px color-mix(in srgb, var(--accent) 8%, transparent),
+        0 12px 26px -24px color-mix(in srgb, var(--ink) 44%, transparent);
+    }
+
+    html.w22-evidence-release .artifact-core strong {
+      font-size: 16px;
+      line-height: 1.18;
+    }
+
+    html.w22-evidence-release .artifact-core span {
+      margin-top: 4px;
+      font-size: 5.7px;
+      letter-spacing: 0.13em;
+    }
+
+    html.w22-evidence-release .artifact-route {
+      gap: 5px;
+    }
+
+    html.w22-evidence-release .artifact-route span {
+      min-height: 27px;
+      padding: 5px 4px;
+      border-radius: 10px;
+      font-size: 5.6px;
+      letter-spacing: 0.08em;
+      line-height: 1.16;
+    }
+
+    html.w22-evidence-release .artifact-insight {
+      display: none;
+    }
+  }
+
+  html.w22-evidence-release .sh-hint {
+    display: none !important;
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ifeed.ie/#organization",
+      "name": "iFeed",
+      "url": "https://ifeed.ie/",
+      "logo": "https://ifeed.ie/favicon.svg"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html#article",
+      "headline": "iFeed Weekly W22: The Evidence-Readiness Release Week",
+      "description": "Source-backed healthcare and life-sciences signals on structured protocols, real-time clinical trials, AI Act classification, real-world evidence, QMSR readiness, device data, ML-enabled device lifecycle control, and market movement.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "author": {
+        "@type": "Person",
+        "name": "Sunita Nawale"
+      },
+      "publisher": {
+        "@id": "https://ifeed.ie/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html"
+      },
+      "about": [
+        "evidence readiness",
+        "EU AI Act classification",
+        "structured clinical protocols",
+        "real-world evidence",
+        "QMSR readiness",
+        "ML-enabled medical devices",
+        "regulated healthcare intelligence"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "iFeed",
+          "item": "https://ifeed.ie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://weeklysignals.ifeed.ie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "W22 Evidence Readiness",
+          "item": "https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://weeklysignals.ifeed.ie/2026-06-01_weekly-w22.html" /></head>
+<body>
+<nav class="nav" aria-label="iFeed weekly navigation">
+  <div class="nav-inner">
+    <a class='brand' href='https://ifeed.ie/'>
+      <div class="nn11"><svg viewBox="0 0 100 80" style="width:100%;height:auto;display:block;overflow:visible" aria-label="iFeed mark">
+        <g class="nerve">
+          <line x1="20" y1="20" x2="50" y2="20"/><line x1="20" y1="20" x2="50" y2="40"/><line x1="20" y1="20" x2="50" y2="60"/>
+          <line x1="20" y1="40" x2="50" y2="20"/><line x1="20" y1="40" x2="50" y2="40"/><line x1="20" y1="40" x2="50" y2="60"/>
+          <line x1="20" y1="60" x2="50" y2="20"/><line x1="20" y1="60" x2="50" y2="40"/><line x1="20" y1="60" x2="50" y2="60"/>
+          <line x1="50" y1="20" x2="80" y2="40"/><line x1="50" y1="40" x2="80" y2="40"/><line x1="50" y1="60" x2="80" y2="40"/>
+        </g>
+        <circle class="neuron-in" cx="20" cy="20" r="3.6"/><circle class="neuron-in" cx="20" cy="40" r="3.6"/><circle class="neuron-in" cx="20" cy="60" r="3.6"/>
+        <circle class="neuron-mid" cx="50" cy="20" r="3.2"/><circle class="neuron-mid" cx="50" cy="40" r="3.2"/><circle class="neuron-mid" cx="50" cy="60" r="3.2"/>
+        <circle class="halo-ring halo-a" cx="80" cy="40" r="6"/><circle class="halo-ring halo-b" cx="80" cy="40" r="7.5"/>
+        <circle class="neuron-out" cx="80" cy="40" r="4.4"/>
+      </svg></div>
+      <span class="if-mark sm"><span class="i">i</span>Feed</span>
+    </a>
+    <div class="nav-title" id="w22-nav-title">
+      <div class="head" id="w22-nav-head">W22 · <em>Evidence Readiness</em></div>
+    </div>
+    <div class="nav-right">
+      <div class="theme-toggle" role="group" aria-label="theme toggle">
+        <button type="button" id="t-light" class="active" aria-label="light theme">Light</button>
+        <button type="button" id="t-dark" aria-label="dark theme">Dark</button>
+      </div>
+      <button type="button" class="w20-hamburger" id="w20-hamburger" aria-label="open menu" aria-expanded="false"><span></span></button>
+    </div>
+    <div class="links">
+      <a href='https://ifeed.ie/'>Home</a>
+      <a href="https://ifeed.ie/methodology.html">Methodology</a>
+      <a href="https://library.ifeed.ie/">Library</a>
+      <a href="https://regulations.ifeed.ie/">Regulations</a>
+      <a href="https://ifeed.ie/services.html">Collaborate</a>
+      <a href="https://ai.ifeed.ie/">AI</a>
+      <a class='current' href='/'>Signals</a>
+      <a href="https://ifeed.ie/academy.html">Academy</a>
+      <a href="https://ifeed.ie/community.html">Community</a>
+      <a href="https://ifeed.ie/founder.html">Founder</a>
+      <a href="https://ifeed.ie/connect.html">Connect</a>
+      <a href="https://ifeed.ie/register.html">Register</a>
+    </div>
+  </div>
+</nav>
+<aside class="w20-drawer-backdrop" id="w20-drawer-backdrop"></aside>
+<aside class="w20-drawer" id="w20-drawer" aria-hidden="true">
+  <button type="button" class="close" id="w20-drawer-close" aria-label="close menu">×</button>
+  <a href='https://ifeed.ie/'>Home</a>
+  <a href="https://ifeed.ie/methodology.html">Methodology</a>
+  <a href="https://library.ifeed.ie/">Library</a>
+  <a href="https://regulations.ifeed.ie/">Regulations</a>
+  <a href="https://ifeed.ie/services.html">Collaborate</a>
+  <a href="https://ai.ifeed.ie/">AI</a>
+  <a class='current' href='/'>Signals</a>
+  <a href="https://ifeed.ie/academy.html">Academy</a>
+  <a href="https://ifeed.ie/community.html">Community</a>
+  <a href="https://ifeed.ie/founder.html">Founder</a>
+  <a href="https://ifeed.ie/connect.html">Connect</a>
+  <a href="https://ifeed.ie/register.html">Register</a>
+</aside>
+
+<main class="page">
+  <section class="hero" aria-labelledby="weekly-title">
+    <div>
+      <div class="eyebrow">2026-05-25 · Weekly · W22 of 2026</div>
+      <h1 id="weekly-title">Evidence-readiness moves from <em>signal</em> to work surface.</h1>
+      <p class="lede">Nine source-backed signals point to one operating pressure: regulated teams need evidence that is structured, traceable, reviewable, and reusable. W22 connects protocols, real-time trials, AI Act classification, real-world evidence, QMSR, device data, ML-enabled device lifecycle control, and market movement.</p>
+      <div class="hero-metadata" aria-label="Digest status">
+        <div class="metric"><div class="label">Perspective</div><div class="value">Analyst Note</div></div>
+        <div class="metric"><div class="label">Source Base</div><div class="value">Primary-led</div></div>
+        <div class="metric"><div class="label">Work Route</div><div class="value">Signal → Evidence</div></div>
+      </div>
+    </div>
+
+    <aside class="signal-map" aria-label="Evidence-readiness map">
+      <svg class="map-svg" viewBox="0 0 520 520" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M95 105 C190 75 255 120 260 260 C266 390 360 440 432 392" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-opacity="0.55"/>
+        <path d="M420 104 C310 150 288 214 260 260 C220 328 155 338 88 410" fill="none" stroke="var(--w21-amber)" stroke-width="2" stroke-opacity="0.55"/>
+        <path d="M74 262 C150 208 216 212 260 260 C308 315 382 304 452 246" fill="none" stroke="var(--w21-blue)" stroke-width="1.8" stroke-opacity="0.5"/>
+        <circle cx="260" cy="260" r="86" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="5 8" stroke-opacity="0.4"/>
+      </svg>
+      <div class="node n1">Structured Protocol</div>
+      <div class="node n2">Real-time Trials</div>
+      <div class="node n3">AI Act</div>
+      <div class="node n4">RWE</div>
+      <div class="node n5">QMSR</div>
+      <div class="node n6">Device Data</div>
+      <div class="map-core"><strong>iFeed</strong><span>trace</span></div>
+    </aside>
+  </section>
+
+  <div class="section-label">The Analyst Frame</div>
+  <section class="thesis-strip" aria-label="Weekly thesis">
+    <article class="thesis-card"><div class="k">What changed</div><p>More signals now point to structured expectations: protocol templates, live evidence loops, classification records, RWE dialogue routes, QMSR alignment, technical data formats, and lifecycle controls.</p></article>
+    <article class="thesis-card"><div class="k">What it means</div><p>Evidence is becoming an operating surface: something teams need to assign, update, review, reuse, and defend.</p></article>
+    <article class="thesis-card"><div class="k">iFeed edge</div><p>iFeed reads the source, separates fact from interpretation, and turns the implication into a checklist, evidence table, review note, or service path.</p></article>
+  </section>
+
+  <div id="signals" class="section-label">Nine Decision Signals</div>
+  <section class="signal-grid" aria-label="W22 signal cards">
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-01" aria-label="Open Structured protocols signal brief">
+      <div class="signal-top"><div class="signal-num">01</div><div class="horizon now">Now</div></div>
+      <h2>Structured protocol becomes an <em>operating object</em>.</h2>
+      <p class="fact">FDA published final M11 Clinical Electronic Structured Harmonised Protocol guidance, with guidance, template, and technical specification files. Protocol content is being formalised as reusable structured evidence, not only a narrative document.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Clinical operations, medical writing, data standards, and quality teams should plan protocol evidence as structured data that can move across systems and reviews.</p></div>
+      <div class="source-line">Official source · 2026-05-22 · FDA / ICH M11 · <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m11-clinical-electronic-structured-harmonised-protocol">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-02" aria-label="Open Real-time evidence signal brief">
+      <div class="signal-top"><div class="signal-num">02</div><div class="horizon now">Now</div></div>
+      <h2>Real-time clinical-trial evidence stays on the <em>regulator agenda</em>.</h2>
+      <p class="fact">FDA announced the extension of the comment period for its Real-Time Clinical Trials request for information to 2026-06-29. The agency continues to frame clinical evidence around faster feedback, active monitoring, and operational learning loops.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Sponsors and CROs should map what trial data can be captured, reconciled, reviewed, and defended closer to real time.</p></div>
+      <div class="source-line">Official source · 2026-05-27 · FDA RTCT · <a href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-03" aria-label="Open AI classification signal brief">
+      <div class="signal-top"><div class="signal-num">03</div><div class="horizon now">Deadline</div></div>
+      <h2>EU AI Act classification becomes <em>traceability work</em>.</h2>
+      <p class="fact">The European Commission opened a targeted consultation on draft guidelines for classifying high-risk AI systems under the AI Act, with feedback open until 2026-06-23.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Health-tech and life-sciences teams need a controlled classification file before they build downstream AI governance controls.</p></div>
+      <div class="source-line">Official source · 2026-05-19 · European Commission · <a href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-04" aria-label="Open RWE dialogue signal brief">
+      <div class="signal-top"><div class="signal-num">04</div><div class="horizon next">Watch</div></div>
+      <h2>Real-world evidence becomes a <em>shared regulator/access language</em>.</h2>
+      <p class="fact">MHRA and NICE opened expressions of interest for a Real-World Evidence Scientific Dialogue programme focused on medical devices and health technologies.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Device and digital-health teams should connect clinical evidence, real-world evidence plans, monitoring, and access questions early.</p></div>
+      <div class="source-line">Official source · 2026-05-20 · MHRA / NICE · <a href="https://www.gov.uk/government/publications/mhra-nice-real-world-evidence-scientific-dialogue/mhra-real-world-evidence-scientific-dialogue-programme">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-05" aria-label="Open Trial metrics signal brief">
+      <div class="signal-top"><div class="signal-num">05</div><div class="horizon next">Horizon</div></div>
+      <h2>Clinical-trial improvement becomes <em>measurable</em>.</h2>
+      <p class="fact">ACT EU reported progress toward 2030 clinical-trial targets, including 19 additional multinational trials above the historical average and 40.5% of trials recruiting within 200 days.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Sponsors and research organisations should treat trial performance as a managed system with measurable baselines, not a general ambition.</p></div>
+      <div class="source-line">Official source · 2026-05-20 · ACT EU · <a href="https://accelerating-clinical-trials.europa.eu/our-work/implementation-clinical-trials-regulation_en">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-06" aria-label="Open QMSR readiness signal brief">
+      <div class="signal-top"><div class="signal-num">06</div><div class="horizon next">Transition</div></div>
+      <h2>QMSR readiness becomes <em>evidence architecture</em>.</h2>
+      <p class="fact">FDA’s eSTAR page notes that eSTAR version 6.1 has been updated to be consistent with the Quality Management System Regulation (QMSR).</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>MedTech teams should connect procedures, records, risks, suppliers, design controls, and submissions before QMSR transition pressure rises.</p></div>
+      <div class="source-line">Official source · 2026-05-01 · FDA eSTAR · <a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar-program">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-07" aria-label="Open Clinical device data signal brief">
+      <div class="signal-top"><div class="signal-num">07</div><div class="horizon next">Data</div></div>
+      <h2>Clinical device data needs <em>controlled structure</em>.</h2>
+      <p class="fact">FDA issued final technical specifications guidance for submitting continuous glucose monitoring data in clinical trials supporting drug and biological product marketing applications.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Trial data management, biostatistics, clinical operations, and quality teams need to treat device data format and metadata as governance work.</p></div>
+      <div class="source-line">Official source · 2026-05-07 · FDA guidance · <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/submitting-continuous-glucose-monitoring-data-clinical-trials">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-08" aria-label="Open ML device lifecycle signal brief">
+      <div class="signal-top"><div class="signal-num">08</div><div class="horizon watch">Watch</div></div>
+      <h2>ML-enabled device changes require <em>planned evidence</em>.</h2>
+      <p class="fact">Health Canada’s pre-market guidance for machine-learning-enabled medical devices sets expectations around transparency, post-market monitoring, and predetermined change control planning.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>AI device teams should prepare lifecycle files that connect model changes, validation evidence, human oversight, risk controls, and post-market monitoring.</p></div>
+      <div class="source-line">Official source · 2026-04-01 · Health Canada · <a href="https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/pre-market-guidance-machine-learning-enabled-medical-devices.html">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+
+    <article class="signal-card" role="button" tabindex="0" data-slide="slide-09" aria-label="Open oral GLP-1 market movement signal brief">
+      <div class="signal-top"><div class="signal-num">09</div><div class="horizon watch">Market</div></div>
+      <h2>Oral GLP-1 shifts the market problem from injection to <em>scale</em>.</h2>
+      <p class="fact">EMA’s Committee for Medicinal Products for Human Use recommended adding a daily oral tablet formulation to Wegovy during its 18-21 May 2026 meeting highlights, describing it as the first oral glucagon-like peptide-1 receptor agonist for weight management.</p>
+      <div class="decision-box"><div class="decision-label">Decision relevance</div><p>Commercial, manufacturing, clinical, and pharmacovigilance teams should re-baseline assumptions around patient uptake, supply design, and real-world adherence evidence.</p></div>
+      <div class="source-line">Official source · 2026-05-22 · EMA CHMP · <a href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">Source</a></div>
+      <div class="open-slide">Read signal brief →</div>
+    </article>
+  </section>
+
+  <section class="expanded" id="expanded" aria-live="polite">
+    <button type="button" class="exp-close" id="exp-close" aria-label="close expanded signal">×</button>
+    <div id="expanded-content"></div>
+  </section>
+
+  <div class="section-label source-only-label">Expanded Signal Briefs</div>
+  <section class="carousel-deck" aria-label="Expanded signal briefs">
+    <article class="carousel-slide" id="slide-01">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 01 of 09 · FDA / ICH · Structured Protocols</div>
+        <h2>The protocol becomes a <em>structured work object</em>.</h2>
+        <p class="slide-summary">ICH M11 and FDA’s final guidance point to a practical shift: protocol design, template fields, technical specification, review logic, and downstream trial systems need to speak to one another. The protocol is no longer just a PDF artefact; it is a source object for evidence flow.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA / ICH</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-22</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Guidance</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Protocol structure can reduce ambiguity in review, amendments, system build, and traceability.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Convert protocol requirements into owner fields, evidence objects, data standards, and review checkpoints.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m11-clinical-electronic-structured-harmonised-protocol">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-protocol" data-insight="Structured protocol design turns narrative trial planning into reusable evidence architecture." aria-hidden="true">
+        <div class="diagram-kicker">Source-to-system protocol object</div>
+        <div class="flow-row">
+          <div class="diagram-stage"><strong>Guidance</strong><span>what must be represented</span></div>
+          <div class="diagram-stage"><strong>Template</strong><span>where fields become explicit</span></div>
+          <div class="diagram-stage"><strong>Tech Spec</strong><span>how systems can exchange</span></div>
+          <div class="diagram-stage"><strong>Trial Build</strong><span>where evidence is reused</span></div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="flow-row">
+          <div class="diagram-chip"><strong>Protocol</strong><span>source object</span></div>
+          <div class="diagram-chip"><strong>Owner</strong><span>controlled edits</span></div>
+          <div class="diagram-chip"><strong>Data</strong><span>standard fields</span></div>
+          <div class="diagram-chip"><strong>Review</strong><span>traceable changes</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-02">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 02 of 09 · FDA · Real-Time Clinical Trials</div>
+        <h2>Trial evidence moves from <em>packet to stream</em>.</h2>
+        <p class="slide-summary">FDA’s Real-Time Clinical Trials work keeps a clear pressure in view: evidence review is moving closer to the running trial. That does not remove quality control; it makes data quality, monitoring logic, and decision records more active.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-27</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">FDA page</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Operational meaning</strong><span>Endpoint, safety, and data-quality signals need review paths while the trial is moving.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Map live-review workflows into evidence fields: signal, owner, review frequency, action route, and audit trail.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-rtct" data-insight="Real-time clinical-trial review depends on live evidence loops, not only end-stage submission packages." aria-hidden="true">
+        <div class="diagram-kicker">Live evidence review loop</div>
+        <div class="loop-board">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <path d="M260 58 C365 58 442 130 442 224 C442 292 383 314 318 300" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.58"/>
+            <path d="M260 282 C155 282 78 210 78 116 C78 52 135 28 198 42" fill="none" stroke="var(--w21-amber)" stroke-width="2.4" stroke-opacity="0.58"/>
+            <path d="M108 170 H412" fill="none" stroke="var(--w21-blue)" stroke-width="1.6" stroke-opacity="0.4"/>
+          </svg>
+          <div class="loop-node" style="left:7%;top:16%">Live data</div>
+          <div class="loop-node" style="right:8%;top:24%">Monitor</div>
+          <div class="loop-node" style="left:9%;bottom:18%">Reconcile</div>
+          <div class="loop-node" style="right:7%;bottom:16%">Review</div>
+          <div class="loop-core"><div><strong>RTCT</strong><span>live file</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-03">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 03 of 09 · European Commission · AI Act Classification</div>
+        <h2>Classification becomes a <em>controlled decision record</em>.</h2>
+        <p class="slide-summary">The practical question is not simply whether an AI system is high risk. Teams need traceable logic for intended purpose, actor role, use context, exclusions, and obligation pathway. That record becomes the foundation for later evidence and governance decisions.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">European Commission</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-19</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Consultation</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Governance meaning</strong><span>Classification should be documented as a reviewed decision, not handled as a loose label.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Build a source-linked starter map for AI literacy, classification logic, and governance readiness.</span></div>
+        </div>
+        <a class="slide-source" href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-classify" data-insight="AI Act classification is a traceable decision file that connects legal text to operational evidence." aria-hidden="true">
+        <div class="diagram-kicker">Classification decision file</div>
+        <div class="tree-board">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <path d="M260 170 L128 76 M260 170 L392 76 M260 170 L130 266 M260 170 L392 266" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-opacity="0.46"/>
+            <path d="M98 170 H422" fill="none" stroke="var(--w21-amber)" stroke-width="1.8" stroke-opacity="0.38"/>
+          </svg>
+          <div class="tree-node a">Intended use</div>
+          <div class="tree-node b">Actor role</div>
+          <div class="tree-node c">Risk pathway</div>
+          <div class="tree-node d">Obligation file</div>
+          <div class="tree-core"><div><strong>AI Act</strong><span>classify</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-04">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 04 of 09 · MHRA / NICE · Real-World Evidence</div>
+        <h2>RWE becomes a <em>market-access bridge</em>.</h2>
+        <p class="slide-summary">The MHRA-NICE dialogue matters because real-world evidence is not only a regulatory evidence issue. For devices and health technologies, it can connect safety, effectiveness, adoption, reimbursement, and stakeholder confidence.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">MHRA / NICE</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-20</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Programme</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Market meaning</strong><span>Evidence readiness increasingly shapes whether a technology can be trusted, adopted, reimbursed, and monitored.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Turn RWE questions into a readiness map: data source, population, endpoint, bias control, and decision use.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.gov.uk/government/publications/mhra-nice-real-world-evidence-scientific-dialogue/mhra-real-world-evidence-scientific-dialogue-programme">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-rwe" data-insight="Real-world evidence connects regulatory confidence with adoption and access decisions." aria-hidden="true">
+        <div class="diagram-kicker">Evidence bridge to access</div>
+        <div class="bridge-row">
+          <div class="diagram-stage"><strong>Clinical evidence</strong><span>safety and performance</span></div>
+          <div class="bridge-center">RWE</div>
+          <div class="diagram-stage"><strong>Access decision</strong><span>adoption and confidence</span></div>
+        </div>
+        <div class="flow-row">
+          <div class="diagram-chip"><strong>Data source</strong><span>fit for purpose</span></div>
+          <div class="diagram-chip"><strong>Population</strong><span>real use context</span></div>
+          <div class="diagram-chip"><strong>Bias control</strong><span>reviewable logic</span></div>
+          <div class="diagram-chip"><strong>Decision use</strong><span>what it supports</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-05">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 05 of 09 · ACT EU · Trial Metrics</div>
+        <h2>Trial competitiveness gets a <em>measurement layer</em>.</h2>
+        <p class="slide-summary">When trial targets are tracked publicly, operational performance becomes part of the ecosystem story. Start-up speed, multinational execution, transparency, and inclusion become measurable operating questions.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">ACT EU</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-20</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Metrics</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Operational meaning</strong><span>Clinical trial execution can be benchmarked against time, geography, recruitment, and delivery indicators.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Use metrics as a decision surface for site strategy, operational design, and evidence planning.</span></div>
+        </div>
+        <a class="slide-source" href="https://accelerating-clinical-trials.europa.eu/our-work/implementation-clinical-trials-regulation_en">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-metrics" data-insight="Clinical trial improvement becomes actionable when ambition is translated into measurable operating indicators." aria-hidden="true">
+        <div class="diagram-kicker">Trial performance scoreboard</div>
+        <div class="metric-board">
+          <div class="metric-tower"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="bar b4"></div></div>
+          <div class="metric-callouts">
+            <div class="diagram-stage"><strong>+19</strong><span>additional multinational trials</span></div>
+            <div class="diagram-stage"><strong>40.5%</strong><span>recruiting within 200 days</span></div>
+            <div class="diagram-stage"><strong>2030</strong><span>target horizon</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-06">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 06 of 09 · FDA eSTAR · QMSR Readiness</div>
+        <h2>QMSR readiness is a <em>traceability exercise</em>.</h2>
+        <p class="slide-summary">The Quality Management System Regulation is not only a wording change. For teams preparing device submissions, the question becomes whether procedures, design controls, risk files, supplier records, and submission fields connect cleanly.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA eSTAR</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-01</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">FDA page</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Quality meaning</strong><span>QMSR readiness can be checked through evidence links between system controls and submission artefacts.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Build gap tables that link requirement, owner, record, evidence status, and review route.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar-program">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-qmsr" data-insight="QMSR readiness depends on the architecture of evidence across the device quality system." aria-hidden="true">
+        <div class="diagram-kicker">QMSR evidence architecture</div>
+        <div class="evidence-stack">
+          <div class="stack-layer"><b>01 Procedure</b><span>controlled operating method</span></div>
+          <div class="stack-layer"><b>02 Risk</b><span>design and process rationale</span></div>
+          <div class="stack-layer"><b>03 Supplier</b><span>external dependency evidence</span></div>
+          <div class="stack-layer"><b>04 Submission</b><span>record that survives review</span></div>
+          <div class="stack-layer"><b>05 Owner</b><span>who maintains the link</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-07">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 07 of 09 · FDA · Device Data</div>
+        <h2>Device signals become <em>submission data</em>.</h2>
+        <p class="slide-summary">Continuous glucose monitoring data can support drug and biologic applications only when the signal, metadata, structure, and submission format are controlled. Technical format becomes part of evidence quality.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">FDA</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-07</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Guidance</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Technical meaning</strong><span>Device-generated data needs traceability from collection through analysis and submission.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Convert device-data guidance into a checklist for format, metadata, ownership, validation, and review.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/submitting-continuous-glucose-monitoring-data-clinical-trials">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-cgm" data-insight="Clinical device data becomes regulatory evidence only when its structure and metadata are controlled." aria-hidden="true">
+        <div class="diagram-kicker">Device data submission pipeline</div>
+        <div class="data-board">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <path d="M68 170 C160 116 220 224 300 170 C360 130 420 150 462 126" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.55"/>
+            <path d="M68 205 H462" fill="none" stroke="var(--w21-amber)" stroke-width="1.8" stroke-opacity="0.5"/>
+          </svg>
+          <div class="data-rail"></div>
+          <div class="data-node">Device signal</div><div class="data-node">Metadata</div><div class="data-node">Analysis file</div><div class="data-node">Submission</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-08">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 08 of 09 · Health Canada · ML-Enabled Devices</div>
+        <h2>Model change needs a <em>lifecycle file</em>.</h2>
+        <p class="slide-summary">Machine-learning-enabled medical devices are not finished at initial clearance or authorisation. Evidence has to follow intended changes, validation strategy, human oversight, transparency, and post-market monitoring.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">Health Canada</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-04-01</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Guidance / watch</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>AI governance meaning</strong><span>Predetermined change control planning turns model updates into a governed lifecycle process.</span></div>
+          <div class="exp-tile"><strong>iFeed use</strong><span>Map AI device lifecycle controls into evidence fields that can be reviewed before product or market decisions.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/pre-market-guidance-machine-learning-enabled-medical-devices.html">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-mlmd" data-insight="ML-enabled device governance depends on planned evidence for change, monitoring, and oversight." aria-hidden="true">
+        <div class="diagram-kicker">MLMD lifecycle control loop</div>
+        <div class="lifecycle-board">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <path d="M260 54 C374 54 452 124 452 220 C452 292 385 316 318 300" fill="none" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.56"/>
+            <path d="M260 286 C146 286 68 216 68 120 C68 48 135 24 202 40" fill="none" stroke="var(--w21-violet)" stroke-width="2.4" stroke-opacity="0.5"/>
+            <circle cx="260" cy="170" r="92" fill="none" stroke="var(--accent)" stroke-dasharray="6 10" stroke-opacity="0.32"/>
+          </svg>
+          <div class="lifecycle-step a">Model change</div>
+          <div class="lifecycle-step b">Validation</div>
+          <div class="lifecycle-step c">Oversight</div>
+          <div class="lifecycle-step d">Post-market</div>
+          <div class="lifecycle-core"><div><strong>MLMD</strong><span>lifecycle</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="carousel-slide" id="slide-09">
+      <div class="slide-copy">
+        <div class="slide-kicker">Signal 09 of 09 · EMA CHMP · Oral GLP-1</div>
+        <h2>The market shifts from injection to <em>scale</em>.</h2>
+        <p class="slide-summary">EMA’s Committee for Medicinal Products for Human Use (CHMP) recommended an oral glucagon-like peptide-1 (GLP-1) receptor agonist formulation for weight management. The operating question shifts toward scale, adherence, access, and pharmacovigilance.</p>
+        <div class="slide-meta-grid">
+          <div class="slide-meta"><div class="m-label">Source</div><div class="m-value">EMA CHMP</div></div>
+          <div class="slide-meta"><div class="m-label">Date</div><div class="m-value">2026-05-22</div></div>
+          <div class="slide-meta"><div class="m-label">Source Type</div><div class="m-value">Highlights</div></div>
+        </div>
+        <div class="slide-explainer">
+          <div class="exp-tile"><strong>Market meaning</strong><span>Patient convenience changes the competitive baseline for weight-management therapies.</span></div>
+          <div class="exp-tile"><strong>Operational use</strong><span>Manufacturing, supply, adherence, and real-world evidence assumptions need a fresh model.</span></div>
+        </div>
+        <a class="slide-source" href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">View source ↗</a>
+      </div>
+      <div class="visual-card v-diagram v-glp" data-insight="An oral GLP-1 shifts the market question toward manufacturing scale, access, adherence, and real-world follow-up." aria-hidden="true">
+        <div class="diagram-kicker">Market scale path</div>
+        <div class="market-board">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <path d="M72 232 C150 152 210 146 260 172 C320 204 370 166 448 92" fill="none" stroke="var(--w21-amber)" stroke-width="3" stroke-opacity="0.58"/>
+            <path d="M72 252 H448" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-opacity="0.35"/>
+          </svg>
+          <div class="market-lane"></div>
+          <div class="scale-row" style="position:absolute;left:6%;right:6%;top:35%;">
+            <div class="diagram-stage"><strong>Oral dose</strong><span>convenience</span></div>
+            <div class="diagram-stage"><strong>Access</strong><span>market route</span></div>
+            <div class="diagram-stage"><strong>Real use</strong><span>adherence</span></div>
+            <div class="diagram-stage"><strong>Supply</strong><span>scale stress</span></div>
+            <div class="diagram-stage"><strong>PV</strong><span>follow-up</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="readout" aria-label="iFeed weekly synthesis">
+    <article class="readout-panel">
+      <h2>The readout: <em>evidence-readiness is becoming operating infrastructure.</em></h2>
+      <p>The W22 signal is convergence. Protocols need structure. Real-time trials need live review loops. AI classification needs a controlled record. Real-world evidence needs a regulator/access language. QMSR needs evidence architecture. Device data needs technical traceability. ML-enabled devices need lifecycle control.</p>
+      <p>For regulated teams, the practical capability is not simply reading guidance. It is turning sources into owners, records, review paths, and reusable evidence surfaces.</p>
+    </article>
+    <article class="pipeline-panel" id="regulations">
+      <h2>How this ladders into <em>iFeed work</em>.</h2>
+      <p>This issue leads directly into the iFeed Regulations workstream, starting with the EU AI Act Article 4 AI Literacy Starter Assessment planned for Wednesday.</p>
+      <div class="pipeline-list">
+        <div class="pipeline-item"><strong>Checklist</strong><span>EU AI Act Article 4 AI literacy starter assessment</span></div>
+        <div class="pipeline-item"><strong>Evidence table</strong><span>Source-linked readiness fields and owner prompts</span></div>
+        <div class="pipeline-item"><strong>Outreach</strong><span>QA, RA, clinical ops, digital-health and AI governance teams</span></div>
+        <div class="pipeline-item"><strong>Service</strong><span>Completed checklist review, evidence-gap report, or readiness sprint</span></div>
+      </div>
+    </article>
+  </section>
+
+  <div id="source-ledger" class="section-label source-ledger-label">Source Ledger</div>
+  <section class="source-table" aria-label="Source ledger">
+    <div class="source-row header"><div>Signal</div><div>Source</div><div>Date</div><div>Class</div></div>
+    <div class="source-row"><div>Structured protocols</div><div><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m11-clinical-electronic-structured-harmonised-protocol">FDA / ICH</a></div><div>2026-05-22</div><div>Official guidance</div></div>
+    <div class="source-row"><div>Real-time evidence</div><div><a href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials">FDA</a></div><div>2026-05-27</div><div>Official announcement</div></div>
+    <div class="source-row"><div>AI classification</div><div><a href="https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems">European Commission</a></div><div>2026-05-19</div><div>Official consultation</div></div>
+    <div class="source-row"><div>RWE dialogue</div><div><a href="https://www.gov.uk/government/publications/mhra-nice-real-world-evidence-scientific-dialogue/mhra-real-world-evidence-scientific-dialogue-programme">MHRA / NICE</a></div><div>2026-05-20</div><div>Official programme</div></div>
+    <div class="source-row"><div>Trial metrics</div><div><a href="https://accelerating-clinical-trials.europa.eu/our-work/implementation-clinical-trials-regulation_en">ACT EU</a></div><div>2026-05-20</div><div>Official metrics</div></div>
+    <div class="source-row"><div>QMSR readiness</div><div><a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar-program">FDA eSTAR</a></div><div>2026-05-01</div><div>Official programme page</div></div>
+    <div class="source-row"><div>Clinical device data</div><div><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/submitting-continuous-glucose-monitoring-data-clinical-trials">FDA</a></div><div>2026-05-07</div><div>Official guidance</div></div>
+    <div class="source-row"><div>ML device lifecycle</div><div><a href="https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/pre-market-guidance-machine-learning-enabled-medical-devices.html">Health Canada</a></div><div>2026-04-01</div><div>Official guidance / watch item</div></div>
+    <div class="source-row"><div>Oral GLP-1 market movement</div><div><a href="https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-18-21-may-2026">EMA CHMP</a></div><div>2026-05-22</div><div>Official highlights</div></div>
+  </section>
+
+  <footer>iFeed Weekly · Sunita Nawale · source-backed analyst note · 2026-W22</footer>
+</main>
+<script>
+  (function () {
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      var href = link.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#') return;
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    var grid = document.querySelector('.signal-grid');
+    var expanded = document.getElementById('expanded');
+    var expandedContent = document.getElementById('expanded-content');
+    var closeBtn = document.getElementById('exp-close');
+    var navTitleWrap = document.getElementById('w22-nav-title');
+    var navTitle = document.getElementById('w22-nav-head');
+    var defaultTitle = navTitle ? navTitle.innerHTML : '';
+    var cards = document.querySelectorAll('.signal-card[data-slide]');
+    var artifactMap = {
+      'v-protocol': ['Protocol object', 'Structured evidence', ['Guidance', 'Template', 'Tech spec'], 'Protocol content becomes a controlled work object for reuse across trial systems.'],
+      'v-rtct': ['Live trial file', 'Review loop', ['Capture', 'Reconcile', 'Review'], 'Real-time trial review depends on live evidence loops, not only submission packets.'],
+      'v-classify': ['AI Act file', 'Classify', ['Intended use', 'Actor role', 'Obligation path'], 'Classification becomes a traceable evidence decision, not a loose label.'],
+      'v-rwe': ['RWE bridge', 'Access evidence', ['Clinical signal', 'Real-world use', 'Access decision'], 'Real-world evidence connects regulatory confidence with adoption and access decisions.'],
+      'v-metrics': ['Trial metrics', 'Performance layer', ['Baseline', 'Speed', 'Recruitment'], 'Trial ambition becomes actionable when translated into operating indicators.'],
+      'v-qmsr': ['QMSR map', 'Quality evidence', ['Procedure', 'Record', 'Inspection'], 'QMSR readiness depends on evidence architecture across the quality system.'],
+      'v-cgm': ['Device data', 'Controlled signal', ['Data format', 'Metadata', 'Submission'], 'Clinical device data becomes evidence when structure and metadata are controlled.'],
+      'v-mlmd': ['ML lifecycle', 'Change control', ['Model change', 'Validation', 'Monitoring'], 'ML-enabled device governance depends on planned evidence across the lifecycle.'],
+      'v-glp': ['Oral GLP-1', 'Scale question', ['Access', 'Supply', 'Follow-up'], 'An oral GLP-1 shifts the market question toward scale, adherence, and real-world follow-up.']
+    };
+
+    function setNavTitle(html) {
+      if (!navTitle || navTitle.innerHTML === html) return;
+      if (navTitleWrap) navTitleWrap.classList.add('swapping');
+      setTimeout(function () {
+        navTitle.innerHTML = html;
+        if (navTitleWrap) navTitleWrap.classList.remove('swapping');
+      }, 120);
+    }
+
+    function polishArtifact(scope) {
+      var card = scope.querySelector('.visual-card');
+      if (!card) return;
+      var key = Object.keys(artifactMap).find(function (className) {
+        return card.classList.contains(className);
+      });
+      if (!key) return;
+      var data = artifactMap[key];
+      card.classList.add('is-polished');
+      card.innerHTML =
+        '<div class="artifact-mini">' +
+          '<div class="artifact-label">' + data[0] + '</div>' +
+          '<div class="artifact-core"><div><strong>' + data[1] + '</strong><span>iFeed trace</span></div></div>' +
+          '<div class="artifact-route">' +
+            data[2].map(function (label) { return '<span>' + label + '</span>'; }).join('') +
+          '</div>' +
+          '<p class="artifact-insight">' + data[3] + '</p>' +
+        '</div>';
+    }
+
+    (function () {
+      var btn = document.getElementById('w20-hamburger');
+      var drawer = document.getElementById('w20-drawer');
+      var backdrop = document.getElementById('w20-drawer-backdrop');
+      var drawerClose = document.getElementById('w20-drawer-close');
+      if (!btn || !drawer || !backdrop) return;
+      function openDrawer() {
+        drawer.classList.add('open');
+        backdrop.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+      }
+      function closeDrawer() {
+        drawer.classList.remove('open');
+        backdrop.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      btn.addEventListener('click', function () {
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+      });
+      backdrop.addEventListener('click', closeDrawer);
+      if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+    })();
+
+    function openSlide(card) {
+      var id = card.getAttribute('data-slide');
+      var source = id && document.getElementById(id);
+      if (!source || !grid || !expanded || !expandedContent) return;
+      expandedContent.innerHTML = '<article class="carousel-slide">' + source.innerHTML + '</article>';
+      polishArtifact(expandedContent);
+      grid.classList.add('is-hidden');
+      expanded.classList.add('is-visible');
+      document.body.classList.add('expanded-open');
+      cards.forEach(function (other) { other.classList.toggle('is-active', other === card); });
+      if (navTitle) {
+        var kicker = source.querySelector('.slide-kicker');
+        setNavTitle(kicker ? kicker.textContent : defaultTitle);
+      }
+      expanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function closeSlide() {
+      if (!grid || !expanded || !expandedContent) return;
+      expanded.classList.remove('is-visible');
+      grid.classList.remove('is-hidden');
+      document.body.classList.remove('expanded-open');
+      cards.forEach(function (card) { card.classList.remove('is-active'); });
+      if (navTitle) setNavTitle(defaultTitle);
+      setTimeout(function () { expandedContent.innerHTML = ''; }, 200);
+    }
+
+    cards.forEach(function (card) {
+      card.addEventListener('click', function (event) {
+        if (event.target.closest('a')) return;
+        openSlide(card);
+      });
+
+      card.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        openSlide(card);
+      });
+    });
+
+    if (location.hash) {
+      var initialCard = document.querySelector('.signal-card[data-slide="' + location.hash.slice(1) + '"]');
+      if (initialCard) {
+        setTimeout(function () { openSlide(initialCard); }, 180);
+      }
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeSlide);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && expanded && expanded.classList.contains('is-visible')) closeSlide();
+    });
+    document.addEventListener('click', function (event) {
+      if (!expanded || !expanded.classList.contains('is-visible')) return;
+      if (event.target.closest('#expanded') || event.target.closest('.signal-card')) return;
+      closeSlide();
+    });
+  })();
+</script>
+</body>
+</html>

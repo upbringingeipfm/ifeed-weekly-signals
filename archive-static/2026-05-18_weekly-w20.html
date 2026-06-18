@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="en" data-theme="light" class="w20-page w20-v3">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>iFeed Weekly · W20 · 11&ndash;17 May 2026 · The Evidence Architecture Shift</title>
+<meta name="description" content="iFeed Weekly W20 · 9 source-verified signals · FDA real-time clinical trials (TRAVERSE + STREAM-SCLC), EU AI Act Article 50, EU ERA GenAI guidelines, WHO clinical trials and environmental sustainability, FDA one-day inspections, EMA Critical Medicines Act, FDA + EMA Good AI Practice, Vanderbilt LLM-PV, FDA one-pivotal-trial default." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css?v=20260504au" />
+<link rel="stylesheet" href="mark.css?v=20260504au" />
+<script src="site.js?v=20260504au" defer></script>
+<style>
+  /* === W20 v3 · V4 pullquote grid + in-place expanded · verified content === */
+  :root {
+    --hot: #C45E3E; --hot-bg: #FBE6DC;
+    --verified: #4F8051; --verified-bg: #DEEBDB;
+  }
+  .wrap { max-width: 1250px; width: calc(100% - 24px); margin: 0 auto; padding: 0 32px; }
+  .nav { position: sticky; top: 0; z-index: 300; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+  .nav .nav-inner { max-width: 1250px; width: calc(100% - 24px); margin: 0 auto; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .nav .brand { display: inline-flex; align-items: center; gap: 12px; }
+  .nav .brand .nn11 { width: 64px; }
+  .nav .brand .if-mark { font-size: 32px; }
+
+  .article-head { padding: 24px 36px 14px; max-width: 1250px; width: calc(100% - 24px); margin: 0 auto; }
+  .breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed transparent; transition: border-color 0.15s; }
+  .breadcrumb a:hover { border-bottom-color: var(--accent); }
+  .article-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .article-meta .signal { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
+  h1.weekly-title { font-family: 'Source Serif 4', serif; font-size: clamp(24px, 2.6vw, 30px); font-weight: 500; letter-spacing: -0.016em; line-height: 1.18; margin: 0 0 10px; }
+  h1.weekly-title em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .standfirst { font-family: 'Source Serif 4', serif; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0 0 14px; padding: 0 0 14px; border-bottom: 1px solid var(--rule); max-width: 920px; }
+  .standfirst em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .verified-strip { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; background: color-mix(in srgb, var(--verified-bg) 55%, var(--surface)); border: 1px solid color-mix(in srgb, var(--verified) 35%, var(--rule)); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--verified); letter-spacing: 0.1em; font-weight: 600; margin-top: 4px; }
+  .verified-strip::before { content: '✓'; font-weight: 700; }
+
+  .legend-strip { display: flex; gap: 18px; flex-wrap: wrap; padding: 0 36px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em; max-width: 1250px; width: calc(100% - 24px); margin: 0 auto; }
+
+  /* CANVAS · grid + expanded LOCKED to same outer-box dimensions for uniform screenshots */
+  /* Card height fixed at 220px (290 −1cm −3mm −1mm −2mm −2mm) · 3 rows × 220 + 2 × 16 gap = 692px grid total · expanded matches */
+  .canvas {
+    padding: 0;
+    max-width: 1250px;
+    width: calc(100% - 24px);
+    margin: 0 auto 30px;
+    position: relative;
+    min-height: 692px;
+  }
+  .grid {
+    position: absolute;
+    inset: 0 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+  .grid.is-hidden { opacity: 0; pointer-events: none; transform: scale(0.985); }
+  @media (max-width: 1080px) {
+    .canvas { min-height: 1820px; }  /* 2 cols × 5 rows fallback */
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .canvas { min-height: 0; }
+    .grid { position: static; inset: auto; grid-template-columns: 1fr; padding: 0 18px; }
+  }
+
+  /* ============ V4 PULLQUOTE CARD · all 9 cards · FIXED HEIGHT 220px (290 −1cm −3mm −1mm −2mm −2mm) ============ */
+  .card {
+    position: relative; height: 220px;
+    padding: 14px 18px 12px;
+    background: var(--surface);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 22%, var(--rule));
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    font: inherit; text-align: left; color: inherit;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 22px 44px -22px color-mix(in srgb, var(--accent) 32%, transparent);
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 6px; border-radius: 11px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 15%, transparent);
+    pointer-events: none;
+  }
+  .card .v4-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; position: relative; z-index: 1; }
+  .card .v4-mark { font-family: 'Newsreader', serif; font-style: italic; font-size: 48px; line-height: 0.4; color: var(--accent); display: inline-block; }
+  .card .v4-badge {
+    font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 4px;
+    background: var(--surface); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule));
+    color: var(--accent);
+  }
+  .card .v4-badge.high { background: color-mix(in srgb, var(--hot-bg) 35%, var(--surface)); color: var(--hot); border-color: color-mix(in srgb, var(--hot) 35%, var(--rule)); }
+  .card .v4-badge.med { background: color-mix(in srgb, var(--signal-bg, oklch(94% 0.04 70)) 50%, var(--surface)); color: var(--signal); border-color: color-mix(in srgb, var(--signal) 35%, var(--rule)); }
+  .card .v4-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent);
+    margin: 4px 0 0;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed color-mix(in srgb, var(--accent) 25%, var(--rule));
+    line-height: 1.3;
+    position: relative; z-index: 1;
+  }
+  .card h3 {
+    font-family: 'Newsreader', serif; font-style: italic;
+    font-size: 15px; font-weight: 500; letter-spacing: -0.005em; line-height: 1.32;
+    color: var(--ink); margin: 8px 0 auto; flex: 1; position: relative; z-index: 1;
+  }
+  .card h3 em { font-style: normal; color: var(--accent); font-family: 'Source Serif 4', serif; font-weight: 600; }
+  .card h3 strong { font-style: normal; font-family: 'Source Serif 4', serif; font-weight: 600; color: var(--ink); }
+  .card .v4-cite {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--ink-3);
+    letter-spacing: 0.08em; padding-top: 8px; margin-top: 8px;
+    border-top: 1px solid var(--rule); text-align: right; position: relative; z-index: 1;
+  }
+  .card .v4-cite .src-link { color: var(--accent); }
+
+  /* ============ EXPANDED CANVAS · LOCKED to grid outer-box dimensions ============ */
+  /* Same width as grid (canvas - 36px each side) · same height (902px = 3 cards + gaps) */
+  /* Content scrolls inside if it exceeds 902px so the OUTER box stays uniform for screenshots */
+  .expanded {
+    position: absolute;
+    inset: 0 36px;
+    background: var(--surface);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 35%, var(--rule));
+    border-radius: 14px;
+    padding: 0;
+    height: auto;
+    opacity: 0; pointer-events: none; transform: scale(0.985);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .expanded.is-visible { opacity: 1; pointer-events: auto; transform: scale(1); }
+  @media (max-width: 720px) {
+    .expanded { position: static; inset: auto; height: auto; margin: 16px 18px 0; }
+  }
+
+  /* ============ TRANSLUCENT FOCUS · when expanded is open ============ */
+  /* Dim everything except the sticky nav and the expanded card itself */
+  body.expanded-open .article-head,
+  body.expanded-open .legend-strip,
+  body.expanded-open .closing-band,
+  body.expanded-open .next-week-strip,
+  body.expanded-open footer {
+    opacity: 0.18;
+    pointer-events: none;
+    transition: opacity 0.22s ease;
+    filter: saturate(0.6);
+  }
+  body:not(.expanded-open) .article-head,
+  body:not(.expanded-open) .legend-strip,
+  body:not(.expanded-open) .closing-band,
+  body:not(.expanded-open) .next-week-strip,
+  body:not(.expanded-open) footer {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.22s ease;
+    filter: none;
+  }
+  /* Expanded card itself gets a subtle lift to feel "above" the dimmed page */
+  body.expanded-open .expanded.is-visible {
+    box-shadow: 0 24px 48px -24px color-mix(in srgb, var(--ink) 35%, transparent), 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+  .exp-close {
+    position: absolute; top: 12px; right: 12px;
+    width: 32px; height: 32px;
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 50%; cursor: pointer; color: var(--ink-2);
+    font-size: 17px; line-height: 1; z-index: 10;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .exp-close:hover { color: var(--accent); border-color: var(--accent); }
+  .expansion-source { display: none; }
+
+  .exp-header {
+    padding: 14px 24px; background: var(--bg-2); border-bottom: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-right: 50px;
+  }
+  .exp-header .slot { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .exp-header .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.06em; }
+  .exp-header .verif { font-size: 9.5px; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.14em; font-weight: 600; background: var(--verified-bg); color: var(--verified); border: 1px solid color-mix(in srgb, var(--verified) 35%, var(--rule)); }
+
+  .exp-body { padding: 20px 26px 18px; }
+
+  .hero-quote {
+    font-family: 'Newsreader', serif; font-style: italic;
+    font-size: 22px; line-height: 1.32; color: var(--ink);
+    padding: 0 0 14px 36px; margin: 0 0 18px;
+    border-bottom: 1px dashed var(--rule); position: relative;
+  }
+  .hero-quote::before { content: '"'; position: absolute; left: 0; top: -8px; font-size: 56px; color: var(--accent); line-height: 1; font-style: italic; }
+  .hero-quote .cite { display: block; font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.08em; margin-top: 10px; text-transform: uppercase; }
+  .hero-quote em { font-style: normal; color: var(--accent); font-family: 'Source Serif 4', serif; font-weight: 600; }
+
+  .exp-src { padding: 14px 26px; background: var(--bg-2); border-top: 1px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); line-height: 1.6; }
+  .exp-src a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed currentColor; word-break: break-word; }
+  .exp-src strong { color: var(--ink-2); font-weight: 600; }
+
+  .section-h { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+
+  /* Sidebar dossier · slot 1 */
+  .ev-sidebar { display: grid; grid-template-columns: 1.7fr 1fr; gap: 22px; align-items: start; }
+  .ev-side { background: var(--bg-2); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .ev-side h4 { font-size: 9.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+  .ev-side h4 + * { margin-bottom: 14px; }
+  .ev-side .deadline { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 600; color: var(--hot); letter-spacing: -0.012em; }
+  .ev-side .stars { color: var(--signal); letter-spacing: 0; font-size: 13px; }
+  .ev-side a { color: var(--accent); text-decoration: none; word-break: break-word; border-bottom: 1px dashed currentColor; font-size: 10.5px; }
+  .ev-side ol { list-style: none; padding: 0; margin: 0; counter-reset: act; }
+  .ev-side ol li { counter-increment: act; position: relative; padding: 7px 0 7px 26px; font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.45; color: var(--ink); border-bottom: 1px dashed var(--rule); }
+  .ev-side ol li:last-child { border-bottom: 0; }
+  .ev-side ol li::before { content: counter(act); position: absolute; left: 0; top: 7px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: var(--bg); font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .ev-main p { font-family: 'Source Serif 4', serif; font-size: 14px; line-height: 1.55; color: var(--ink-2); margin: 0 0 10px; }
+  .ev-main p strong { color: var(--ink); font-weight: 600; }
+  .pilots-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 12px; }
+  .pilots-row .p { padding: 12px 14px; background: color-mix(in srgb, var(--accent-bg) 30%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule)); border-radius: 8px; }
+  .pilots-row .p .sponsor { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .pilots-row .p .trial { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .pilots-row .p .detail { font-family: 'Source Serif 4', serif; font-size: 12.5px; color: var(--ink-2); line-height: 1.45; }
+  @media (max-width: 720px) { .ev-sidebar, .pilots-row { grid-template-columns: 1fr; } }
+
+  /* Principle quad · slot 2 */
+  .pquad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 14px; }
+  .pquad .p { padding: 12px 14px; background: var(--bg-2); border: 1px solid var(--rule); border-radius: 8px; border-left: 4px solid var(--accent); }
+  .pquad .p .pn { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 4px; }
+  .pquad .p .pname { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .pquad .p .pdesc { font-family: 'Source Serif 4', serif; font-size: 11.5px; line-height: 1.42; color: var(--ink-2); }
+  .audience-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0 14px; }
+  .audience-row .a { padding: 10px 12px; background: var(--surface); border: 1px dashed var(--rule-2); border-radius: 7px; text-align: center; }
+  .audience-row .a .al { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
+  .audience-row .a .an { font-family: 'Source Serif 4', serif; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+  .duties { background: color-mix(in srgb, var(--accent-bg) 30%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule)); border-radius: 9px; padding: 13px 17px; }
+  .duties ol { font-family: 'Source Serif 4', serif; font-size: 13px; line-height: 1.55; color: var(--ink); margin: 0; padding-left: 22px; }
+  .duties ol li { margin: 5px 0; }
+  .duties ol li strong { color: var(--ink); font-weight: 600; }
+  @media (max-width: 720px) { .pquad, .audience-row { grid-template-columns: 1fr; } }
+
+  /* Art 50 table · slot 3 */
+  .art50 { display: grid; grid-template-columns: 70px 1.3fr 1.6fr 0.7fr; border: 1px solid var(--rule); border-radius: 9px; overflow: hidden; margin: 0 0 14px; }
+  .art50 > div { padding: 11px 13px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.45; color: var(--ink); }
+  .art50 > div:nth-child(4n) { border-right: 0; }
+  .art50 .head { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: var(--bg-3); color: var(--accent); }
+  .art50 .art-num { background: color-mix(in srgb, var(--accent-bg) 50%, var(--surface)); font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent); font-size: 12.5px; }
+  .art50 .actor-prov { color: var(--hot); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; }
+  .art50 .actor-depl { color: var(--accent); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; }
+  .timeline-block { background: var(--bg-2); border: 1px solid var(--rule); border-radius: 9px; padding: 12px 16px; }
+  .tlh { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 12px; }
+  .tl { display: flex; align-items: center; gap: 0; padding: 2px 0; }
+  .tl .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--ink-4); flex-shrink: 0; }
+  .tl .dot.hot { background: var(--hot); box-shadow: 0 0 0 4px color-mix(in srgb, var(--hot) 22%, transparent); }
+  .tl .line { flex: 1; height: 2px; background: var(--rule-2); }
+  .tl-labels { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-3); letter-spacing: 0.06em; margin-top: 8px; }
+  .tl-labels .hot { color: var(--hot); font-weight: 700; }
+  @media (max-width: 720px) { .art50 { grid-template-columns: 1fr; } .art50 > div { border-right: 0 !important; } }
+
+  /* WHO stats · slot 4 */
+  .who-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 12px; }
+  .who-stats .s { padding: 13px 12px; background: var(--bg-2); border: 1px solid var(--rule); border-radius: 9px; }
+  .who-stats .s.hi { background: color-mix(in srgb, var(--accent-bg) 50%, var(--surface)); border-color: var(--accent); }
+  .who-stats .s .sn { font-family: 'Source Serif 4', serif; font-size: 22px; font-weight: 700; line-height: 1; color: var(--accent); letter-spacing: -0.02em; margin: 0 0 4px; }
+  .who-stats .s .sl { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); line-height: 1.3; }
+  .who-stats .s .ssub { font-family: 'Source Serif 4', serif; font-size: 11px; line-height: 1.4; color: var(--ink-3); margin-top: 4px; }
+  .lifecycle { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 6px 0 12px; }
+  .lifecycle .stage { padding: 12px 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: 9px; border-top: 3px solid var(--accent); }
+  .lifecycle .stage .stl { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
+  .lifecycle .stage ul { font-family: 'Source Serif 4', serif; font-size: 11.5px; line-height: 1.4; color: var(--ink-2); margin: 0; padding-left: 14px; }
+  .lifecycle .stage li { margin: 2px 0; }
+  .areas-row { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 0; }
+  .areas-row .area { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 5px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent-bg) 40%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule)); color: var(--accent); letter-spacing: 0.06em; }
+  @media (max-width: 720px) { .who-stats { grid-template-columns: repeat(2, 1fr); } .lifecycle { grid-template-columns: 1fr; } }
+
+  /* Inspection breakdown · slot 5 */
+  .insp-table { display: grid; grid-template-columns: 180px 1fr; border: 1px solid var(--rule); border-radius: 9px; overflow: hidden; margin: 0 0 14px; }
+  .insp-table > div { padding: 11px 14px; border-bottom: 1px solid var(--rule); font-family: 'Source Serif 4', serif; font-size: 13px; line-height: 1.45; color: var(--ink); }
+  .insp-table > div:nth-child(odd) { background: var(--bg-2); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); border-right: 1px solid var(--rule); }
+  .insp-table strong { color: var(--ink); font-weight: 600; }
+  .insp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 12px; }
+  .insp-stats .s { padding: 12px 14px; background: color-mix(in srgb, var(--accent-bg) 35%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--rule)); border-radius: 8px; }
+  .insp-stats .s .n { font-family: 'Source Serif 4', serif; font-size: 22px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 2px; }
+  .insp-stats .s .l { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+  .insp-stats .s .sub { font-family: 'Source Serif 4', serif; font-size: 11px; color: var(--ink-3); margin-top: 3px; line-height: 1.4; }
+  .not-box { background: color-mix(in srgb, var(--hot-bg) 25%, var(--surface)); border-left: 3px solid var(--hot); border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 10px; }
+  .not-box .nl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--hot); margin-bottom: 4px; }
+  .not-box p { font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.5; color: var(--ink-2); margin: 0; }
+  @media (max-width: 720px) { .insp-stats { grid-template-columns: 1fr; } .insp-table { grid-template-columns: 1fr; } }
+
+  /* EU flow · slot 6 */
+  .eu-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 14px; }
+  .eu-flow .step { padding: 12px 14px; background: var(--bg-2); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
+  .eu-flow .step.done { background: color-mix(in srgb, var(--verified-bg) 30%, var(--surface)); border-color: var(--verified); }
+  .eu-flow .step.pending { background: color-mix(in srgb, var(--bg-3) 40%, var(--surface)); border-style: dashed; }
+  .eu-flow .step .sl { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
+  .eu-flow .step.done .sl { color: var(--verified); }
+  .eu-flow .step .st { font-family: 'Source Serif 4', serif; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .eu-flow .step .ssub { font-family: 'Source Serif 4', serif; font-size: 11px; color: var(--ink-3); margin-top: 3px; }
+  .qa-row { padding: 11px 16px; border-radius: 8px; margin: 8px 0; }
+  .qa-row .qq { font-family: 'Source Serif 4', serif; font-size: 13.5px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .qa-row .aa { font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.5; color: var(--ink-2); }
+  .qa-row.what { border-left: 3px solid var(--verified); background: color-mix(in srgb, var(--verified-bg) 18%, var(--surface)); }
+  .qa-row.gap { border-left: 3px solid var(--ink-4); background: color-mix(in srgb, var(--bg-2) 60%, var(--surface)); }
+  @media (max-width: 720px) { .eu-flow { grid-template-columns: 1fr; } }
+
+  /* 10 principles · slot 7 */
+  .princ10 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 0 12px; }
+  .princ10 .p { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding: 9px 13px; background: var(--bg-2); border: 1px solid var(--rule); border-radius: 7px; align-items: start; }
+  .princ10 .p .pn { font-family: 'Source Serif 4', serif; font-size: 16px; font-weight: 700; color: var(--accent); text-align: center; line-height: 1; padding-top: 2px; }
+  .princ10 .p .pc { display: flex; flex-direction: column; gap: 2px; }
+  .princ10 .p .pname { font-family: 'Source Serif 4', serif; font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .princ10 .p .pdesc { font-family: 'Source Serif 4', serif; font-size: 11px; line-height: 1.4; color: var(--ink-2); }
+  .princ-sum { display: flex; gap: 14px; padding: 9px 16px; background: color-mix(in srgb, var(--accent-bg) 35%, var(--surface)); border-radius: 8px; margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; flex-wrap: wrap; }
+  .princ-sum span strong { color: var(--accent); }
+  @media (max-width: 720px) { .princ10 { grid-template-columns: 1fr; } }
+
+  /* VUMC · slot 8 */
+  .vumc-table { display: grid; grid-template-columns: 1.6fr 0.7fr 0.7fr 1.2fr; border: 1px solid var(--rule); border-radius: 9px; overflow: hidden; margin: 0 0 12px; }
+  .vumc-table > div { padding: 10px 14px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-family: 'Source Serif 4', serif; font-size: 12.5px; color: var(--ink); }
+  .vumc-table > div:nth-child(4n) { border-right: 0; }
+  .vumc-table .head { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: var(--bg-3); color: var(--accent); }
+  .vumc-table .num { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent); font-size: 13px; }
+  .model-cmp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 12px; }
+  .model-cmp .m { padding: 12px 14px; background: var(--bg-2); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
+  .model-cmp .m.best { background: color-mix(in srgb, var(--verified-bg) 40%, var(--surface)); border-color: var(--verified); }
+  .model-cmp .m .mn { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .model-cmp .m.best .mn { color: var(--verified); }
+  .model-cmp .m .ml { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+  .model-cmp .m.best .ml { color: var(--verified); font-weight: 700; }
+  .caveat-box { background: color-mix(in srgb, var(--hot-bg) 30%, var(--surface)); border-left: 4px solid var(--hot); border-radius: 0 8px 8px 0; padding: 11px 16px; margin: 10px 0; }
+  .caveat-box .cl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--hot); margin-bottom: 5px; }
+  .caveat-box p { font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.5; color: var(--ink); margin: 0; }
+  @media (max-width: 720px) { .vumc-table, .model-cmp { grid-template-columns: 1fr; } }
+
+  /* Slot 9 · constellation */
+  .const-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 12px; }
+  .const-col { padding: 13px 16px; border-radius: 9px; }
+  .const-col.policy { background: color-mix(in srgb, var(--accent-bg) 30%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule)); }
+  .const-col.tech { background: color-mix(in srgb, var(--verified-bg) 30%, var(--surface)); border: 1px solid color-mix(in srgb, var(--verified) 30%, var(--rule)); }
+  .const-col .cl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+  .const-col.policy .cl { color: var(--accent); }
+  .const-col.tech .cl { color: var(--verified); }
+  .const-col h5 { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 6px; line-height: 1.25; }
+  .const-col p { font-family: 'Source Serif 4', serif; font-size: 12.5px; line-height: 1.5; color: var(--ink-2); margin: 0 0 8px; }
+  .const-col p strong { color: var(--ink); font-weight: 600; }
+  .const-col .pub { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-3); letter-spacing: 0.06em; }
+  .cost-callout { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--bg-2); border-radius: 8px; margin: 10px 0; }
+  .cost-callout .cn { font-family: 'Source Serif 4', serif; font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; }
+  .cost-callout .cl { font-family: 'Source Serif 4', serif; font-size: 13px; color: var(--ink); line-height: 1.5; }
+  .cost-callout .cl em { font-style: italic; color: var(--ink-3); font-size: 11px; display: block; margin-top: 2px; }
+  .source-list { background: var(--bg-2); border: 1px solid var(--rule); border-radius: 9px; padding: 12px 16px; }
+  .source-list .sh { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .source-list ul { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; line-height: 1.6; color: var(--ink-3); margin: 0; padding-left: 16px; }
+  .source-list ul li { margin: 3px 0; }
+  .source-list a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed currentColor; }
+  @media (max-width: 720px) { .const-grid { grid-template-columns: 1fr; } }
+
+  /* Closing band + footer · keep brand chrome */
+  .closing-band { padding: 22px 36px; max-width: 1250px; width: calc(100% - 24px); margin: 16px auto 0; border-top: 1px solid var(--rule); }
+  .closing-band .pattern-h { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .closing-band p { font-family: 'Source Serif 4', serif; font-size: 13px; line-height: 1.55; color: var(--ink); margin: 0 0 9px; }
+  .closing-band p em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  .closing-band .disclaimer { padding: 11px 14px; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; font-family: 'Source Serif 4', serif; font-size: 12px; color: var(--ink-3); margin-top: 12px; line-height: 1.5; }
+  .next-week-strip { text-align: center; padding: 14px 36px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.06em; max-width: 1250px; width: calc(100% - 24px); margin: 0 auto; }
+  .next-week-strip a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+  footer { padding: 18px 0 26px; }
+  footer .credits { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.12em; text-transform: uppercase; text-align: center; }
+
+  /* W20 nav with hamburger · preserved from v1/v2 brand chrome */
+  html.w20-page .nav .links { display: none !important; }
+  html.w20-page .nav .nav-title { flex: 1 1 auto; min-width: 0; text-align: center; padding: 0 18px; }
+  html.w20-page .nav .nav-title .head { font-family: 'Source Serif 4', serif; font-size: clamp(14px, 1.5vw, 18px); font-weight: 500; letter-spacing: -0.012em; color: var(--ink); line-height: 1.2; transition: opacity .22s ease; }
+  html.w20-page .nav .nav-title .head em { font-family: 'Newsreader', serif; font-style: italic; color: var(--accent); }
+  html.w20-page .nav .nav-title.swapping .head { opacity: 0; }
+  html.w20-page .nav .nav-right { display: inline-flex; align-items: center; gap: 14px; }
+  html.w20-page .nav .w20-hamburger { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; cursor: pointer; transition: border-color .15s, color .15s; color: var(--ink-2); padding: 0; }
+  html.w20-page .nav .w20-hamburger:hover { border-color: var(--accent); color: var(--accent); }
+  html.w20-page .nav .w20-hamburger span { display: block; width: 16px; height: 1.5px; background: currentColor; position: relative; }
+  html.w20-page .nav .w20-hamburger span::before, html.w20-page .nav .w20-hamburger span::after { content: ""; position: absolute; left: 0; width: 16px; height: 1.5px; background: currentColor; }
+  html.w20-page .nav .w20-hamburger span::before { top: -5px; }
+  html.w20-page .nav .w20-hamburger span::after  { top:  5px; }
+  html.w20-page .w20-drawer { position: fixed; top: 0; right: 0; height: 100vh; width: min(320px, 86vw); background: var(--bg); border-left: 1px solid var(--rule); transform: translateX(100%); transition: transform .26s ease; z-index: 250; padding: 72px 28px 28px; overflow-y: auto; }
+  html.w20-page .w20-drawer.open { transform: translateX(0); box-shadow: -20px 0 60px -20px color-mix(in srgb, var(--ink) 35%, transparent); }
+  html.w20-page .w20-drawer a { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-2); padding: 12px 0; border-bottom: 1px dashed var(--rule); text-decoration: none; transition: color .15s; }
+  html.w20-page .w20-drawer a:hover, html.w20-page .w20-drawer a.current { color: var(--accent); }
+  html.w20-page .w20-drawer-backdrop { position: fixed; inset: 0; background: color-mix(in srgb, var(--ink) 40%, transparent); backdrop-filter: blur(3px); opacity: 0; pointer-events: none; transition: opacity .22s ease; z-index: 240; }
+  html.w20-page .w20-drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+  html.w20-page .w20-drawer .close { position: absolute; top: 18px; right: 18px; width: 32px; height: 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 50%; color: var(--ink-2); cursor: pointer; font-size: 18px; line-height: 1; }
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260504au" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="iFeed Weekly · W20 · 11-17 May 2026 · The Evidence Architecture Shift" />
+<meta property="og:description" content="9 source-verified signals · FDA real-time clinical trials (TRAVERSE + STREAM-SCLC) · EU AI Act Article 50 · WHO clinical trials and environmental sustainability · FDA one-day inspections · EMA Critical Medicines Act · FDA + EMA Good AI Practice · Vanderbilt LLM-PV · FDA one-pivotal-trial default." />
+<meta property="og:url" content="https://weeklysignals.ifeed.ie/2026-05-18_weekly-w20.html" />
+<meta property="og:image" content="https://ifeed.ie/favicon.svg" />
+<meta property="og:site_name" content="iFeed" />
+<meta property="og:locale" content="en_IE" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="iFeed Weekly · W20 · 11-17 May 2026" />
+<meta name="twitter:description" content="9 source-verified signals · the evidence architecture shift · every word source-anchored." />
+<meta name="twitter:image" content="https://ifeed.ie/favicon.svg" />
+<link rel="canonical" href="https://weeklysignals.ifeed.ie/2026-05-18_weekly-w20.html" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class='brand' href='https://ifeed.ie/'>
+      <div class="nn11"><svg viewBox="0 0 100 80" style="width:100%;height:auto;display:block;overflow:visible" aria-label="iFeed mark">
+        <g class="nerve">
+          <line x1="20" y1="20" x2="50" y2="20"/><line x1="20" y1="20" x2="50" y2="40"/><line x1="20" y1="20" x2="50" y2="60"/>
+          <line x1="20" y1="40" x2="50" y2="20"/><line x1="20" y1="40" x2="50" y2="40"/><line x1="20" y1="40" x2="50" y2="60"/>
+          <line x1="20" y1="60" x2="50" y2="20"/><line x1="20" y1="60" x2="50" y2="40"/><line x1="20" y1="60" x2="50" y2="60"/>
+          <line x1="50" y1="20" x2="80" y2="40"/><line x1="50" y1="40" x2="80" y2="40"/><line x1="50" y1="60" x2="80" y2="40"/>
+        </g>
+        <circle class="neuron-in" cx="20" cy="20" r="3.6"/><circle class="neuron-in" cx="20" cy="40" r="3.6"/><circle class="neuron-in" cx="20" cy="60" r="3.6"/>
+        <circle class="neuron-mid" cx="50" cy="20" r="3.2"/><circle class="neuron-mid" cx="50" cy="40" r="3.2"/><circle class="neuron-mid" cx="50" cy="60" r="3.2"/>
+        <circle class="halo-ring halo-a" cx="80" cy="40" r="6"/><circle class="halo-ring halo-b" cx="80" cy="40" r="7.5"/>
+        <circle class="neuron-out" cx="80" cy="40" r="4.4"/>
+      </svg></div>
+      <span class="if-mark sm"><span class="i">i</span>Feed</span>
+    </a>
+    <div class="nav-title" id="w20-nav-title">
+      <div class="head" id="w20-nav-head">The <em>Evidence Architecture</em> Shift</div>
+    </div>
+    <div class="nav-right">
+      <div class="theme-toggle" role="group" aria-label="theme toggle">
+        <button type="button" id="t-light" class="active" aria-label="light theme">Light</button>
+        <button type="button" id="t-dark" aria-label="dark theme">Dark</button>
+      </div>
+      <button type="button" class="w20-hamburger" id="w20-hamburger" aria-label="open menu" aria-expanded="false"><span></span></button>
+    </div>
+    <div class="links">
+      <a href='https://ifeed.ie/'>Home</a>
+      <a href="https://ifeed.ie/methodology.html">Methodology</a>
+      <a href="https://library.ifeed.ie/">Library</a>
+      <a href="https://ifeed.ie/services.html">Collaborate</a>
+      <a href="https://ai.ifeed.ie/">AI</a>
+      <a class='current' href='/'>Signals</a>
+      <a href="https://ifeed.ie/academy.html">Academy</a>
+      <a href="https://ifeed.ie/community.html">Community</a>
+      <a href="https://ifeed.ie/founder.html">Founder</a>
+      <a href="https://ifeed.ie/connect.html">Connect</a>
+      <a href="https://ifeed.ie/register.html">Register</a>
+    </div>
+  </div>
+</nav>
+<aside class="w20-drawer-backdrop" id="w20-drawer-backdrop"></aside>
+<aside class="w20-drawer" id="w20-drawer" aria-hidden="true">
+  <button type="button" class="close" id="w20-drawer-close" aria-label="close menu">×</button>
+  <a href='https://ifeed.ie/'>Home</a>
+  <a href="https://ifeed.ie/methodology.html">Methodology</a>
+  <a href="https://library.ifeed.ie/">Library</a>
+  <a href="https://ifeed.ie/services.html">Collaborate</a>
+  <a href="https://ai.ifeed.ie/">AI</a>
+  <a class='current' href='/'>Signals</a>
+  <a href="https://ifeed.ie/academy.html">Academy</a>
+  <a href="https://ifeed.ie/community.html">Community</a>
+  <a href="https://ifeed.ie/founder.html">Founder</a>
+  <a href="https://ifeed.ie/connect.html">Connect</a>
+  <a href="https://ifeed.ie/register.html">Register</a>
+</aside>
+
+<main>
+
+  <header class="article-head">
+    <div class="breadcrumb"><a href='/'>&larr; All notes</a> &middot; <a href="https://library.ifeed.ie/">Library</a> &middot; <a href='https://ifeed.ie/'>Home</a></div>
+    <div class="article-meta">
+      <span class="signal"></span>
+      <span>2026-05-18 · Weekly · W20 of 2026</span>
+      <span>·</span>
+      <span>9 source-verified signals</span>
+    </div>
+    <h1 class="weekly-title">iFeed <em>Weekly</em>: the <em>evidence architecture</em> shift.</h1>
+    <p class="standfirst">Nine signals for the week of <em>11&ndash;17 May 2026</em>. FDA pilots real-time clinical trials with AstraZeneca <em>TRAVERSE</em> and Amgen <em>STREAM-SCLC</em>, declares one pivotal trial the new default, launches one-day inspectional assessments. EU opens AI Act Article&nbsp;50 transparency consultation, updates its responsible-GenAI-in-research guidelines, reaches political agreement on the Critical Medicines Act. WHO sizes the climate footprint of clinical trials. FDA and EMA align on 10 Good AI Practice principles. Vanderbilt shows LLMs can detect immune-related AEs from clinical notes &mdash; with a notable over-prediction caveat.</p>
+    <div class="verified-strip">All claims source-anchored · primary documents read · per-claim citations available</div>
+  </header>
+
+  <div class="legend-strip">
+    <span>🔴 High &middot; action / urgent attention</span>
+    <span>🟡 Medium &middot; track for context</span>
+  </div>
+
+  <section class="canvas" id="canvas">
+
+    <div class="grid" id="grid">
+
+      <!-- SLOT 01 · FDA RTCT -->
+      <button class="card" type="button" data-target="exp-1">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">01 · 🔴</span></div>
+        <div class="v4-title">FDA · Real-Time Clinical Trials</div>
+        <h3>FDA <em>real-time</em> clinical trials launch with AstraZeneca <em>TRAVERSE</em> and Amgen <em>STREAM-SCLC</em> &mdash; RFI open until <strong>29 May 2026</strong>.</h3>
+        <div class="v4-cite">— <span class="src-link">fda.gov</span> · 28 April 2026</div>
+      </button>
+
+      <!-- SLOT 02 · EU ERA GenAI -->
+      <button class="card" type="button" data-target="exp-2">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">02 · 🔴</span></div>
+        <div class="v4-title">EU · Responsible GenAI in Research</div>
+        <h3>AI systems are <strong>neither authors nor co-authors</strong>. Authorship implies agency and responsibility, so it lies with <em>human researchers</em>.</h3>
+        <div class="v4-cite">— EC ERA Living Guidelines · 3rd ed · <span class="src-link">May 2026</span></div>
+      </button>
+
+      <!-- SLOT 03 · EU AI Act Article 50 -->
+      <button class="card" type="button" data-target="exp-3">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">03 · 🔴</span></div>
+        <div class="v4-title">EU AI Act · Article 50 Transparency</div>
+        <h3>Article 50 transparency obligations apply <strong>two years after the entry into force</strong> of the AI Act &mdash; i.e. as from <em>2 August 2026</em>.</h3>
+        <div class="v4-cite">— <span class="src-link">EC Draft Guidelines · §2</span></div>
+      </button>
+
+      <!-- SLOT 04 · WHO -->
+      <button class="card" type="button" data-target="exp-4">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge med">04 · 🟡</span></div>
+        <div class="v4-title">WHO · CT &amp; Environmental Sustainability</div>
+        <h3>Approximately <strong>76 000 new trials</strong> were registered in 2023, each producing an estimated <em>80–2000 tonnes</em> of emissions.</h3>
+        <div class="v4-cite">— <span class="src-link">WHO · Executive Summary</span></div>
+      </button>
+
+      <!-- SLOT 05 · FDA One-Day -->
+      <button class="card" type="button" data-target="exp-5">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">05 · 🔴</span></div>
+        <div class="v4-title">FDA · One-Day Inspections</div>
+        <h3>One-day inspectional assessments are <strong>not intended to replace</strong> standard FDA inspections &mdash; <em>46 completed</em>, mostly NAI, focused on lower-risk establishments.</h3>
+        <div class="v4-cite">— <span class="src-link">fda.gov</span> · 6 May 2026</div>
+      </button>
+
+      <!-- SLOT 06 · EMA CMA -->
+      <button class="card" type="button" data-target="exp-6">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge med">06 · 🟡</span></div>
+        <div class="v4-title">EU · Critical Medicines Act</div>
+        <h3>Act to improve <em>availability, production and supply</em> of <strong>critical medicines</strong> in the European Union.</h3>
+        <div class="v4-cite">— EMA · provisional agreement · <span class="src-link">12 May 2026</span></div>
+      </button>
+
+      <!-- SLOT 07 · FDA + EMA Good AI -->
+      <button class="card" type="button" data-target="exp-7">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">07 · 🔴</span></div>
+        <div class="v4-title">FDA + EMA · Good AI Practice</div>
+        <h3>These <em>10 guiding principles</em> are intended to lay the foundation for developing <strong>good practice</strong> that addresses the unique nature of these technologies.</h3>
+        <div class="v4-cite">— <span class="src-link">FDA + EMA joint · January 2026</span></div>
+      </button>
+
+      <!-- SLOT 08 · VUMC -->
+      <button class="card" type="button" data-target="exp-8">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge med">08 · 🟡</span></div>
+        <div class="v4-title">Vanderbilt · LLMs for Drug Safety</div>
+        <h3>The models showed a <strong>systematic bias toward <em>overpredicting</em></strong> immune-related adverse events.</h3>
+        <div class="v4-cite">— VUMC News · <span class="src-link">7 April 2026</span> · eBioMedicine</div>
+      </button>
+
+      <!-- SLOT 09 · FDA Single Pivotal -->
+      <button class="card" type="button" data-target="exp-9">
+        <div class="v4-top"><span class="v4-mark">"</span><span class="v4-badge high">09 · 🔴</span></div>
+        <div class="v4-title">FDA · One Pivotal Trial Default</div>
+        <h3><strong>One adequate and well-controlled study</strong>, combined with confirmatory evidence, will serve as the basis of <em>marketing authorization</em> of novel products.</h3>
+        <div class="v4-cite">— FDA leadership · <span class="src-link">NEJM</span> · Feb 2026</div>
+      </button>
+
+    </div>
+
+    <div class="expanded" id="expanded">
+      <button type="button" class="exp-close" id="exp-close" aria-label="close · return to grid">×</button>
+      <div id="expanded-content"></div>
+    </div>
+
+  </section>
+
+  <!-- ============== EXPANDED CONTENT · per-claim source-anchored ============== -->
+  <div class="expansion-source" aria-hidden="true">
+
+    <!-- SLOT 01 -->
+    <div id="exp-1">
+      <div class="exp-header">
+        <span class="slot">FDA Real-Time Clinical Trials · TRAVERSE + STREAM-SCLC</span>
+        <span class="meta">FDA press · 28 Apr 2026 · RFI deadline 29 May 2026</span>
+        <span class="verif">✓ FDA primary</span>
+      </div>
+      <div class="exp-body">
+        <div class="hero-quote">
+          We are boldly advancing a modern approach whereby FDA scientists can view safety signals and endpoints in real time as a trial progresses.
+          <span class="cite">— FDA Commissioner Marty Makary, M.D., M.P.H. · FDA press, 28 April 2026</span>
+        </div>
+
+        <div class="ev-sidebar">
+          <div class="ev-main">
+            <p>FDA announced two major steps on <strong>28 April 2026</strong>: successful initiation of two proof-of-concept real-time clinical trials (RTCTs), and a Request for Information on a broader pilot program — <em>AI-Enabled Optimization of Early-Phase Clinical Trials</em> — launching this summer.</p>
+            <p>FDA met with each sponsor on the establishment of criteria for reporting signals in real time. The agency has received and validated signals for AstraZeneca's trial through <strong>Paradigm Health</strong>, establishing the feasibility of the technical framework required for real-time signal sharing.</p>
+
+            <div class="pilots-row" style="margin-top:10px;">
+              <div class="p">
+                <div class="sponsor">AstraZeneca</div>
+                <div class="trial">TRAVERSE</div>
+                <div class="detail">Phase 2 multi-site · treatment-naïve <strong>mantle cell lymphoma</strong> · MD Anderson + UPenn · signals validated via Paradigm Health</div>
+              </div>
+              <div class="p">
+                <div class="sponsor">Amgen</div>
+                <div class="trial">STREAM-SCLC</div>
+                <div class="detail">Phase 1b · limited-stage <strong>small cell lung carcinoma</strong> · final site selection in process</div>
+              </div>
+            </div>
+
+            <p style="font-family:'Newsreader',serif;font-style:italic;font-size:13.5px;color:var(--ink-2);border-left:3px solid var(--accent);padding:0 0 0 12px;margin:10px 0 0;">"Real-time trials have been talked about for years. We demonstrated that it is not only possible, but also potentially transformative." <span style="font-style:normal;font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--ink-3);display:block;margin-top:4px;letter-spacing:0.08em;">— Jeremy Walsh · Chief AI Officer, FDA</span></p>
+          </div>
+
+          <aside class="ev-side">
+            <h4>RFI deadline</h4>
+            <div class="deadline">29 May 2026<br><span style="font-size:11px;color:var(--ink-3);letter-spacing:0.06em;">comments close</span></div>
+            <h4>Pilot rollout</h4>
+            <div style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);line-height:1.45;">Selection criteria <strong>July 2026</strong> · pilot selections complete <strong>August 2026</strong></div>
+            <h4>Authority</h4>
+            <div class="stars">★★★★★ FDA primary</div>
+            <h4>Action items</h4>
+            <ol>
+              <li>Submit RFI comments before 29 May</li>
+              <li>Map data pipelines to a real-time signal-sharing architecture</li>
+              <li>Brief safety-monitoring SOP owners on the cadence shift</li>
+            </ol>
+            <h4>Read sources</h4>
+            <div><a href="https://www.fda.gov/news-events/press-announcements/fda-announces-major-steps-implement-real-time-clinical-trials" target="_blank" rel="noopener">FDA press release →</a><br><a href="https://www.federalregister.gov/public-inspection/2026-08281/request-for-information-ai-enabled-optimization-of-early-phase-clinical-trials-pilot-program" target="_blank" rel="noopener">Federal Register RFI →</a></div>
+          </aside>
+        </div>
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "FDA Announces Major Steps to Implement Real-Time Clinical Trials" · Office of the Commissioner · 28 April 2026. RFI title: <em>Request for Information: AI-Enabled Optimization of Early-Phase Clinical Trials Pilot Program</em> (Federal Register 2026-08281).</div>
+    </div>
+
+    <!-- SLOT 02 -->
+    <div id="exp-2">
+      <div class="exp-header">
+        <span class="slot">EU ERA · Living guidelines on responsible use of generative AI in research</span>
+        <span class="meta">EC DG-RTD · Third version · May 2026</span>
+        <span class="verif">✓ EC primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          AI systems are neither authors nor co-authors. Authorship implies agency and responsibility, so it lies with human researchers.
+          <span class="cite">— Section 2.1 · Recommendations for researchers · Item 1</span>
+        </div>
+
+        <div class="section-h">Four key principles framing the guidelines</div>
+        <div class="pquad">
+          <div class="p"><div class="pn">01</div><div class="pname">Reliability</div><div class="pdesc">Quality of research design, methodology, analysis — verifying AI output, awareness of bias.</div></div>
+          <div class="p"><div class="pn">02</div><div class="pname">Honesty</div><div class="pdesc">Transparent, fair, impartial reporting — disclosing that generative AI has been used.</div></div>
+          <div class="p"><div class="pn">03</div><div class="pname">Respect</div><div class="pdesc">For colleagues, participants, society, ecosystems — including environmental impact and IP.</div></div>
+          <div class="p"><div class="pn">04</div><div class="pname">Accountability</div><div class="pdesc">From idea to publication — including human agency and oversight throughout.</div></div>
+        </div>
+
+        <div class="section-h">Three audiences with distinct recommendation sets</div>
+        <div class="audience-row">
+          <div class="a"><div class="al">For</div><div class="an">Researchers</div></div>
+          <div class="a"><div class="al">For</div><div class="an">Research organisations</div></div>
+          <div class="a"><div class="al">For</div><div class="an">Research funding orgs</div></div>
+        </div>
+
+        <div class="section-h">Researcher duties · verbatim from §2.1</div>
+        <div class="duties">
+          <ol>
+            <li><strong>Remain ultimately responsible for scientific output.</strong> Researchers accountable for content; aware of AI limitations (bias, hallucinations, invented citations).</li>
+            <li><strong>Use generative AI transparently.</strong> Detail substantially-used tools, account for stochastic nature, aim for reproducibility, disclose limitations.</li>
+            <li><strong>Pay particular attention to privacy, confidentiality and IP rights</strong> when sharing sensitive information with AI tools.</li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "Living guidelines on the responsible use of generative AI in research" · ERA Forum Stakeholders' document · Third version, May 2026 · European Commission, DG Research &amp; Innovation, Unit E4 — AI in Science &amp; Critical Technologies · © European Union 2026, CC BY 4.0 · <a href="https://research-and-innovation.ec.europa.eu/document/download/2b6cf7e5-36ac-41cb-aab5-0d32050143dc_en?filename=ec_rtd_ai-guidelines.pdf" target="_blank" rel="noopener">Read full document →</a></div>
+    </div>
+
+    <!-- SLOT 03 -->
+    <div id="exp-3">
+      <div class="exp-header">
+        <span class="slot">EU AI Act · Article 50 · Draft Guidelines</span>
+        <span class="meta">EC DG-CNECT · AI Office · stakeholder consultation</span>
+        <span class="verif">✓ EC primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          Article 50 includes four transparency obligations, each applying to different types of AI systems or their outputs.
+          <span class="cite">— §6 · Overview of transparency obligations</span>
+        </div>
+
+        <div class="section-h">Article 50 · the four obligations · verbatim from the official table</div>
+        <div class="art50">
+          <div class="head">Provision</div>
+          <div class="head">AI system type</div>
+          <div class="head">Transparency obligation</div>
+          <div class="head">Actor</div>
+
+          <div class="art-num">50(1)</div>
+          <div>Directly interacting with natural persons</div>
+          <div>Design the system so persons are informed they are interacting with an AI system.</div>
+          <div class="actor-prov">Provider</div>
+
+          <div class="art-num">50(2)</div>
+          <div>Generating or manipulating synthetic image, video, audio or text</div>
+          <div>Mark outputs as artificially generated / manipulated in a machine-readable format.</div>
+          <div class="actor-prov">Provider</div>
+
+          <div class="art-num">50(3)</div>
+          <div>Emotion recognition or biometric categorisation</div>
+          <div>Inform the natural persons exposed of the system's operation.</div>
+          <div class="actor-depl">Deployer</div>
+
+          <div class="art-num">50(4)</div>
+          <div>Deep fakes &middot; or text published to inform the public on matters of public interest</div>
+          <div>Disclose that the content has been artificially generated or manipulated.</div>
+          <div class="actor-depl">Deployer</div>
+        </div>
+
+        <div class="timeline-block">
+          <div class="tlh">Timeline · AI Act → Article 50 application</div>
+          <div class="tl">
+            <span class="dot"></span><span class="line"></span><span class="dot"></span><span class="line"></span><span class="dot hot"></span>
+          </div>
+          <div class="tl-labels">
+            <span>13 Jun 2024 · adopted</span>
+            <span>1 Aug 2024 · entered into force</span>
+            <span class="hot">2 Aug 2026 · Art 50 applies</span>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; padding:10px 14px; background:var(--bg-2); border-radius:8px; font-family:'Source Serif 4',serif; font-size:12.5px; line-height:1.5; color:var(--ink-2);">
+          <strong style="color:var(--ink);">Status:</strong> these Guidelines are <em>non-binding</em>. "Any authoritative interpretation of the AI Act may ultimately only be given by the Court of Justice of the European Union ('CJEU')." (§5)
+        </div>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "Draft Guidelines on the implementation of the transparency obligations for certain AI systems under Article 50 of Regulation (EU) 2024/1689 (the 'AI Act')" · European Commission, DG-CNECT, AI Office, AI Regulation and Compliance · <a href="https://ec.europa.eu/newsroom/dae/redirection/document/128275" target="_blank" rel="noopener">Read full document →</a> · <a href="https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations" target="_blank" rel="noopener">Consultation page</a></div>
+    </div>
+
+    <!-- SLOT 04 -->
+    <div id="exp-4">
+      <div class="exp-header">
+        <span class="slot">WHO · Clinical trials and environmental sustainability</span>
+        <span class="meta">WHO · published 26 Feb 2026</span>
+        <span class="verif">✓ WHO primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          Approximately 76 000 new trials were registered on The World Health Organization's International Clinical Trials Registry Platform in 2023, each producing an estimated 80–2000 tonnes of emissions. Even at the lower end of the estimates, these numbers are significant: 80 tonnes is equivalent to driving a car 12 times around the planet.
+          <span class="cite">— WHO Executive Summary</span>
+        </div>
+
+        <div class="section-h">The footprint at scale</div>
+        <div class="who-stats">
+          <div class="s hi"><div class="sn">~76 000</div><div class="sl">New trials registered</div><div class="ssub">WHO ICTRP, 2023.</div></div>
+          <div class="s hi"><div class="sn">80–2000</div><div class="sl">Tonnes CO₂e / trial</div><div class="ssub">Range estimate, single trial.</div></div>
+          <div class="s"><div class="sn">12×</div><div class="sl">Round the planet</div><div class="ssub">WHO's analogy for 80 tonnes.</div></div>
+          <div class="s"><div class="sn">27</div><div class="sl">Trial actors consulted</div><div class="ssub">15 LMIC · 24 LMIC-experience.</div></div>
+        </div>
+
+        <div class="section-h">Mitigation framework · three trial stages</div>
+        <div class="lifecycle">
+          <div class="stage">
+            <div class="stl">Pre-trial</div>
+            <ul>
+              <li>Trial planning + design with sustainability principles</li>
+              <li>Reduce long-distance travel for feasibility visits</li>
+              <li>Improve local trial capacity when selecting sites</li>
+              <li>Optimise logistics; reduce packaging</li>
+            </ul>
+          </div>
+          <div class="stage">
+            <div class="stl">In-trial</div>
+            <ul>
+              <li>Conduct virtual trial meetings when appropriate</li>
+              <li>Sample + data collection aligned to principle of sufficiency</li>
+              <li>Warming up ultra-low-temperature freezers when feasible</li>
+              <li>Reducing on-site monitoring + in-person audits where possible</li>
+            </ul>
+          </div>
+          <div class="stage">
+            <div class="stl">Post-trial</div>
+            <ul>
+              <li>Reduce plastic waste</li>
+              <li>Repurpose / repair equipment</li>
+              <li>Adapt archiving length to risk level</li>
+              <li>Require environmental-consideration disclosure in publications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-h" style="margin-top:12px;">Four areas of climate adaptation</div>
+        <div class="areas-row">
+          <span class="area">Planning &amp; governance</span>
+          <span class="area">Clinical trial facilities</span>
+          <span class="area">Trial participants</span>
+          <span class="area">Supply chains</span>
+        </div>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "Clinical trials and environmental sustainability: Review of key considerations to develop climate change mitigation and adaptation strategies" · World Health Organization · <strong>published 26 February 2026</strong> · Authoring unit: Health Ethics &amp; Governance (HEG), WHO · Lead writers: Gabrielle Samuel + Matthew Graham (King's College, UK) · Direction: Katherine Littler, Meg Doherty, Sylvie Briand (WHO) · <a href="https://www.who.int/publications/i/item/9789240120105" target="_blank" rel="noopener">WHO publications page</a> · <a href="https://iris.who.int/server/api/core/bitstreams/e676dd94-f47d-4285-885d-a039332e5f3d/content" target="_blank" rel="noopener">Read full document →</a></div>
+    </div>
+
+    <!-- SLOT 05 -->
+    <div id="exp-5">
+      <div class="exp-header">
+        <span class="slot">FDA · One-Day Inspectional Assessments pilot</span>
+        <span class="meta">FDA press · 6 May 2026 · launched April 2026</span>
+        <span class="verif">✓ FDA primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          One-day inspectional assessments are not intended to replace standard FDA inspections. Instead, they serve as an additional tool to complement the agency's existing approach.
+          <span class="cite">— FDA press release · 6 May 2026</span>
+        </div>
+
+        <div class="section-h">What the pilot has done so far</div>
+        <div class="insp-stats">
+          <div class="s"><div class="n">~46</div><div class="l">One-day assessments</div><div class="sub">Completed as of late April 2026.</div></div>
+          <div class="s"><div class="n">Most</div><div class="l">NAI outcomes</div><div class="sub">No Action Indicated · compliance confirmed.</div></div>
+          <div class="s"><div class="n">FY26</div><div class="l">Pilot duration</div><div class="sub">Continues through fiscal year 2026.</div></div>
+        </div>
+
+        <div class="section-h">What it is · what's in scope</div>
+        <div class="insp-table">
+          <div>Inspectorates</div><div>Human and animal foods · biologics · <strong>medical products</strong> · <strong>clinical research programs</strong></div>
+          <div>Selection criteria</div><div>Risk-based: product type · prior inspection outcomes · operational characteristics</div>
+          <div>Risk targeting</div><div><strong>Lower-risk establishments</strong> · does not apply to higher-risk or more complex facilities</div>
+          <div>Flexibility</div><div>Some assessments extended beyond one day when significant observations identified</div>
+          <div>Commissioner quote</div><div><em>"…broader surveillance coverage, enabling the agency to assess more facilities… timely feedback while minimizing operational disruption."</em></div>
+        </div>
+
+        <p style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink-2);line-height:1.55;margin:10px 0 0;"><strong style="color:var(--ink);">Elizabeth Miller, Pharm.D., FDA Associate Commissioner for Inspections and Investigations:</strong> the agency is "closely analyzing the operational and compliance data from these assessments — including trends in outcomes, risk signals, and investigator feedback." FDA is developing evaluation metrics on inspection duration, escalation rates, and utility of findings.</p>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "FDA Launches One-Day Inspectional Assessments to Strengthen and Expand Oversight" · Office of the Commissioner · 6 May 2026 · <a href="https://www.fda.gov/news-events/press-announcements/fda-launches-one-day-inspectional-assessments-strengthen-and-expand-oversight" target="_blank" rel="noopener">fda.gov press release →</a></div>
+    </div>
+
+    <!-- SLOT 06 -->
+    <div id="exp-6">
+      <div class="exp-header">
+        <span class="slot">EMA · Critical Medicines Act · provisional agreement</span>
+        <span class="meta">EMA news · 12 May 2026</span>
+        <span class="verif">✓ EMA primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          Act to improve availability, production and supply of critical medicines in the European Union.
+          <span class="cite">— EMA news item · 12 May 2026 · verbatim framing</span>
+        </div>
+
+        <div class="section-h">EU institutional flow · where the CMA stands</div>
+        <div class="eu-flow">
+          <div class="step done">
+            <div class="sl">Stage 1</div>
+            <div class="st">Negotiation</div>
+            <div class="ssub">Parliament + Council + Commission</div>
+          </div>
+          <div class="step done">
+            <div class="sl">Stage 2 · 12 May 2026</div>
+            <div class="st">Provisional agreement</div>
+            <div class="ssub">EMA publishes welcome statement</div>
+          </div>
+          <div class="step pending">
+            <div class="sl">Stage 3</div>
+            <div class="st">Formal adoption</div>
+            <div class="ssub">Date not stated in EMA item</div>
+          </div>
+          <div class="step pending">
+            <div class="sl">Stage 4</div>
+            <div class="st">Entry into force</div>
+            <div class="ssub">Implementation date not announced</div>
+          </div>
+        </div>
+
+        <div class="section-h">What this EMA item does — and does not — tell us</div>
+
+        <div class="qa-row what">
+          <div class="qq">What the EMA item explicitly says</div>
+          <div class="aa">The CMA <strong>"strengthens the resilience, security and sustainability of the European Union's supply of critical medicines"</strong>. Named institutions: European Parliament, Council of the European Union, European Commission, EU Member States.</div>
+        </div>
+        <div class="qa-row gap">
+          <div class="qq">What the EMA item does NOT say</div>
+          <div class="aa">No implementation date. No specific obligations for Marketing Authorisation Holders. No criteria for "critical medicines list". The actual legal text — once formally adopted and published — will be needed for operational MAH planning.</div>
+        </div>
+
+        <div style="margin-top:12px; padding:10px 14px; background:var(--bg-2); border-radius:8px; font-family:'Source Serif 4',serif; font-size:12.5px; line-height:1.5; color:var(--ink-2);">
+          <strong style="color:var(--ink);">For sponsors / MAH-of-record:</strong> until formal adoption, treat as a policy-direction signal — not an operational compliance trigger. Track for downstream MAH obligations, critical-medicines-list mechanism, and supply-chain reporting cadence.
+        </div>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> European Medicines Agency news · 12 May 2026 · <a href="https://www.ema.europa.eu/en/news/ema-welcomes-political-agreement-critical-medicines-act" target="_blank" rel="noopener">ema.europa.eu/en/news/ema-welcomes-political-agreement-critical-medicines-act</a></div>
+    </div>
+
+    <!-- SLOT 07 -->
+    <div id="exp-7">
+      <div class="exp-header">
+        <span class="slot">FDA + EMA · Guiding Principles of Good AI Practice in Drug Development</span>
+        <span class="meta">Joint statement · January 2026</span>
+        <span class="verif">✓ FDA + EMA primary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          These 10 guiding principles are intended to lay the foundation for developing good practice that addresses the unique nature of these technologies. They will also help cultivate future growth in this rapidly progressing field.
+          <span class="cite">— Joint FDA + EMA · January 2026</span>
+        </div>
+
+        <p style="font-family:'Source Serif 4',serif; font-size:12.5px; line-height:1.55; color:var(--ink-2); margin:0 0 12px;">FDA + EMA define AI as <strong>"system-level technologies used to generate or analyze evidence across the drug product life cycle"</strong> — covering nonclinical, clinical, post-marketing, and manufacturing.</p>
+
+        <div class="section-h">All 10 principles · verbatim names + extracted descriptions</div>
+        <div class="princ10">
+          <div class="p"><div class="pn">1</div><div class="pc"><div class="pname">Human-centric by design</div><div class="pdesc">Align with ethical and human-centric values.</div></div></div>
+          <div class="p"><div class="pn">2</div><div class="pc"><div class="pname">Risk-based approach</div><div class="pdesc">Proportionate validation, mitigation, oversight based on context of use and model risk.</div></div></div>
+          <div class="p"><div class="pn">3</div><div class="pc"><div class="pname">Adherence to standards</div><div class="pdesc">Relevant legal, ethical, technical, scientific, cybersecurity, regulatory standards including GxP.</div></div></div>
+          <div class="p"><div class="pn">4</div><div class="pc"><div class="pname">Clear context of use</div><div class="pdesc">Well-defined role and scope for why the AI is being used.</div></div></div>
+          <div class="p"><div class="pn">5</div><div class="pc"><div class="pname">Multidisciplinary expertise</div><div class="pdesc">Expertise covering both the AI technology and its context of use throughout the life cycle.</div></div></div>
+          <div class="p"><div class="pn">6</div><div class="pc"><div class="pname">Data governance and documentation</div><div class="pdesc">Provenance, processing steps, decisions documented in detailed, traceable, verifiable manner.</div></div></div>
+          <div class="p"><div class="pn">7</div><div class="pc"><div class="pname">Model design and development practices</div><div class="pdesc">Best practices in design + software engineering; interpretability, explainability, predictive performance.</div></div></div>
+          <div class="p"><div class="pn">8</div><div class="pc"><div class="pname">Risk-based performance assessment</div><div class="pdesc">Evaluate complete system including human-AI interactions, with fit-for-use data and metrics.</div></div></div>
+          <div class="p"><div class="pn">9</div><div class="pc"><div class="pname">Life cycle management</div><div class="pdesc">Quality management systems throughout; scheduled monitoring + periodic re-evaluation (e.g. data drift).</div></div></div>
+          <div class="p"><div class="pn">10</div><div class="pc"><div class="pname">Clear, essential information</div><div class="pdesc">Plain language to present context of use, performance, limitations, underlying data, updates.</div></div></div>
+        </div>
+
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "Guiding Principles of Good AI Practice in Drug Development" · U.S. Food &amp; Drug Administration + European Medicines Agency · January 2026 · <a href="https://www.fda.gov/about-fda/artificial-intelligence-drug-development/guiding-principles-good-ai-practice-drug-development" target="_blank" rel="noopener">FDA landing</a> · <a href="https://www.fda.gov/media/189581/download" target="_blank" rel="noopener">Read full document →</a></div>
+    </div>
+
+    <!-- SLOT 08 -->
+    <div id="exp-8">
+      <div class="exp-header">
+        <span class="slot">Vanderbilt · LLMs detect immune-related AEs from clinical notes</span>
+        <span class="meta">Cosmin Bejan et al · eBioMedicine · 6 April 2026</span>
+        <span class="verif">✓ Academic + journal verified</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          The models showed a systematic bias toward overpredicting irAEs.
+          <span class="cite">— VUMC News · 7 April 2026 · verbatim</span>
+        </div>
+
+        <div class="section-h">Performance across three datasets</div>
+        <div class="vumc-table">
+          <div class="head">Dataset</div>
+          <div class="head">Patients</div>
+          <div class="head">Best F1</div>
+          <div class="head">Source type</div>
+
+          <div>Vanderbilt Health</div>
+          <div class="num">100</div>
+          <div class="num">56%</div>
+          <div>Real-world EHR</div>
+
+          <div>UC San Francisco</div>
+          <div class="num">70</div>
+          <div class="num">66%</div>
+          <div>Real-world EHR</div>
+
+          <div>7 ICI trials · Roche-sponsored</div>
+          <div class="num">272</div>
+          <div class="num">62%</div>
+          <div>Clinical-trial notes</div>
+        </div>
+
+        <div class="section-h">Three LLMs tested · GPT-4o gave best performance</div>
+        <div class="model-cmp">
+          <div class="m"><div class="mn">GPT-3.5</div><div class="ml">Tested</div></div>
+          <div class="m"><div class="mn">GPT-4</div><div class="ml">Tested</div></div>
+          <div class="m best"><div class="mn">GPT-4o</div><div class="ml">Best performance</div></div>
+        </div>
+
+        <div class="caveat-box">
+          <div class="cl">Critical methodology caveat</div>
+          <p>The models showed a <strong>systematic bias toward overpredicting</strong> immune-related adverse events. Operationalising this methodology for pharmacovigilance requires triage workflows that anticipate <em>false-positive load</em>, not just precision/recall claims.</p>
+        </div>
+
+        <p style="font-family:'Source Serif 4',serif;font-size:12.5px;color:var(--ink-2);line-height:1.55;margin:10px 0 0;"><strong style="color:var(--ink);">Why this matters in the bioanalytical / PV intersection:</strong> the work tests LLMs against both <strong>real-world EHR notes</strong> (Vanderbilt + UCSF) and <strong>industry-sponsored clinical-trial notes</strong> (Roche ICI trials, 272 patients). The cross-dataset variation (F1 56–66%) and the over-prediction bias are the operative findings for anyone considering LLM-on-notes as a PV signal-detection layer.</p>
+
+      </div>
+      <div class="exp-src"><strong>Source:</strong> "AI finds drug safety signals in clinical notes" by Paul Govern · VUMC News, 7 April 2026 · published in <em>eBioMedicine</em>, 6 April 2026 · Lead researcher: <strong>Cosmin Bejan, PhD</strong>, assistant professor of Biomedical Informatics at Vanderbilt · <a href="https://news.vumc.org/2026/04/07/ai-finds-drug-safety-signals-in-clinical-notes/" target="_blank" rel="noopener">VUMC News article</a></div>
+    </div>
+
+    <!-- SLOT 09 -->
+    <div id="exp-9">
+      <div class="exp-header">
+        <span class="slot">FDA · One pivotal trial as the new approval default</span>
+        <span class="meta">NEJM · Makary + Prasad · Feb 2026 · + FDA Bayesian draft guidance</span>
+        <span class="verif">✓ FDA leadership + FDA primary + named-publisher commentary</span>
+      </div>
+      <div class="exp-body">
+
+        <div class="hero-quote">
+          Going forward, the FDA's default position is that one adequate and well-controlled study, combined with confirmatory evidence, will serve as the basis of marketing authorization of novel products. The FDA will carefully examine all aspects of study design with particular focus on controls, end points, effect size, and statistical protocols.
+          <span class="cite">— FDA Commissioner Marty Makary + CBER Director Vinay Prasad · NEJM, Feb 2026 · via Cytel direct citation</span>
+        </div>
+
+        <div class="section-h">The constellation · policy + technical enabler</div>
+        <div class="const-grid">
+          <div class="const-col policy">
+            <div class="cl">The policy shift</div>
+            <h5>One pivotal trial as default — not exception</h5>
+            <p>Single-trial pathway has always existed for breakthrough · accelerated · priority review. FDA leadership (Makary + Prasad) now positions it as the <strong>default</strong> for novel-product approval — published in <em>NEJM</em>, Feb 2026. Hummel (Cytel): "modern drug development provides much more clarity on a precise mechanism of action… supporting statistical with biologic inference."</p>
+          </div>
+          <div class="const-col tech">
+            <div class="cl">The technical enabler</div>
+            <h5>FDA Bayesian Methodology Draft Guidance</h5>
+            <p><strong>Use of Bayesian Methodology in Clinical Trials of Drug and Biological Products</strong> · CDER + CBER · <strong>12 Jan 2026</strong> · Docket FDA-2025-D-3217. "The primary focus is on the use of Bayesian methods <strong>to support primary inference</strong> in clinical trials intended to support the effectiveness and safety of drugs."</p>
+          </div>
+        </div>
+
+        <div class="cost-callout">
+          <div class="cn">$30–150M</div>
+          <div class="cl">Per pivotal trial · cost benchmark<em>— Hummel, Cytel · Feb 26, 2026</em></div>
+        </div>
+
+        <p style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--ink);line-height:1.55;margin:0 0 12px;"><strong>Cytel's Savina Jaeger</strong> on the Bayesian guidance: <em>"The strategic question is not whether Bayesian methods are acceptable in principle — it is whether the efficiency gains justify the additional complexity and review burden for your specific program."</em></p>
+
+        <div class="source-list">
+          <div class="sh">Source constellation</div>
+          <ul>
+            <li>NEJM · Makary + Prasad · Feb 2026 · <a href="https://www.nejm.org/doi/10.1056/NEJMsb2517623" target="_blank" rel="noopener">nejm.org →</a> (paywalled)</li>
+            <li>FDA Bayesian draft guidance · CDER + CBER · 12 Jan 2026 · <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-bayesian-methodology-clinical-trials-drug-and-biological-products" target="_blank" rel="noopener">fda.gov →</a></li>
+            <li>Cytel · Jürgen Hummel · 26 Feb 2026 · <a href="https://cytel.com/perspectives/fdas-new-default-one-pivotal-trial-for-drug-approval/" target="_blank" rel="noopener">cytel.com →</a></li>
+            <li>Cytel · Savina Jaeger · 5 Feb 2026 · <a href="https://cytel.com/perspectives/fdas-bayesian-guidance-strategic-considerations-for-sponsors/" target="_blank" rel="noopener">cytel.com →</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="exp-src"><strong>Source constellation:</strong> NEJM publication by FDA leadership (paywalled · quoted via Cytel direct citation) + FDA Bayesian draft guidance (CDER + CBER · 12 Jan 2026 · Docket FDA-2025-D-3217 · verified via direct read) + Cytel commentary by Jürgen Hummel (26 Feb 2026) + Cytel commentary by Savina Jaeger (5 Feb 2026) + ICH E9 baseline reference.</div>
+    </div>
+
+  </div>
+
+  <section class="closing-band">
+    <div class="pattern-h">▢ The cross-cutting pattern this week</div>
+    <p>This week's nine signals point to one system-level movement: regulators on both sides of the Atlantic are <em>rewriting the evidence architecture</em> of drug development.</p>
+    <p><em>FDA Real-Time Clinical Trials</em> (TRAVERSE + STREAM-SCLC), <em>FDA's single-pivotal-trial default</em> (NEJM Feb 2026) and <em>FDA's draft Bayesian guidance</em> (Jan 2026) collapse the evidence stack from "two adequate and well-controlled trials" toward "one pivotal + Bayesian inference + real-time signal sharing." <em>FDA + EMA's 10 Good AI Practice principles</em> and <em>EU AI Act Article&nbsp;50</em> set the cross-Atlantic AI baseline. <em>WHO</em> sizes the environmental footprint with hard numbers. <em>Vanderbilt's LLM-PV</em> shows the methodology layer that makes real-time review scalable — and honestly flags its over-prediction bias. <em>EMA's Critical Medicines Act</em> opens a new EU supply-chain regime. <em>FDA's One-Day Inspectional Assessments</em> add a targeted surveillance tool for lower-risk facilities.</p>
+    <p>The integration question for W20: <em>which organisations can adapt their evidence-generation, AI-governance, and operational design before the regulator and the procurement function start asking?</em></p>
+    <p class="disclaimer">
+      <strong>Snapshot as of 18 May 2026.</strong> Every claim on this page is anchored to a primary source actually read (PDF) or content-verified (WebFetch / direct curl). iFeed publishes synthesis and methodology &mdash; not legal advice, not a substitute for full guideline reading or your own SOPs and validation plans. Always confirm against the latest official texts for your submission. Cross-domain regulatory intelligence &mdash; bioanalytical · bioequivalence · clinical trials · governance · AI in healthcare &mdash; in one place. <em>This is the constant. Every Monday.</em>
+    </p>
+  </section>
+
+  <div class="next-week-strip">
+    Next: <a href='/'>All notes</a> &middot; <a href="https://library.ifeed.ie/">Library</a> &middot; <a href="https://ifeed.ie/connect.html">Connect</a>
+    <br/><br/>
+    <em style="font-family:'Newsreader',serif;font-size:13px;color:var(--accent);">W21 ships Monday 25 May 2026.</em>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="credits">
+      iFeed · Intellectual Feeds · Galway · Pune · Global
+      &middot; <a href="https://ifeed.ie/privacy.html" style="color: inherit; border-bottom: 1px solid currentColor; padding-bottom: 1px;">privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle
+  const root = document.documentElement;
+  const tLight = document.getElementById('t-light');
+  const tDark = document.getElementById('t-dark');
+  const saved = localStorage.getItem('ifeed-theme');
+  if (saved === 'dark') { root.setAttribute('data-theme','dark'); tDark.classList.add('active'); tLight.classList.remove('active'); }
+  tLight.addEventListener('click', () => { root.setAttribute('data-theme','light'); tLight.classList.add('active'); tDark.classList.remove('active'); localStorage.setItem('ifeed-theme','light'); });
+  tDark.addEventListener('click', () => { root.setAttribute('data-theme','dark'); tDark.classList.add('active'); tLight.classList.remove('active'); localStorage.setItem('ifeed-theme','dark'); });
+
+  // W20 hamburger drawer
+  (function(){
+    var btn = document.getElementById('w20-hamburger');
+    var drawer = document.getElementById('w20-drawer');
+    var bd = document.getElementById('w20-drawer-backdrop');
+    var closeBtn = document.getElementById('w20-drawer-close');
+    if (!btn || !drawer || !bd) return;
+    function open(){ drawer.classList.add('open'); bd.classList.add('open'); btn.setAttribute('aria-expanded','true'); drawer.setAttribute('aria-hidden','false'); }
+    function close(){ drawer.classList.remove('open'); bd.classList.remove('open'); btn.setAttribute('aria-expanded','false'); drawer.setAttribute('aria-hidden','true'); }
+    btn.addEventListener('click', function(){ drawer.classList.contains('open') ? close() : open(); });
+    bd.addEventListener('click', close);
+    closeBtn && closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && drawer.classList.contains('open')) close(); });
+  })();
+
+  // Nav title swap on expand
+  (function(){
+    var wrap = document.getElementById('w20-nav-title');
+    var head = document.getElementById('w20-nav-head');
+    if (!wrap || !head) return;
+    var def = head.innerHTML;
+    window.__w20SetTitle = function(html){
+      if (head.innerHTML === html) return;
+      wrap.classList.add('swapping');
+      setTimeout(function(){ head.innerHTML = html; wrap.classList.remove('swapping'); }, 180);
+    };
+    window.__w20ResetTitle = function(){ window.__w20SetTitle(def); };
+  })();
+
+  // In-place expand · grid hides, expanded fills same area
+  (function(){
+    const grid = document.getElementById('grid');
+    const expanded = document.getElementById('expanded');
+    const content = document.getElementById('expanded-content');
+    const closeBtn = document.getElementById('exp-close');
+    const cards = document.querySelectorAll('.card[data-target]');
+    const sources = document.querySelectorAll('.expansion-source > div');
+    const map = {};
+    sources.forEach(s => { map[s.id] = s; });
+
+    function open(id) {
+      const src = map[id]; if (!src) return;
+      content.innerHTML = src.innerHTML;
+      grid.classList.add('is-hidden');
+      expanded.classList.add('is-visible');
+      document.body.classList.add('expanded-open');
+      // Update nav title with the active slot header
+      var header = content.querySelector('.exp-header .slot');
+      if (header && window.__w20SetTitle) window.__w20SetTitle(header.textContent);
+      document.querySelector('.canvas').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    function close() {
+      expanded.classList.remove('is-visible');
+      grid.classList.remove('is-hidden');
+      document.body.classList.remove('expanded-open');
+      if (window.__w20ResetTitle) window.__w20ResetTitle();
+      setTimeout(() => { content.innerHTML = ''; }, 240);
+    }
+    cards.forEach(c => c.addEventListener('click', () => open(c.dataset.target)));
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && expanded.classList.contains('is-visible')) close(); });
+  })();
+</script>
+
+</body>
+</html>
