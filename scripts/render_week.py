@@ -77,17 +77,11 @@ def render_nav(issue: dict) -> str:
     </div>
     <div class="links">
       <a href='https://ifeed.ie/'>Home</a>
-      <a href="https://ifeed.ie/methodology.html">Methodology</a>
-      <a href="https://library.ifeed.ie/">Library</a>
-      <a href="https://regulations.ifeed.ie/">Regulations</a>
-      <a href="https://ifeed.ie/services.html">Collaborate</a>
-      <a href="https://ai.ifeed.ie/">AI</a>
+      <a href='https://ifeed.ie/methodology/'>Methodology</a>
+      <a href='https://ifeed.ie/about/'>About</a>
       <a class='current' href='/'>Signals</a>
-      <a href="https://ifeed.ie/academy.html">Academy</a>
-      <a href="https://ifeed.ie/community.html">Community</a>
-      <a href="https://ifeed.ie/founder.html">Founder</a>
-      <a href="https://ifeed.ie/connect.html">Connect</a>
-      <a href="https://ifeed.ie/register.html">Register</a>
+      <a href='https://ifeed.ie/collaboration/'>Collaboration</a>
+      <a href='https://ifeed.ie/contact/'>Contact</a>
     </div>
   </div>
 </nav>
@@ -95,17 +89,11 @@ def render_nav(issue: dict) -> str:
 <aside class="w20-drawer" id="w20-drawer" aria-hidden="true">
   <button type="button" class="close" id="w20-drawer-close" aria-label="close menu">×</button>
   <a href='https://ifeed.ie/'>Home</a>
-  <a href="https://ifeed.ie/methodology.html">Methodology</a>
-  <a href="https://library.ifeed.ie/">Library</a>
-  <a href="https://regulations.ifeed.ie/">Regulations</a>
-  <a href="https://ifeed.ie/services.html">Collaborate</a>
-  <a href="https://ai.ifeed.ie/">AI</a>
+  <a href='https://ifeed.ie/methodology/'>Methodology</a>
+  <a href='https://ifeed.ie/about/'>About</a>
   <a class='current' href='/'>Signals</a>
-  <a href="https://ifeed.ie/academy.html">Academy</a>
-  <a href="https://ifeed.ie/community.html">Community</a>
-  <a href="https://ifeed.ie/founder.html">Founder</a>
-  <a href="https://ifeed.ie/connect.html">Connect</a>
-  <a href="https://ifeed.ie/register.html">Register</a>
+  <a href='https://ifeed.ie/collaboration/'>Collaboration</a>
+  <a href='https://ifeed.ie/contact/'>Contact</a>
 </aside>"""
 
 
@@ -114,7 +102,7 @@ def render_test_banner(issue_data: dict) -> str:
         return ""
     return """
 <div class="test-banner" style="width:min(1250px,calc(100% - 24px));margin:16px auto 0;border:1px solid #c45e3e;color:#8d2d1f;background:#f9e8e4;border-radius:10px;padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;">
-  TEST ISSUE · Generated from JSON for workflow validation. Replace placeholder signals before public publication.
+  TEST ISSUE · Generated from JSON for workflow validation. Complete source, claim, editorial, CMS, and deploy approvals before public publication.
 </div>"""
 
 

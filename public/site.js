@@ -9,7 +9,7 @@
      3. backtotop    · floating return-to-top affordance
      4. smoothlinks  · anchor links scroll smoothly + offset for sticky nav
      5. externals    · auto-affix ↗ to external links · open in new tab
-     6. shortcuts    · keyboard shortcuts (t, g h/l/m/n/r/f/c, ?, esc)
+     6. shortcuts    · keyboard shortcuts (t, g h/m/a/s/c/o, ?, esc)
      7. shortcutui   · the help overlay invoked by ?
      8. activesec    · current section indicator (auto-generates side rail when ≥3 sections)
 */
@@ -133,6 +133,10 @@
     var prefix = '';
     var prefixTimeout = null;
     function navTo(href) {
+      if (/^(https?:)?\/\//.test(href) || href.charAt(0) === '/') {
+        window.location.href = href;
+        return;
+      }
       var path = window.location.pathname;
       var depth = (path.match(/\//g) || []).length - 1;
       if (path.endsWith('/')) depth = depth;
@@ -179,14 +183,11 @@
         clearTimeout(prefixTimeout); prefix = '';
         var map = {
           h: 'index.html',
-          l: 'library.html',
-          m: 'methodology.html',
-          n: 'notes/index.html',
-          a: 'academy.html',
-          c: 'connect.html',
-          f: 'founder.html',
-          r: 'register.html',
-          y: 'community.html',
+          m: 'https://ifeed.ie/methodology/',
+          a: 'https://ifeed.ie/about/',
+          s: '/',
+          c: 'https://ifeed.ie/collaboration/',
+          o: 'https://ifeed.ie/contact/',
           g: null
         };
         if (e.key === 'g') {
@@ -227,13 +228,10 @@
       +     '<div class="sh-row"><kbd>g</kbd><kbd>g</kbd><span>Back to top</span></div>'
       +     '<div class="sh-row"><kbd>g</kbd><kbd>h</kbd><span>Home</span></div>'
       +     '<div class="sh-row"><kbd>g</kbd><kbd>m</kbd><span>Methodology</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>l</kbd><span>Library</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>n</kbd><span>Notes</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>a</kbd><span>Academy</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>y</kbd><span>Community</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>f</kbd><span>Founder</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>c</kbd><span>Connect</span></div>'
-      +     '<div class="sh-row"><kbd>g</kbd><kbd>r</kbd><span>Register</span></div>'
+      +     '<div class="sh-row"><kbd>g</kbd><kbd>a</kbd><span>About</span></div>'
+      +     '<div class="sh-row"><kbd>g</kbd><kbd>s</kbd><span>Signals</span></div>'
+      +     '<div class="sh-row"><kbd>g</kbd><kbd>c</kbd><span>Collaboration</span></div>'
+      +     '<div class="sh-row"><kbd>g</kbd><kbd>o</kbd><span>Contact</span></div>'
       +     '<div class="sh-row"><kbd>?</kbd><span>Toggle this help</span></div>'
       +   '</div>'
       + '</div>';

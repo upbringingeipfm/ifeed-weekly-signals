@@ -69,7 +69,9 @@ def render_timeline(issues: list[dict]) -> str:
 
 def render_index() -> str:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
-    issues = registry["issues"]
+    issues = [issue for issue in registry["issues"] if not issue.get("testMode")]
+    if not issues:
+        raise RuntimeError("No public issues available for index generation.")
     latest = max(issues, key=lambda item: item["issueNumber"])
     shell = TEMPLATE.read_text(encoding="utf-8")
 
@@ -90,7 +92,12 @@ def render_index() -> str:
 def render_sitemap() -> str:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     base = registry["publicSite"]["canonicalUrl"].rstrip("/")
-    issues = sorted(registry["issues"], key=lambda item: item["issueNumber"])
+    issues = sorted(
+        [issue for issue in registry["issues"] if not issue.get("testMode")],
+        key=lambda item: item["issueNumber"],
+    )
+    if not issues:
+        raise RuntimeError("No public issues available for sitemap generation.")
     rows = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

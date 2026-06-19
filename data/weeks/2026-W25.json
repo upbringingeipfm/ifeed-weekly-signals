@@ -12,292 +12,291 @@
       "end": "2026-06-21",
       "actualEnd": "2026-06-18"
     },
-    "title": "W25: intelligence needs an operating file.",
-    "theme": "From signal capture to controlled work",
-    "dek": "A test W25 issue showing how iFeed Weekly Signals can move from hand-built pages to a structured data and rendering workflow.",
-    "lede": "This pilot keeps the Week 23 format but moves the changing weekly material into JSON. The nine records below are test signals for workflow validation: replace them with verified W25 selections before public publication.",
+    "title": "W25: intelligence needs a source-backed operating file.",
+    "theme": "From movement to controlled evidence",
+    "dek": "A controlled W25 draft built from source-backed candidates across AI governance, medical devices, quality systems, clinical operations, market access, health data, and biopharma AI.",
+    "lede": "This W25 draft replaces the earlier placeholder records with source-backed candidates. It remains a test-mode, noindex issue until final editorial selection, source check, claim check, CMS handoff, domain confirmation, and publish approval are complete.",
     "canonicalUrl": "https://weeklysignals.ifeed.ie/2026-06-22_weekly-w25.html",
-    "referenceTemplate": "week23"
+    "referenceTemplate": "week23-standard"
   },
   "workflow": {
-    "status": "test",
+    "status": "draft",
     "sourceChecked": false,
     "claimChecked": false,
     "editorApproved": false,
     "publishApproved": false,
-    "notes": "Test dataset only. Use this to verify CMS/render workflow before W25 editorial selection."
+    "notes": "Source-backed controlled draft imported from the iFeed Master Platform W25 source register on 2026-06-18. Keep testMode true until human/editor approval and deployment target confirmation."
   },
   "signals": [
     {
       "number": 1,
-      "id": "w25-test-01",
+      "id": "w25-cand-01",
       "lane": "AI Governance",
-      "horizon": "Govern",
-      "title": "AI governance needs a controlled evidence trail.",
-      "cardFact": "Healthcare AI decisions need source, context, version, reviewer, and limitation records before they can become trusted operating infrastructure.",
-      "whyItMatters": "This matters because AI adoption without reviewable evidence turns intelligence into an undocumented risk surface.",
-      "sourceTitle": "Replace with verified W25 AI governance source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "horizon": "Classify",
+      "title": "High-risk AI classification is becoming operating architecture.",
+      "cardFact": "AI Act classification work is moving from policy language into source-backed records about intended purpose, risk route, owner review, and claim boundary.",
+      "whyItMatters": "Classification decisions become operational only when teams can show how the source was read, what the AI system does, and why the conclusion was reached.",
+      "sourceTitle": "Draft Commission guidelines on classification of high-risk AI systems",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the AI-governance lane. In the real issue, replace it with a verified W25 source from a regulator, standards body, health authority, journal, or primary organization. The operating interpretation should explain what changed and what a responsible team should document.",
+      "sourceType": "European Commission guidance consultation",
+      "expandedSummary": "The European Commission draft high-risk AI classification source gives iFeed a clear governance signal: classification cannot sit as a vague legal label. It needs an operating record that connects intended purpose, product or safety-component relationship, source interpretation, reviewer, and limitation. For iFeed, the important move is not to overstate the consultation as final guidance, but to turn it into a controlled decision workflow.",
       "tiles": [
-        { "label": "Why it matters", "text": "AI can affect decisions before formal review unless the workflow creates traceable evidence." },
-        { "label": "Owner", "text": "AI governance, quality, clinical safety, regulatory, and data teams." },
-        { "label": "Monday move", "text": "Create a one-page AI use record: purpose, data, model/version, reviewer, limitations, and decision boundary." }
+        { "label": "Why it matters", "text": "AI Act classification affects what evidence, controls, and accountability records a team needs." },
+        { "label": "Owner", "text": "AI governance, regulatory, quality, product, clinical safety, and legal review teams." },
+        { "label": "Monday move", "text": "Create a classification record with source, intended purpose, risk route, reviewer, and claim boundary." }
       ],
       "visual": {
-        "title": "AI use becomes evidence work",
+        "title": "Classification becomes a record",
         "nodes": [
-          { "label": "Input", "text": "source data" },
-          { "label": "Model", "text": "version + limits" },
-          { "label": "Review", "text": "human judgment" },
-          { "label": "Record", "text": "decision trail" }
+          { "label": "Source", "text": "draft guideline" },
+          { "label": "Purpose", "text": "AI system use" },
+          { "label": "Route", "text": "risk logic" },
+          { "label": "Record", "text": "reviewed conclusion" }
         ],
-        "footer": "If it cannot be reviewed later, it is not controlled intelligence."
+        "footer": "Do not publish the interpretation without separating source fact from iFeed view."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Draft consultation source only. This is not legal advice and should not be framed as final Commission guidance."
     },
     {
       "number": 2,
-      "id": "w25-test-02",
-      "lane": "Regulatory Evidence",
-      "horizon": "Source",
-      "title": "Regulatory interpretation needs source separation.",
-      "cardFact": "A useful regulatory signal should separate what the source says from what iFeed interprets for operators.",
-      "whyItMatters": "This prevents a digest from becoming overclaiming commentary and makes each action point auditable.",
-      "sourceTitle": "Replace with verified W25 regulatory source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-02",
+      "lane": "MedTech AI",
+      "horizon": "Map",
+      "title": "AI-enabled device evidence is now a visible market map.",
+      "cardFact": "FDA's public AI/ML-enabled medical device list makes the regulated AI-device landscape inspectable by device area, date, specialty, and source record.",
+      "whyItMatters": "A public list turns AI-device intelligence from broad trend language into a traceable market and evidence map.",
+      "sourceTitle": "Artificial Intelligence and Machine Learning (AI/ML)-Enabled Medical Devices",
+      "sourceUrl": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the regulatory-evidence lane. In real use, paste the exact source URL, source date, source type, and one factual sentence before writing iFeed interpretation.",
+      "sourceType": "FDA device list",
+      "expandedSummary": "The FDA AI/ML-enabled medical devices page is useful because it gives operators a source-backed way to inspect the AI-device landscape rather than describe it generally. For iFeed, the signal is that MedTech AI content should not just say that AI devices are increasing. It should connect public device records to specialty, intended use, lifecycle implication, and what kind of evidence or quality controls a responsible reader should consider.",
       "tiles": [
-        { "label": "Why it matters", "text": "Regulatory intelligence is only useful if the reader can trace the source." },
-        { "label": "Owner", "text": "Regulatory affairs, quality systems, clinical evidence, and market-access teams." },
-        { "label": "Monday move", "text": "Add source-fact and iFeed-interpretation as separate fields for every selected signal." }
+        { "label": "Why it matters", "text": "Device AI can be tracked with public evidence instead of vague market claims." },
+        { "label": "Owner", "text": "MedTech regulatory, QMS, clinical evaluation, software validation, and product teams." },
+        { "label": "Monday move", "text": "Build a device-intelligence table with specialty, intended use, clearance date, and lifecycle implication." }
       ],
       "visual": {
-        "title": "Source before interpretation",
+        "title": "Device intelligence as a map",
         "nodes": [
-          { "label": "Source", "text": "what happened" },
-          { "label": "Class", "text": "regulator/journal/etc." },
-          { "label": "Boundary", "text": "what it proves" },
-          { "label": "Action", "text": "what to do" }
+          { "label": "List", "text": "FDA source" },
+          { "label": "Device", "text": "area and use" },
+          { "label": "Lifecycle", "text": "control need" },
+          { "label": "Signal", "text": "reader action" }
         ],
-        "footer": "A source-backed signal should survive an audit trail."
+        "footer": "A list can become intelligence only when it is structured for action."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Do not infer device safety, performance, or market share beyond the public FDA list."
     },
     {
       "number": 3,
-      "id": "w25-test-03",
-      "lane": "Quality Systems",
-      "horizon": "QMS",
-      "title": "Weekly signals need CAPA-style discipline.",
-      "cardFact": "Signal review works better when every candidate has status, rationale, owner, and next check.",
-      "whyItMatters": "This turns intelligence gathering into a controlled operating process instead of a weekly scramble.",
-      "sourceTitle": "Replace with verified W25 QMS/quality source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-03",
+      "lane": "QMS and Quality",
+      "horizon": "Control",
+      "title": "Good machine-learning practice is moving into quality language.",
+      "cardFact": "FDA's SaMD AI materials keep AI/ML medical-device software tied to lifecycle, transparency, change-control, monitoring, and good machine-learning-practice concepts.",
+      "whyItMatters": "AI quality is becoming less about novelty and more about traceable intended use, data, validation, transparency, monitoring, and change records.",
+      "sourceTitle": "Artificial Intelligence and Machine Learning in Software as a Medical Device",
+      "sourceUrl": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the quality-system lane. The future CMS should treat signals like quality records: status, rationale, owner, evidence, decision, and closure.",
+      "sourceType": "FDA SaMD AI topic page",
+      "expandedSummary": "The FDA SaMD AI topic page supports a quality-system reading of AI. The useful W25 signal is that good machine-learning practice and lifecycle thinking should become record structures, not presentation language. iFeed can turn this into a reusable QMS lens: purpose, data, training context, validation, transparency, monitoring, update logic, and change decision.",
       "tiles": [
-        { "label": "Why it matters", "text": "The same signal may be selected, watched, parked, or rejected, but the reason should be retained." },
-        { "label": "Owner", "text": "Editorial lead, quality intelligence owner, and source reviewer." },
-        { "label": "Monday move", "text": "Use statuses: candidate, selected, alternative, watch, separate, drop." }
+        { "label": "Why it matters", "text": "AI tools become risky when update logic and evidence boundaries are not controlled." },
+        { "label": "Owner", "text": "QMS, software validation, regulatory, product, clinical safety, and post-market teams." },
+        { "label": "Monday move", "text": "Create an AI software control record with intended use, dataset, validation, monitoring, and change trigger." }
       ],
       "visual": {
-        "title": "Signal review as quality control",
+        "title": "AI quality follows the lifecycle",
         "nodes": [
-          { "label": "Capture", "text": "raw item" },
-          { "label": "Verify", "text": "source check" },
-          { "label": "Decide", "text": "status + reason" },
-          { "label": "Publish", "text": "selected 9" }
+          { "label": "Purpose", "text": "intended use" },
+          { "label": "Data", "text": "training and input" },
+          { "label": "Validate", "text": "evidence" },
+          { "label": "Monitor", "text": "change control" }
         ],
-        "footer": "A dropped signal can still be useful evidence of editorial judgment."
+        "footer": "Quality language becomes useful when it creates reviewable records."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "This is a governance/readiness interpretation, not a claim that one FDA topic page creates a new W25 obligation."
     },
     {
       "number": 4,
-      "id": "w25-test-04",
-      "lane": "Clinical Trials",
-      "horizon": "Trial",
-      "title": "Trial intelligence still depends on source records.",
-      "cardFact": "Clinical-trial innovation only becomes credible when protocol, source data, deviations, consent, training, and oversight stay inspectable.",
-      "whyItMatters": "This keeps weekly intelligence grounded in operational evidence rather than abstract innovation language.",
-      "sourceTitle": "Replace with verified W25 clinical-trials source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-04",
+      "lane": "Clinical Operations",
+      "horizon": "Evidence",
+      "title": "Clinical AI needs reviewable medical-product evidence.",
+      "cardFact": "FDA's AI and medical products page treats AI as a cross-product issue spanning devices, drugs, biologics, evidence, oversight, and research.",
+      "whyItMatters": "AI in medical products and clinical workflows needs a visible evidence trail before it can become trusted operating infrastructure.",
+      "sourceTitle": "Artificial Intelligence and Medical Products",
+      "sourceUrl": "https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-medical-products",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the clinical-trials lane. Real W25 content should be based on a verified trial, regulator, journal, inspection, or ecosystem source.",
+      "sourceType": "FDA science and research topic page",
+      "expandedSummary": "FDA's AI and medical products page is not a single clinical-trial rule, but it is an important operating signal. AI is no longer a narrow software sidebar. It sits across medical products, clinical evidence, and oversight. iFeed should use this to frame clinical AI as evidence work: source, model purpose, workflow point, human review, decision boundary, and audit trail.",
       "tiles": [
-        { "label": "Why it matters", "text": "AI and adaptive methods do not remove GCP evidence responsibilities." },
-        { "label": "Owner", "text": "Clinical operations, QA, sponsor oversight, site management." },
-        { "label": "Monday move", "text": "Map each trial innovation signal to the evidence record it would require." }
+        { "label": "Why it matters", "text": "Clinical AI can affect product evidence and decisions before the record is ready." },
+        { "label": "Owner", "text": "Clinical operations, medical product teams, regulatory strategy, QA, data science, and safety." },
+        { "label": "Monday move", "text": "Map every AI use to a workflow point, reviewer, decision boundary, and retained evidence record." }
       ],
       "visual": {
-        "title": "Innovation needs inspectability",
+        "title": "Clinical AI as evidence work",
         "nodes": [
-          { "label": "Protocol", "text": "intent" },
-          { "label": "Source", "text": "truth" },
-          { "label": "Deviation", "text": "change" },
-          { "label": "CAPA", "text": "closure" }
+          { "label": "Workflow", "text": "where AI acts" },
+          { "label": "Evidence", "text": "what supports it" },
+          { "label": "Review", "text": "human owner" },
+          { "label": "Record", "text": "audit trail" }
         ],
-        "footer": "If the trial changes, the evidence file must change with it."
+        "footer": "If AI changes a decision, the record must show how."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Do not claim a trial-specific regulatory change from this source without a trial-specific guidance source."
     },
     {
       "number": 5,
-      "id": "w25-test-05",
+      "id": "w25-cand-05",
       "lane": "Market Access",
       "horizon": "Access",
-      "title": "Access planning starts before the dossier.",
-      "cardFact": "Evidence planning should connect regulatory, clinical, statistical, HTA, and payer questions before late-stage submission pressure begins.",
-      "whyItMatters": "Weak early evidence design can turn market access into a late corrective exercise.",
-      "sourceTitle": "Replace with verified W25 HTA/market-access source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "title": "EU HTA is becoming a planning system, not a late dossier step.",
+      "cardFact": "The European Commission HTA page anchors joint clinical assessment and joint scientific consultation as part of the EU health technology assessment operating environment.",
+      "whyItMatters": "Evidence planning has to connect regulatory, clinical, statistical, HTA, and payer questions before late-stage submission pressure begins.",
+      "sourceTitle": "Health Technology Assessment",
+      "sourceUrl": "https://health.ec.europa.eu/health-technology-assessment_en",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the market-access lane. A real W25 signal should identify a payer, HTA, EU JCA/JSC, reimbursement, or evidence-planning source.",
+      "sourceType": "European Commission health policy page",
+      "expandedSummary": "The European Commission HTA source supports a market-access signal: value evidence is moving upstream. iFeed should frame HTA not as a final dossier activity but as a planning system that shapes what evidence is generated, how it is explained, and how regulatory and payer questions are separated. This is especially relevant to iFeed's market research and service readiness layers.",
       "tiles": [
-        { "label": "Why it matters", "text": "The evidence that wins approval may not be enough for access." },
-        { "label": "Owner", "text": "Market access, regulatory strategy, clinical development, statistics." },
-        { "label": "Monday move", "text": "Add an HTA question field to every evidence-planning signal." }
+        { "label": "Why it matters", "text": "Approval evidence and access evidence can ask different questions." },
+        { "label": "Owner", "text": "Market access, regulatory strategy, clinical development, health economics, and statistics." },
+        { "label": "Monday move", "text": "Add HTA question, comparator, outcome, and uncertainty fields to evidence-planning records." }
       ],
       "visual": {
-        "title": "One evidence plan, many decisions",
+        "title": "Access starts upstream",
         "nodes": [
           { "label": "Regulator", "text": "benefit-risk" },
-          { "label": "Clinician", "text": "use" },
+          { "label": "Clinical", "text": "evidence" },
           { "label": "HTA", "text": "value" },
           { "label": "Payer", "text": "coverage" }
         ],
-        "footer": "Access is designed upstream, not rescued downstream."
+        "footer": "Access is designed before the dossier hardens."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Do not claim reimbursement outcome, payer decision, or product-specific value from this source."
     },
     {
       "number": 6,
-      "id": "w25-test-06",
-      "lane": "MedTech",
-      "horizon": "Device",
-      "title": "AI-device signals need lifecycle evidence.",
-      "cardFact": "Software and AI-device intelligence should track intended use, validation, monitoring, change control, and post-market feedback.",
-      "whyItMatters": "A device signal is weak if it only describes launch or clearance without lifecycle obligations.",
-      "sourceTitle": "Replace with verified W25 medtech source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-06",
+      "lane": "Health Data Infrastructure",
+      "horizon": "Data",
+      "title": "Health data space is becoming readiness infrastructure.",
+      "cardFact": "The European Health Data Space frames health data access, use, and governance as an EU-level infrastructure question.",
+      "whyItMatters": "AI, research, quality systems, and market intelligence all depend on provenance, access rights, reuse logic, and governance controls.",
+      "sourceTitle": "European Health Data Space",
+      "sourceUrl": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the MedTech lane. In real use, connect the event to product lifecycle controls, evidence duties, or post-market intelligence.",
+      "sourceType": "European Commission digital health policy page",
+      "expandedSummary": "The European Health Data Space source gives W25 a healthcare infrastructure signal. The practical point for iFeed is that health data is becoming an operating layer. AI readiness, research evidence, QMS controls, and market intelligence all need clarity around data provenance, access, secondary use, governance, and accountability. This belongs in both the public research layer and the internal cockpit model.",
       "tiles": [
-        { "label": "Why it matters", "text": "MedTech intelligence must show what changes for QMS, PMS, validation, or clinical evidence." },
-        { "label": "Owner", "text": "MedTech regulatory, QMS, clinical evaluation, software validation." },
-        { "label": "Monday move", "text": "For each AI-device item, record intended use and lifecycle-control implication." }
+        { "label": "Why it matters", "text": "Data access and reuse rules determine what AI, research, and evidence workflows can safely do." },
+        { "label": "Owner", "text": "Digital health, data governance, research, quality, privacy, and platform teams." },
+        { "label": "Monday move", "text": "Create a health-data readiness checklist: source, access right, purpose, reuse limit, and governance owner." }
       ],
       "visual": {
-        "title": "Device intelligence follows the lifecycle",
+        "title": "Data becomes infrastructure",
         "nodes": [
-          { "label": "Use", "text": "intended purpose" },
-          { "label": "Validate", "text": "evidence" },
-          { "label": "Monitor", "text": "post-market" },
-          { "label": "Change", "text": "control" }
+          { "label": "Source", "text": "health data" },
+          { "label": "Access", "text": "rights" },
+          { "label": "Use", "text": "purpose" },
+          { "label": "Govern", "text": "control" }
         ],
-        "footer": "A launch is not the whole signal; lifecycle control is."
+        "footer": "Intelligence depends on governed data movement."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Do not convert general EHDS policy into organization-specific operational claims without implementation-level evidence."
     },
     {
       "number": 7,
-      "id": "w25-test-07",
-      "lane": "Healthcare Infrastructure",
-      "horizon": "Operate",
-      "title": "Healthcare intelligence is becoming infrastructure.",
-      "cardFact": "Signals matter most when they reveal an operating capability healthcare teams must build or strengthen.",
-      "whyItMatters": "This frames iFeed as an operating intelligence system, not a news summary.",
-      "sourceTitle": "Replace with verified W25 infrastructure source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-07",
+      "lane": "Biopharma AI",
+      "horizon": "Develop",
+      "title": "Drug-development AI needs submission-grade operating records.",
+      "cardFact": "FDA CDER's AI in drug development page shows AI activity becoming an operating and submission-readiness question for drug development teams.",
+      "whyItMatters": "AI use in drug development needs enough context to explain purpose, data, method, validation rationale, human review, and where it affects decisions.",
+      "sourceTitle": "Artificial Intelligence in Drug Development",
+      "sourceUrl": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/artificial-intelligence-drug-development",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the healthcare infrastructure lane. Real sources may include health-system AI, digital health, data infrastructure, payer-provider operations, or evidence platforms.",
+      "sourceType": "FDA CDER AI topic page",
+      "expandedSummary": "FDA CDER's AI in drug development page supports a biopharma AI signal for W25. The iFeed reading is that AI use in development is not just an innovation story. It needs submission-grade operating records: model purpose, input data, output role, validation rationale, human review, limitation, and decision impact. This is a natural bridge between iFeed Signals, AI healthcare, and future academy content.",
       "tiles": [
-        { "label": "Why it matters", "text": "Operators need to know what capability the signal asks them to build." },
-        { "label": "Owner", "text": "Healthcare operations, digital transformation, governance, quality." },
-        { "label": "Monday move", "text": "Write each signal as an operating capability, not only an event." }
+        { "label": "Why it matters", "text": "Drug-development AI may influence evidence, decisions, or submission narratives." },
+        { "label": "Owner", "text": "R&D, clinical development, regulatory strategy, data science, quality, and statistics." },
+        { "label": "Monday move", "text": "For each AI use, record purpose, data, output role, reviewer, limitation, and submission relevance." }
       ],
       "visual": {
-        "title": "From news to capability",
+        "title": "AI needs submission context",
         "nodes": [
-          { "label": "Event", "text": "what happened" },
-          { "label": "Pattern", "text": "why it matters" },
-          { "label": "Capability", "text": "what to build" },
-          { "label": "Owner", "text": "who acts" }
+          { "label": "Purpose", "text": "development use" },
+          { "label": "Input", "text": "data" },
+          { "label": "Output", "text": "decision support" },
+          { "label": "File", "text": "reviewable record" }
         ],
-        "footer": "The useful question is: what does this force us to operate?"
+        "footer": "Innovation becomes durable when the record can travel."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "Do not claim FDA endorsement of any specific AI approach unless the source says so."
     },
     {
       "number": 8,
-      "id": "w25-test-08",
-      "lane": "Biopharma AI",
-      "horizon": "Agents",
-      "title": "Agentic AI needs task boundaries.",
-      "cardFact": "Agentic AI becomes operationally meaningful only when allowed tasks, data access, review steps, and decision ownership are defined.",
-      "whyItMatters": "Without task boundaries, autonomous workflows can create uncontrolled outputs and unclear accountability.",
-      "sourceTitle": "Replace with verified W25 biopharma AI source",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-08",
+      "lane": "Regulatory Intelligence",
+      "horizon": "Separate",
+      "title": "Public-source regulation needs a claim boundary before commentary.",
+      "cardFact": "A regulatory signal is stronger when the public fact, the iFeed interpretation, and the non-legal-advice boundary are separate fields.",
+      "whyItMatters": "Regulatory commentary can overclaim quickly unless each source-backed statement keeps evidence, interpretation, and action boundary apart.",
+      "sourceTitle": "Draft Commission guidelines on classification of high-risk AI systems",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
       "sourceDate": "2026-06-18",
-      "sourceType": "test placeholder",
-      "expandedSummary": "This test signal represents the agentic AI / biopharma AI lane. A real selected signal should identify what the AI system is doing, who reviews it, and where decision authority remains human.",
+      "sourceType": "European Commission guidance consultation",
+      "expandedSummary": "This signal deliberately uses the same high-risk AI source as Signal 1 for a different purpose: method control. W25 is not only about what changed in the market. It is also about how iFeed should read regulatory movement. The Signal Cockpit should keep source fact, source class, iFeed interpretation, and claim boundary as separate fields. That is how a public digest can stay useful without turning into unbounded advice.",
       "tiles": [
-        { "label": "Why it matters", "text": "Agentic systems move from insight generation into work execution." },
-        { "label": "Owner", "text": "R&D, data science, quality, legal, regulatory strategy." },
-        { "label": "Monday move", "text": "Define allowed tasks, prohibited tasks, review steps, and escalation triggers." }
+        { "label": "Why it matters", "text": "Regulatory intelligence needs traceability before it needs confident commentary." },
+        { "label": "Owner", "text": "Editorial, regulatory, quality, legal review, and source verification teams." },
+        { "label": "Monday move", "text": "Use four fields for each regulatory item: source fact, source class, iFeed view, and boundary." }
       ],
       "visual": {
-        "title": "Agents need operating limits",
+        "title": "Source before commentary",
         "nodes": [
-          { "label": "Task", "text": "allowed work" },
-          { "label": "Access", "text": "data boundary" },
-          { "label": "Review", "text": "human check" },
-          { "label": "Decision", "text": "owner" }
+          { "label": "Fact", "text": "what source says" },
+          { "label": "Class", "text": "source type" },
+          { "label": "View", "text": "iFeed reading" },
+          { "label": "Limit", "text": "claim boundary" }
         ],
-        "footer": "Autonomy without boundary is not infrastructure; it is risk."
+        "footer": "Good intelligence survives review because the source is visible."
       },
-      "claimBoundary": "Test signal; not a verified W25 source-backed claim."
+      "claimBoundary": "This method signal duplicates the Signal 1 source; final editorial review should decide whether both should remain in the public issue."
     },
     {
       "number": 9,
-      "id": "w25-test-09",
-      "lane": "Operating Intelligence",
-      "horizon": "System",
-      "title": "The weekly digest becomes a management system.",
-      "cardFact": "The strongest iFeed move is converting weekly signal work into a repeatable cockpit with data, status, source ledger, and rendering.",
-      "whyItMatters": "This makes iFeed easier to operate, easier to audit, and easier to scale.",
-      "sourceTitle": "Internal iFeed CMS pilot",
-      "sourceUrl": "https://weeklysignals.ifeed.ie/",
+      "id": "w25-cand-09",
+      "lane": "Clinical Trial Quality",
+      "horizon": "GCP",
+      "title": "Clinical trial quality is becoming an operating-system requirement.",
+      "cardFact": "FDA ties clinical-trial oversight to federal law, GCP regulations, participant protection, robust evidence, and quality clinical evidence.",
+      "whyItMatters": "Trial modernization, AI use, and digital workflows still need to resolve into participant protection, protocol intent, source data, oversight, essential records, evidence quality, and quality management.",
+      "sourceTitle": "Clinical Trials and Human Subject Protection",
+      "sourceUrl": "https://www.fda.gov/science-research/science-and-research-special-topics/clinical-trials-and-human-subject-protection",
       "sourceDate": "2026-06-18",
-      "sourceType": "internal test",
-      "expandedSummary": "This test signal represents the operating-system lane. It proves the product direction: signals are not just content; they are a controlled intelligence workflow that can become a management layer.",
+      "sourceType": "FDA clinical trials and GCP page",
+      "expandedSummary": "The FDA clinical-trials and human-subject-protection page gives W25 a clinical-trial quality anchor. FDA describes oversight around trial design, conduct, analysis, reporting, participant protection, GCP regulations, and evidence quality. The iFeed interpretation is that modernization is not a reason to loosen the operating file. Whether teams are dealing with AI, digital tools, decentralized elements, or adaptive operations, the useful question remains: what record proves participant protection, protocol intent, source truth, oversight, training, deviation handling, and quality management?",
       "tiles": [
-        { "label": "Why it matters", "text": "A reliable weekly system can become a paid intelligence and execution cockpit." },
-        { "label": "Owner", "text": "iFeed editorial, data, product, and publishing operations." },
-        { "label": "Monday move", "text": "Move W25 from static HTML into a data-driven issue file and renderer." }
+        { "label": "Why it matters", "text": "Modern trials still need protected participants, reliable records, and evidence that can be inspected, explained, and trusted." },
+        { "label": "Owner", "text": "Clinical operations, sponsor oversight, QA, data management, sites, and trial technology teams." },
+        { "label": "Monday move", "text": "Map each trial innovation to participant-protection, protocol, source, oversight, essential-record, and QMS evidence." }
       ],
       "visual": {
-        "title": "Digest to cockpit",
+        "title": "Clinical quality needs an operating file",
         "nodes": [
-          { "label": "Capture", "text": "signals" },
-          { "label": "Control", "text": "status" },
-          { "label": "Render", "text": "page" },
-          { "label": "Deploy", "text": "Netlify" }
+          { "label": "People", "text": "protection" },
+          { "label": "Protocol", "text": "intent" },
+          { "label": "Evidence", "text": "quality" },
+          { "label": "QMS", "text": "control" }
         ],
-        "footer": "The process is the product."
+        "footer": "Modernization is strongest when participant protection and evidence quality become easier to verify."
       },
-      "claimBoundary": "Internal test signal for CMS validation."
+      "claimBoundary": "Do not claim FDA endorsement of a specific trial technology or AI approach from this general page; use it as a clinical-trial quality and GCP oversight anchor."
     }
   ]
 }
-
