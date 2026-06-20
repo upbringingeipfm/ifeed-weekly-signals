@@ -32,7 +32,11 @@
       "summary": "Nine updates across bioanalytical, bioequivalence, clinical trials, governance, AI in healthcare and broader. Verified primary sources.",
       "href": "2026-05-11_weekly-w19.html",
       "readTime": "~6 min",
-      "topics": ["weekly", "cross-domain", "W19"],
+      "topics": [
+        "weekly",
+        "cross-domain",
+        "W19"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -45,7 +49,11 @@
       "summary": "Nine selected signals across clinical trials, AI governance, IDMP, QMSR, biomarker validation, bioequivalence, non-animal evidence, pharmacovigilance and product-specific BE.",
       "href": "2026-05-18_weekly-w20.html",
       "readTime": "~7 min",
-      "topics": ["weekly", "cross-domain", "W20"],
+      "topics": [
+        "weekly",
+        "cross-domain",
+        "W20"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -58,7 +66,11 @@
       "summary": "Nine official-source signals across EU AI Act classification, FDA TEMPO, ACT EU trial metrics, AI in GMP, real-time trials, UDI execution, food-effect evidence, lifecycle quality and oral GLP-1 market movement.",
       "href": "2026-05-25_weekly-w21.html",
       "readTime": "~8 min",
-      "topics": ["weekly", "structured evidence", "W21"],
+      "topics": [
+        "weekly",
+        "structured evidence",
+        "W21"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -71,7 +83,11 @@
       "summary": "Nine source-backed signals across structured protocols, real-time clinical trials, AI Act classification, real-world evidence, QMSR readiness, device data, ML-enabled device lifecycle control, and the first iFeed Regulations artifact.",
       "href": "2026-06-01_weekly-w22.html",
       "readTime": "~8 min",
-      "topics": ["weekly", "evidence-readiness", "W22"],
+      "topics": [
+        "weekly",
+        "evidence-readiness",
+        "W22"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -84,7 +100,11 @@
       "summary": "Nine source-backed signals across healthcare AI, regulatory evidence, QMS and GMP controls, clinical operations, market access, and inspection-ready operating infrastructure.",
       "href": "2026-06-08_weekly-w23.html",
       "readTime": "~10 min",
-      "topics": ["weekly", "operating infrastructure", "W23"],
+      "topics": [
+        "weekly",
+        "operating infrastructure",
+        "W23"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -97,7 +117,11 @@
       "summary": "Nine source-backed stories across AI continuity, QMS enforcement, regulatory sandboxes, AI-device evidence, medtech records, clinical-trial AI, and HTA routing.",
       "href": "2026-06-15_weekly-w24.html",
       "readTime": "~11 min",
-      "topics": ["weekly", "AI infrastructure", "W24"],
+      "topics": [
+        "weekly",
+        "AI infrastructure",
+        "W24"
+      ],
       "source": "archive-static",
       "locked": true
     },
@@ -106,14 +130,18 @@
       "issueNumber": 25,
       "publishDate": "2026-06-22",
       "coverage": "15-21 June 2026",
-      "title": "iFeed Weekly · W25: intelligence needs a source-backed operating file.",
-      "summary": "A noindex source-backed W25 draft across AI governance, medical devices, quality systems, clinical operations, market access, health data, and biopharma AI. Not public-approved.",
+      "title": "iFeed Weekly · W25: 15-21 June 2026.",
+      "summary": "Nine source-backed signals across AI-device change control, QMSR enforcement, EMA data infrastructure, RWE, registry governance, EU HTA planning, supply resilience, prior authorization APIs, and platform evidence reuse.",
       "href": "2026-06-22_weekly-w25.html",
-      "readTime": "~10 min",
-      "topics": ["weekly", "source-backed draft", "W25"],
+      "readTime": "~11 min",
+      "topics": [
+        "weekly",
+        "controlled intelligence",
+        "W25"
+      ],
       "source": "data/weeks/2026-W25.json",
       "locked": false,
-      "testMode": true
+      "testMode": false
     }
   ]
 }

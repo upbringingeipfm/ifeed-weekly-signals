@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "testMode": true,
+  "testMode": false,
   "issue": {
     "week": "2026-W25",
     "issueNumber": 25,
@@ -10,293 +10,482 @@
     "coverage": {
       "start": "2026-06-15",
       "end": "2026-06-21",
-      "actualEnd": "2026-06-18"
+      "actualEnd": "2026-06-20"
     },
-    "title": "W25: intelligence needs a source-backed operating file.",
-    "theme": "From movement to controlled evidence",
-    "dek": "A controlled W25 draft built from source-backed candidates across AI governance, medical devices, quality systems, clinical operations, market access, health data, and biopharma AI.",
-    "lede": "This W25 draft replaces the earlier placeholder records with source-backed candidates. It remains a test-mode, noindex issue until final editorial selection, source check, claim check, CMS handoff, domain confirmation, and publish approval are complete.",
+    "title": "W25: controlled intelligence is becoming operating infrastructure.",
+    "theme": "AI, evidence, and regulatory systems move into controlled work",
+    "dek": "Nine source-backed signals across AI-device change control, QMSR enforcement, EMA data infrastructure, real-world evidence, registry governance, EU HTA planning, supply resilience, payer APIs, and platform evidence reuse.",
+    "lede": "This week is less about one big headline and more about the operating layer forming underneath healthcare intelligence. FDA, EMA, CMS and EU HTA sources all point in the same direction: AI, evidence, quality, access and supply decisions now need traceable records, not just strategy language.",
     "canonicalUrl": "https://weeklysignals.ifeed.ie/2026-06-22_weekly-w25.html",
     "referenceTemplate": "week23-standard"
   },
   "workflow": {
-    "status": "draft",
-    "sourceChecked": false,
-    "claimChecked": false,
-    "editorApproved": false,
-    "publishApproved": false,
-    "notes": "Source-backed controlled draft imported from the iFeed Master Platform W25 source register on 2026-06-18. Keep testMode true until human/editor approval and deployment target confirmation."
+    "status": "publish-ready",
+    "sourceChecked": true,
+    "claimChecked": true,
+    "editorApproved": true,
+    "publishApproved": true,
+    "notes": "W25 selected 9 aligned to the iFeed Master Platform Signal Cockpit on 2026-06-20. DARWIN EU source routed to stable EMA DARWIN page because the captured factsheet URL redirects. Claims retain source boundaries."
   },
   "signals": [
     {
       "number": 1,
-      "id": "w25-cand-01",
-      "lane": "AI Governance",
+      "id": "w25-01-ml-radiology-pccp",
+      "lane": "Regulated AI / MedTech",
       "horizon": "Classify",
-      "title": "High-risk AI classification is becoming operating architecture.",
-      "cardFact": "AI Act classification work is moving from policy language into source-backed records about intended purpose, risk route, owner review, and claim boundary.",
-      "whyItMatters": "Classification decisions become operational only when teams can show how the source was read, what the AI system does, and why the conclusion was reached.",
-      "sourceTitle": "Draft Commission guidelines on classification of high-risk AI systems",
-      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
-      "sourceDate": "2026-06-18",
-      "sourceType": "European Commission guidance consultation",
-      "expandedSummary": "The European Commission draft high-risk AI classification source gives iFeed a clear governance signal: classification cannot sit as a vague legal label. It needs an operating record that connects intended purpose, product or safety-component relationship, source interpretation, reviewer, and limitation. For iFeed, the important move is not to overstate the consultation as final guidance, but to turn it into a controlled decision workflow.",
+      "title": "FDA puts ML radiology software with PCCP into a Class II pathway.",
+      "cardFact": "FDA classified radiological machine-learning quantitative imaging software with a predetermined change control plan into Class II with special controls, effective 17 June 2026.",
+      "whyItMatters": "For AI-device teams, change control is no longer an abstract lifecycle principle; it is becoming part of the regulated device category and evidence package.",
+      "sourceTitle": "Medical Devices; Radiology Devices; Classification of the Radiological Machine Learning-Based Quantitative Imaging Software With Predetermined Change Control Plan",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/06/17/2026-12166/medical-devices-radiology-devices-classification-of-the-radiological-machine-learning-based",
+      "sourceDate": "2026-06-17",
+      "sourceType": "Federal Register / FDA final classification",
+      "expandedSummary": "FDA’s Federal Register notice is the cleanest W25 AI-device governance signal. It creates a Class II route for a radiological ML-based quantitative imaging device category when the software includes a predetermined change control plan. The practical story is not that every AI device now has a free update path. It is that lifecycle change, verification, labelling, performance limits, and change boundaries are becoming part of the regulated evidence record.\n\nFor operators, this turns PCCP from a guidance concept into a design-control conversation: what can change, what evidence supports the change, what remains locked, and how the user and regulator can understand the boundary.",
       "tiles": [
-        { "label": "Why it matters", "text": "AI Act classification affects what evidence, controls, and accountability records a team needs." },
-        { "label": "Owner", "text": "AI governance, regulatory, quality, product, clinical safety, and legal review teams." },
-        { "label": "Monday move", "text": "Create a classification record with source, intended purpose, risk route, reviewer, and claim boundary." }
+        {
+          "label": "Why it matters",
+          "text": "PCCP evidence becomes part of AI-device lifecycle planning."
+        },
+        {
+          "label": "Owner",
+          "text": "Regulatory, software quality, clinical evaluation, product, and postmarket teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Map each adaptive function to planned change, verification evidence, labelling, and review owner."
+        }
       ],
       "visual": {
-        "title": "Classification becomes a record",
+        "title": "FDA puts ML radiology software with PCCP into a Class II pathway.",
         "nodes": [
-          { "label": "Source", "text": "draft guideline" },
-          { "label": "Purpose", "text": "AI system use" },
-          { "label": "Route", "text": "risk logic" },
-          { "label": "Record", "text": "reviewed conclusion" }
+          {
+            "label": "Device class",
+            "text": "Class II with special controls"
+          },
+          {
+            "label": "Change plan",
+            "text": "Predetermined change boundaries"
+          },
+          {
+            "label": "Evidence file",
+            "text": "Verification, limits, labelling"
+          },
+          {
+            "label": "Operating impact",
+            "text": "Lifecycle change becomes inspectable"
+          }
         ],
-        "footer": "Do not publish the interpretation without separating source fact from iFeed view."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Draft consultation source only. This is not legal advice and should not be framed as final Commission guidance."
+      "claimBoundary": "This is a device-category classification and special-controls signal, not approval of all adaptive AI devices or a blanket acceptance of PCCPs."
     },
     {
       "number": 2,
-      "id": "w25-cand-02",
-      "lane": "MedTech AI",
-      "horizon": "Map",
-      "title": "AI-enabled device evidence is now a visible market map.",
-      "cardFact": "FDA's public AI/ML-enabled medical device list makes the regulated AI-device landscape inspectable by device area, date, specialty, and source record.",
-      "whyItMatters": "A public list turns AI-device intelligence from broad trend language into a traceable market and evidence map.",
-      "sourceTitle": "Artificial Intelligence and Machine Learning (AI/ML)-Enabled Medical Devices",
-      "sourceUrl": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices",
-      "sourceDate": "2026-06-18",
-      "sourceType": "FDA device list",
-      "expandedSummary": "The FDA AI/ML-enabled medical devices page is useful because it gives operators a source-backed way to inspect the AI-device landscape rather than describe it generally. For iFeed, the signal is that MedTech AI content should not just say that AI devices are increasing. It should connect public device records to specialty, intended use, lifecycle implication, and what kind of evidence or quality controls a responsible reader should consider.",
+      "id": "w25-02-qmsr-warning-letter",
+      "lane": "QMS / Quality",
+      "horizon": "Inspect",
+      "title": "FDA warning-letter language is already bridging old QS findings into QMSR corrections.",
+      "cardFact": "FDA’s 15 June warning letter to Happiest Baby states that corrective actions proposed or implemented after 2 February 2026 must comply with QMSR requirements, even though the inspection occurred under the former QS Regulation.",
+      "whyItMatters": "QMSR is now a live operating standard for remediation, not a future readiness talking point.",
+      "sourceTitle": "Happiest Baby Inc. - 718306 - 06/15/2026",
+      "sourceUrl": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/happiest-baby-inc-718306-06152026",
+      "sourceDate": "2026-06-15",
+      "sourceType": "FDA warning letter",
+      "expandedSummary": "This is the grounding quality signal for W25. While AI gets the attention, FDA enforcement is showing how legacy QS Regulation observations can become current QMSR corrective-action obligations. The signal is not just “a company received a warning letter”; it is that remediation now needs to speak the language of the current quality-system rule.\n\nFor QMS leaders, the action is immediate: open CAPA, management review, complaint, supplier, design, and production controls and ask whether responses created after the QMSR effective date are written against the current rule and supported by objective evidence.",
       "tiles": [
-        { "label": "Why it matters", "text": "Device AI can be tracked with public evidence instead of vague market claims." },
-        { "label": "Owner", "text": "MedTech regulatory, QMS, clinical evaluation, software validation, and product teams." },
-        { "label": "Monday move", "text": "Build a device-intelligence table with specialty, intended use, clearance date, and lifecycle implication." }
+        {
+          "label": "Why it matters",
+          "text": "Remediation now has to meet the current QMSR operating expectation."
+        },
+        {
+          "label": "Owner",
+          "text": "QA, regulatory compliance, CAPA owners, management review, and site quality."
+        },
+        {
+          "label": "Monday move",
+          "text": "Review open corrective actions and update evidence language against QMSR requirements."
+        }
       ],
       "visual": {
-        "title": "Device intelligence as a map",
+        "title": "FDA warning-letter language is already bridging old QS findings into QMSR corrections.",
         "nodes": [
-          { "label": "List", "text": "FDA source" },
-          { "label": "Device", "text": "area and use" },
-          { "label": "Lifecycle", "text": "control need" },
-          { "label": "Signal", "text": "reader action" }
+          {
+            "label": "Inspection finding",
+            "text": "Legacy QS Regulation context"
+          },
+          {
+            "label": "Correction date",
+            "text": "Post-QMSR effective period"
+          },
+          {
+            "label": "Evidence gap",
+            "text": "CAPA and objective proof"
+          },
+          {
+            "label": "Review forum",
+            "text": "Management review input"
+          }
         ],
-        "footer": "A list can become intelligence only when it is structured for action."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not infer device safety, performance, or market share beyond the public FDA list."
+      "claimBoundary": "The public signal is the FDA warning-letter wording and remediation expectation; it should not be framed as a general finding about all manufacturers."
     },
     {
       "number": 3,
-      "id": "w25-cand-03",
-      "lane": "QMS and Quality",
-      "horizon": "Control",
-      "title": "Good machine-learning practice is moving into quality language.",
-      "cardFact": "FDA's SaMD AI materials keep AI/ML medical-device software tied to lifecycle, transparency, change-control, monitoring, and good machine-learning-practice concepts.",
-      "whyItMatters": "AI quality is becoming less about novelty and more about traceable intended use, data, validation, transparency, monitoring, and change records.",
-      "sourceTitle": "Artificial Intelligence and Machine Learning in Software as a Medical Device",
-      "sourceUrl": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device",
-      "sourceDate": "2026-06-18",
-      "sourceType": "FDA SaMD AI topic page",
-      "expandedSummary": "The FDA SaMD AI topic page supports a quality-system reading of AI. The useful W25 signal is that good machine-learning practice and lifecycle thinking should become record structures, not presentation language. iFeed can turn this into a reusable QMS lens: purpose, data, training context, validation, transparency, monitoring, update logic, and change decision.",
+      "id": "w25-03-ema-board-infrastructure",
+      "lane": "Regulatory Infrastructure",
+      "horizon": "Operate",
+      "title": "EMA’s June board update shows regulation becoming data-connected infrastructure.",
+      "cardFact": "EMA’s June Management Board highlights covered CTIS workload, preparation for Biotech Act-related CTR/CTIS changes, international network collaboration, supply priorities, and a beta public API for Product Management Service data.",
+      "whyItMatters": "Regulatory operations are moving from document portals into connected data services, workload systems, and cross-network execution.",
+      "sourceTitle": "EMA Management Board highlights from June 2026 meeting",
+      "sourceUrl": "https://www.ema.europa.eu/en/news/ema-management-board-highlights-june-2026-meeting",
+      "sourceDate": "2026-06-15",
+      "sourceType": "EMA news",
+      "expandedSummary": "This signal matters because it ties multiple infrastructure pieces together: CTIS pressure, product data APIs, Biotech Act preparation, international cooperation, and medicine-supply priorities. None of these is a standalone “news item” for operators; together they show regulatory work becoming a data and capacity system.\n\nFor regulatory intelligence teams, this changes the operating question. Tracking EMA is not only tracking guidelines. It is also tracking API availability, product-data standards, trial-system workload, and network-level priorities that shape submission planning and evidence operations.",
       "tiles": [
-        { "label": "Why it matters", "text": "AI tools become risky when update logic and evidence boundaries are not controlled." },
-        { "label": "Owner", "text": "QMS, software validation, regulatory, product, clinical safety, and post-market teams." },
-        { "label": "Monday move", "text": "Create an AI software control record with intended use, dataset, validation, monitoring, and change trigger." }
+        {
+          "label": "Why it matters",
+          "text": "EMA’s operating layer is becoming more data-connected and capacity-dependent."
+        },
+        {
+          "label": "Owner",
+          "text": "Regulatory operations, data governance, submissions, clinical operations, and portfolio teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Add CTIS, PMS API, Biotech Act, and supply-priority trackers to the regulatory intelligence file."
+        }
       ],
       "visual": {
-        "title": "AI quality follows the lifecycle",
+        "title": "EMA’s June board update shows regulation becoming data-connected infrastructure.",
         "nodes": [
-          { "label": "Purpose", "text": "intended use" },
-          { "label": "Data", "text": "training and input" },
-          { "label": "Validate", "text": "evidence" },
-          { "label": "Monitor", "text": "change control" }
+          {
+            "label": "Trial system",
+            "text": "CTIS demand and CTR changes"
+          },
+          {
+            "label": "Product data",
+            "text": "PMS API beta"
+          },
+          {
+            "label": "Network",
+            "text": "AMA and international collaboration"
+          },
+          {
+            "label": "Supply",
+            "text": "Availability as regulatory priority"
+          }
         ],
-        "footer": "Quality language becomes useful when it creates reviewable records."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "This is a governance/readiness interpretation, not a claim that one FDA topic page creates a new W25 obligation."
+      "claimBoundary": "This is an infrastructure interpretation of EMA board highlights, not a claim that one board update creates a new legal obligation."
     },
     {
       "number": 4,
-      "id": "w25-cand-04",
-      "lane": "Clinical Operations",
-      "horizon": "Evidence",
-      "title": "Clinical AI needs reviewable medical-product evidence.",
-      "cardFact": "FDA's AI and medical products page treats AI as a cross-product issue spanning devices, drugs, biologics, evidence, oversight, and research.",
-      "whyItMatters": "AI in medical products and clinical workflows needs a visible evidence trail before it can become trusted operating infrastructure.",
-      "sourceTitle": "Artificial Intelligence and Medical Products",
-      "sourceUrl": "https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-medical-products",
-      "sourceDate": "2026-06-18",
-      "sourceType": "FDA science and research topic page",
-      "expandedSummary": "FDA's AI and medical products page is not a single clinical-trial rule, but it is an important operating signal. AI is no longer a narrow software sidebar. It sits across medical products, clinical evidence, and oversight. iFeed should use this to frame clinical AI as evidence work: source, model purpose, workflow point, human review, decision boundary, and audit trail.",
+      "id": "w25-04-darwin-rwe",
+      "lane": "Evidence / RWE",
+      "horizon": "Use",
+      "title": "DARWIN EU shows RWE becoming a routine regulatory capability.",
+      "cardFact": "EMA describes DARWIN EU as a network that delivers real-world evidence from European healthcare data to support EMA committees and national regulators across the medicinal-product lifecycle.",
+      "whyItMatters": "RWE is shifting from occasional supportive analysis into an organised regulatory capability with data partners, common models, study protocols and decision use.",
+      "sourceTitle": "Data Analysis and Real World Interrogation Network (DARWIN EU)",
+      "sourceUrl": "https://www.ema.europa.eu/en/about-us/how-we-work/data-regulation-big-data-other-sources/real-world-evidence/data-analysis-real-world-interrogation-network-darwin-eu",
+      "sourceDate": "2026-06-17",
+      "sourceType": "EMA DARWIN EU page / factsheet context",
+      "expandedSummary": "The W25 value is not that RWE exists. The value is that EMA’s DARWIN EU infrastructure makes RWE repeatable: data partners, standardisation, non-interventional studies, reporting, and use by EMA committees and national regulators. That turns evidence generation into a system rather than a one-off project.\n\nFor evidence teams, this is a planning signal. If regulators can increasingly ask and answer lifecycle questions through RWE infrastructure, sponsors need stronger records for data provenance, fit-for-purpose logic, protocol rationale, uncertainty, and how RWE complements other evidence.",
       "tiles": [
-        { "label": "Why it matters", "text": "Clinical AI can affect product evidence and decisions before the record is ready." },
-        { "label": "Owner", "text": "Clinical operations, medical product teams, regulatory strategy, QA, data science, and safety." },
-        { "label": "Monday move", "text": "Map every AI use to a workflow point, reviewer, decision boundary, and retained evidence record." }
+        {
+          "label": "Why it matters",
+          "text": "RWE is becoming a repeatable regulatory evidence service."
+        },
+        {
+          "label": "Owner",
+          "text": "RWE, epidemiology, safety, regulatory strategy, data governance, and market access."
+        },
+        {
+          "label": "Monday move",
+          "text": "Create a RWE readiness record: source, population, data model, protocol, limitation, and decision use."
+        }
       ],
       "visual": {
-        "title": "Clinical AI as evidence work",
+        "title": "DARWIN EU shows RWE becoming a routine regulatory capability.",
         "nodes": [
-          { "label": "Workflow", "text": "where AI acts" },
-          { "label": "Evidence", "text": "what supports it" },
-          { "label": "Review", "text": "human owner" },
-          { "label": "Record", "text": "audit trail" }
+          {
+            "label": "Data partners",
+            "text": "Distributed healthcare data"
+          },
+          {
+            "label": "Standardisation",
+            "text": "OMOP/common-model logic"
+          },
+          {
+            "label": "Study output",
+            "text": "Reports for regulators"
+          },
+          {
+            "label": "Decision use",
+            "text": "Lifecycle evidence support"
+          }
         ],
-        "footer": "If AI changes a decision, the record must show how."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not claim a trial-specific regulatory change from this source without a trial-specific guidance source."
+      "claimBoundary": "The stable EMA page supports the infrastructure reading; avoid saying the W25 page itself announced a new DARWIN obligation."
     },
     {
       "number": 5,
-      "id": "w25-cand-05",
-      "lane": "Market Access",
-      "horizon": "Access",
-      "title": "EU HTA is becoming a planning system, not a late dossier step.",
-      "cardFact": "The European Commission HTA page anchors joint clinical assessment and joint scientific consultation as part of the EU health technology assessment operating environment.",
-      "whyItMatters": "Evidence planning has to connect regulatory, clinical, statistical, HTA, and payer questions before late-stage submission pressure begins.",
-      "sourceTitle": "Health Technology Assessment",
-      "sourceUrl": "https://health.ec.europa.eu/health-technology-assessment_en",
-      "sourceDate": "2026-06-18",
-      "sourceType": "European Commission health policy page",
-      "expandedSummary": "The European Commission HTA source supports a market-access signal: value evidence is moving upstream. iFeed should frame HTA not as a final dossier activity but as a planning system that shapes what evidence is generated, how it is explained, and how regulatory and payer questions are separated. This is especially relevant to iFeed's market research and service readiness layers.",
+      "id": "w25-05-alzheimer-registry",
+      "lane": "RWE / Registries",
+      "horizon": "Plan",
+      "title": "Alzheimer registry work turns RWE governance into disease-specific evidence planning.",
+      "cardFact": "EMA published material from the HMA/EMA multistakeholder workshop on Alzheimer’s disease patient registries, focused on how registry data can support regulatory decision-making and long-term follow-up.",
+      "whyItMatters": "For complex therapies, evidence planning increasingly needs disease-specific registries, common data elements, governance, consent, quality, and interoperability before launch pressure arrives.",
+      "sourceTitle": "Joint HMA/EMA multistakeholder workshop on patient registries in Alzheimer’s disease",
+      "sourceUrl": "https://www.ema.europa.eu/en/events/joint-heads-medicines-agencies-hma-european-medicines-agency-ema-multistakeholder-workshop-patient-registries-alzheimers-disease",
+      "sourceDate": "2026-06-16",
+      "sourceType": "EMA event/report page",
+      "expandedSummary": "This signal makes RWE concrete. Alzheimer’s disease registries are not only research infrastructure; they are becoming part of the evidence plan for long-term follow-up, safety, effectiveness, risk minimisation, and decision confidence. The operating issue is whether registry data are governed well enough to be useful.\n\nFor sponsors, registries, regulators and evidence teams, the work starts before the evidence is needed: define core data elements, consent logic, interoperability, quality assurance, patient follow-up, and how the registry will answer regulatory and access questions.",
       "tiles": [
-        { "label": "Why it matters", "text": "Approval evidence and access evidence can ask different questions." },
-        { "label": "Owner", "text": "Market access, regulatory strategy, clinical development, health economics, and statistics." },
-        { "label": "Monday move", "text": "Add HTA question, comparator, outcome, and uncertainty fields to evidence-planning records." }
+        {
+          "label": "Why it matters",
+          "text": "Disease-specific RWE needs governance before it can support decisions."
+        },
+        {
+          "label": "Owner",
+          "text": "RWE, registry owners, clinical development, safety, HEOR, regulatory and patient-engagement teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Map registry readiness against data elements, consent, QA, interoperability, and decision questions."
+        }
       ],
       "visual": {
-        "title": "Access starts upstream",
+        "title": "Alzheimer registry work turns RWE governance into disease-specific evidence planning.",
         "nodes": [
-          { "label": "Regulator", "text": "benefit-risk" },
-          { "label": "Clinical", "text": "evidence" },
-          { "label": "HTA", "text": "value" },
-          { "label": "Payer", "text": "coverage" }
+          {
+            "label": "Disease context",
+            "text": "Alzheimer’s therapies"
+          },
+          {
+            "label": "Registry controls",
+            "text": "Core data and consent"
+          },
+          {
+            "label": "Quality layer",
+            "text": "QA and interoperability"
+          },
+          {
+            "label": "Decision use",
+            "text": "Long-term evidence planning"
+          }
         ],
-        "footer": "Access is designed before the dossier hardens."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not claim reimbursement outcome, payer decision, or product-specific value from this source."
+      "claimBoundary": "This is a registry-governance and evidence-planning signal, not a claim about any individual Alzheimer product outcome."
     },
     {
       "number": 6,
-      "id": "w25-cand-06",
-      "lane": "Health Data Infrastructure",
-      "horizon": "Data",
-      "title": "Health data space is becoming readiness infrastructure.",
-      "cardFact": "The European Health Data Space frames health data access, use, and governance as an EU-level infrastructure question.",
-      "whyItMatters": "AI, research, quality systems, and market intelligence all depend on provenance, access rights, reuse logic, and governance controls.",
-      "sourceTitle": "European Health Data Space",
-      "sourceUrl": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en",
-      "sourceDate": "2026-06-18",
-      "sourceType": "European Commission digital health policy page",
-      "expandedSummary": "The European Health Data Space source gives W25 a healthcare infrastructure signal. The practical point for iFeed is that health data is becoming an operating layer. AI readiness, research evidence, QMS controls, and market intelligence all need clarity around data provenance, access, secondary use, governance, and accountability. This belongs in both the public research layer and the internal cockpit model.",
+      "id": "w25-06-eu-hta-jsc",
+      "lane": "HTA / Market Access",
+      "horizon": "Align",
+      "title": "EU HTA consultation is moving device and IVD evidence planning earlier.",
+      "cardFact": "The European Commission’s Joint Scientific Consultations page says JSCs support planning clinical studies or investigations for later Joint Clinical Assessment and flags a 17 June webinar for high-risk medical devices and IVD developers.",
+      "whyItMatters": "High-risk device and IVD teams need to align clinical evidence, regulatory strategy and HTA questions before the dossier is locked.",
+      "sourceTitle": "Joint Scientific Consultations",
+      "sourceUrl": "https://health.ec.europa.eu/health-technology-assessment/implementation-regulation-health-technology-assessment/joint-scientific-consultations_en",
+      "sourceDate": "2026-06-17",
+      "sourceType": "European Commission HTA page",
+      "expandedSummary": "This is a practical market-access signal. EU HTA is not just a downstream assessment step; the Joint Scientific Consultation route exists to improve evidence planning for later Joint Clinical Assessment. The W25 update matters because high-risk medical device and IVD developers are being explicitly pulled into that planning conversation.\n\nFor teams building evidence packages, the question is simple: are regulatory endpoints, clinical investigation design, comparators, patient-relevant outcomes, uncertainty and access questions being discussed early enough to survive HTA review?",
       "tiles": [
-        { "label": "Why it matters", "text": "Data access and reuse rules determine what AI, research, and evidence workflows can safely do." },
-        { "label": "Owner", "text": "Digital health, data governance, research, quality, privacy, and platform teams." },
-        { "label": "Monday move", "text": "Create a health-data readiness checklist: source, access right, purpose, reuse limit, and governance owner." }
+        {
+          "label": "Why it matters",
+          "text": "Evidence built only for approval may not answer HTA questions."
+        },
+        {
+          "label": "Owner",
+          "text": "Market access, medtech regulatory, clinical evidence, biostatistics, HEOR and product teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Add HTA comparator, outcome, uncertainty and JSC route fields to the evidence plan."
+        }
       ],
       "visual": {
-        "title": "Data becomes infrastructure",
+        "title": "EU HTA consultation is moving device and IVD evidence planning earlier.",
         "nodes": [
-          { "label": "Source", "text": "health data" },
-          { "label": "Access", "text": "rights" },
-          { "label": "Use", "text": "purpose" },
-          { "label": "Govern", "text": "control" }
+          {
+            "label": "Consultation route",
+            "text": "JSC before JCA"
+          },
+          {
+            "label": "Device focus",
+            "text": "High-risk devices and IVDs"
+          },
+          {
+            "label": "Evidence plan",
+            "text": "Clinical design and comparators"
+          },
+          {
+            "label": "Access impact",
+            "text": "Earlier value alignment"
+          }
         ],
-        "footer": "Intelligence depends on governed data movement."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not convert general EHDS policy into organization-specific operational claims without implementation-level evidence."
+      "claimBoundary": "Do not claim a product-specific access decision; this is about the JSC planning route and public webinar/update context."
     },
     {
       "number": 7,
-      "id": "w25-cand-07",
-      "lane": "Biopharma AI",
-      "horizon": "Develop",
-      "title": "Drug-development AI needs submission-grade operating records.",
-      "cardFact": "FDA CDER's AI in drug development page shows AI activity becoming an operating and submission-readiness question for drug development teams.",
-      "whyItMatters": "AI use in drug development needs enough context to explain purpose, data, method, validation rationale, human review, and where it affects decisions.",
-      "sourceTitle": "Artificial Intelligence in Drug Development",
-      "sourceUrl": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/artificial-intelligence-drug-development",
-      "sourceDate": "2026-06-18",
-      "sourceType": "FDA CDER AI topic page",
-      "expandedSummary": "FDA CDER's AI in drug development page supports a biopharma AI signal for W25. The iFeed reading is that AI use in development is not just an innovation story. It needs submission-grade operating records: model purpose, input data, output role, validation rationale, human review, limitation, and decision impact. This is a natural bridge between iFeed Signals, AI healthcare, and future academy content.",
+      "id": "w25-07-breast-biopsy-supply",
+      "lane": "Supply / Clinical Operations",
+      "horizon": "Prepare",
+      "title": "FDA’s breast-biopsy needle notice turns supply risk into a clinical operating signal.",
+      "cardFact": "FDA warned healthcare providers about disruptions in breast biopsy needle availability and said supply impacts may continue through the first quarter of 2027.",
+      "whyItMatters": "Supply resilience is now part of clinical quality, pathway continuity, procurement planning and patient-access risk management.",
+      "sourceTitle": "Disruptions in Availability of Breast Biopsy Needles: Letter to Health Care Providers",
+      "sourceUrl": "https://www.fda.gov/medical-devices/letters-health-care-providers/disruptions-availability-breast-biopsy-needles-letter-health-care-providers",
+      "sourceDate": "2026-06-16",
+      "sourceType": "FDA letter to healthcare providers",
+      "expandedSummary": "This is not an AI story, and that is exactly why it matters. A device supply disruption can affect screening follow-up, diagnostic workflows, procurement decisions, clinical scheduling and patient anxiety. FDA’s notice gives operators a concrete supply-risk item with an expected duration into Q1 2027.\n\nFor healthcare organisations, the signal is to move supply intelligence into pathway management: inventory visibility, clinical alternatives, prioritisation rules, communication plans, and documentation of how care continuity is protected.",
       "tiles": [
-        { "label": "Why it matters", "text": "Drug-development AI may influence evidence, decisions, or submission narratives." },
-        { "label": "Owner", "text": "R&D, clinical development, regulatory strategy, data science, quality, and statistics." },
-        { "label": "Monday move", "text": "For each AI use, record purpose, data, output role, reviewer, limitation, and submission relevance." }
+        {
+          "label": "Why it matters",
+          "text": "Supply disruption can become clinical delay and access risk."
+        },
+        {
+          "label": "Owner",
+          "text": "Clinical operations, radiology/breast care, procurement, quality, risk, and patient-access teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Create a disruption plan covering stock, alternatives, prioritisation, communication, and escalation."
+        }
       ],
       "visual": {
-        "title": "AI needs submission context",
+        "title": "FDA’s breast-biopsy needle notice turns supply risk into a clinical operating signal.",
         "nodes": [
-          { "label": "Purpose", "text": "development use" },
-          { "label": "Input", "text": "data" },
-          { "label": "Output", "text": "decision support" },
-          { "label": "File", "text": "reviewable record" }
+          {
+            "label": "Device category",
+            "text": "Breast biopsy needles"
+          },
+          {
+            "label": "Time horizon",
+            "text": "Potential Q1 2027 impact"
+          },
+          {
+            "label": "Operational file",
+            "text": "Inventory and alternatives"
+          },
+          {
+            "label": "Patient impact",
+            "text": "Continuity and communication"
+          }
         ],
-        "footer": "Innovation becomes durable when the record can travel."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not claim FDA endorsement of any specific AI approach unless the source says so."
+      "claimBoundary": "This source supports a supply-disruption and preparedness signal; avoid extrapolating to all biopsy devices or all care settings."
     },
     {
       "number": 8,
-      "id": "w25-cand-08",
-      "lane": "Regulatory Intelligence",
-      "horizon": "Separate",
-      "title": "Public-source regulation needs a claim boundary before commentary.",
-      "cardFact": "A regulatory signal is stronger when the public fact, the iFeed interpretation, and the non-legal-advice boundary are separate fields.",
-      "whyItMatters": "Regulatory commentary can overclaim quickly unless each source-backed statement keeps evidence, interpretation, and action boundary apart.",
-      "sourceTitle": "Draft Commission guidelines on classification of high-risk AI systems",
-      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
-      "sourceDate": "2026-06-18",
-      "sourceType": "European Commission guidance consultation",
-      "expandedSummary": "This signal deliberately uses the same high-risk AI source as Signal 1 for a different purpose: method control. W25 is not only about what changed in the market. It is also about how iFeed should read regulatory movement. The Signal Cockpit should keep source fact, source class, iFeed interpretation, and claim boundary as separate fields. That is how a public digest can stay useful without turning into unbounded advice.",
+      "id": "w25-08-cms-epa-drugs",
+      "lane": "Market Access / Digital Infrastructure",
+      "horizon": "Route",
+      "title": "CMS electronic prior authorization is becoming a drug-access data infrastructure issue.",
+      "cardFact": "The CMS-0062-P comment period closed on 15 June 2026 for a proposed rule extending FHIR-based electronic prior authorization requirements to certain drugs and payer reporting elements.",
+      "whyItMatters": "Prior authorization is moving from administrative friction into structured data, APIs and public performance reporting that market-access teams will need to understand.",
+      "sourceTitle": "CMS Interoperability Standards for Prior Authorization of Drugs Proposed Rule CMS-0062-P",
+      "sourceUrl": "https://www.cms.gov/priorities/burden-reduction/overview/interoperability/policies-regulations/cms-interoperability-standards-prior-authorization-drugs-proposed-rule-cms-0062-p",
+      "sourceDate": "2026-06-15",
+      "sourceType": "CMS proposed rule page",
+      "expandedSummary": "This signal belongs in the digest because market access is becoming digital infrastructure. CMS-0062-P is still a proposed rule process, but the close of comments moves the policy toward the next decision point. The practical relevance is that drug prior authorization may become more API-driven, more measurable, and more visible.\n\nFor pharma, payer, provider and health-IT teams, this raises an operating question: what happens when access friction becomes structured data that can be routed, measured and compared across drugs, plans and workflows?",
       "tiles": [
-        { "label": "Why it matters", "text": "Regulatory intelligence needs traceability before it needs confident commentary." },
-        { "label": "Owner", "text": "Editorial, regulatory, quality, legal review, and source verification teams." },
-        { "label": "Monday move", "text": "Use four fields for each regulatory item: source fact, source class, iFeed view, and boundary." }
+        {
+          "label": "Why it matters",
+          "text": "Access operations may become more API-visible and benchmarkable."
+        },
+        {
+          "label": "Owner",
+          "text": "Market access, payer tech, EHR vendors, revenue cycle, policy, and patient-support teams."
+        },
+        {
+          "label": "Monday move",
+          "text": "Track final-rule timing, covered drug scope, FHIR API readiness, and denial/approval reporting implications."
+        }
       ],
       "visual": {
-        "title": "Source before commentary",
+        "title": "CMS electronic prior authorization is becoming a drug-access data infrastructure issue.",
         "nodes": [
-          { "label": "Fact", "text": "what source says" },
-          { "label": "Class", "text": "source type" },
-          { "label": "View", "text": "iFeed reading" },
-          { "label": "Limit", "text": "claim boundary" }
+          {
+            "label": "Policy stage",
+            "text": "Comment period closed"
+          },
+          {
+            "label": "Technical route",
+            "text": "FHIR-based prior auth"
+          },
+          {
+            "label": "Access data",
+            "text": "Approvals and denials"
+          },
+          {
+            "label": "Market use",
+            "text": "Benchmarkable friction"
+          }
         ],
-        "footer": "Good intelligence survives review because the source is visible."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "This method signal duplicates the Signal 1 source; final editorial review should decide whether both should remain in the public issue."
+      "claimBoundary": "This is a proposed-rule process signal. Do not state final requirements or implementation dates as settled unless CMS finalises them."
     },
     {
       "number": 9,
-      "id": "w25-cand-09",
-      "lane": "Clinical Trial Quality",
-      "horizon": "GCP",
-      "title": "Clinical trial quality is becoming an operating-system requirement.",
-      "cardFact": "FDA ties clinical-trial oversight to federal law, GCP regulations, participant protection, robust evidence, and quality clinical evidence.",
-      "whyItMatters": "Trial modernization, AI use, and digital workflows still need to resolve into participant protection, protocol intent, source data, oversight, essential records, evidence quality, and quality management.",
-      "sourceTitle": "Clinical Trials and Human Subject Protection",
-      "sourceUrl": "https://www.fda.gov/science-research/science-and-research-special-topics/clinical-trials-and-human-subject-protection",
-      "sourceDate": "2026-06-18",
-      "sourceType": "FDA clinical trials and GCP page",
-      "expandedSummary": "The FDA clinical-trials and human-subject-protection page gives W25 a clinical-trial quality anchor. FDA describes oversight around trial design, conduct, analysis, reporting, participant protection, GCP regulations, and evidence quality. The iFeed interpretation is that modernization is not a reason to loosen the operating file. Whether teams are dealing with AI, digital tools, decentralized elements, or adaptive operations, the useful question remains: what record proves participant protection, protocol intent, source truth, oversight, training, deviation handling, and quality management?",
+      "id": "w25-09-ema-platform-evidence",
+      "lane": "Platform Evidence / Biopharma",
+      "horizon": "Reuse",
+      "title": "EMA’s platform-approach work pushes reusable evidence beyond manufacturing.",
+      "cardFact": "EMA published material from its platform-approaches webinar covering platform technologies, prior knowledge, platform marketing-authorisation concepts, individualised therapies, and clinical/non-clinical case studies.",
+      "whyItMatters": "Regulatory evidence is moving toward reusable logic: what can be carried forward, what must be product-specific, and how prior knowledge is controlled.",
+      "sourceTitle": "Webinar on the use of platform approaches in non-clinical and clinical domains",
+      "sourceUrl": "https://www.ema.europa.eu/en/events/webinar-use-platform-approaches-non-clinical-clinical-domains",
+      "sourceDate": "2026-06-15",
+      "sourceType": "EMA event/report page",
+      "expandedSummary": "This closes the week by connecting W25 back to a bigger iFeed theme: intelligence becomes infrastructure when evidence can be reused responsibly. EMA’s platform discussion extends the conversation beyond quality and manufacturing into non-clinical and clinical domains, where prior knowledge, individualised therapies and product-specific boundaries matter.\n\nFor development and regulatory teams, the useful question is not “can we reuse evidence?” but “which part of the evidence is platform-level, which part is product-specific, and what record proves that boundary?”",
       "tiles": [
-        { "label": "Why it matters", "text": "Modern trials still need protected participants, reliable records, and evidence that can be inspected, explained, and trusted." },
-        { "label": "Owner", "text": "Clinical operations, sponsor oversight, QA, data management, sites, and trial technology teams." },
-        { "label": "Monday move", "text": "Map each trial innovation to participant-protection, protocol, source, oversight, essential-record, and QMS evidence." }
+        {
+          "label": "Why it matters",
+          "text": "Platform logic can reduce repetition only when evidence boundaries are explicit."
+        },
+        {
+          "label": "Owner",
+          "text": "CMC, non-clinical, clinical, regulatory strategy, quality, statistics, and evidence planning."
+        },
+        {
+          "label": "Monday move",
+          "text": "Separate platform prior knowledge, product-specific evidence, assumptions, and review ownership in one file."
+        }
       ],
       "visual": {
-        "title": "Clinical quality needs an operating file",
+        "title": "EMA’s platform-approach work pushes reusable evidence beyond manufacturing.",
         "nodes": [
-          { "label": "People", "text": "protection" },
-          { "label": "Protocol", "text": "intent" },
-          { "label": "Evidence", "text": "quality" },
-          { "label": "QMS", "text": "control" }
+          {
+            "label": "Prior knowledge",
+            "text": "What can travel"
+          },
+          {
+            "label": "Product boundary",
+            "text": "What must be new"
+          },
+          {
+            "label": "Evidence reuse",
+            "text": "Clinical and non-clinical domains"
+          },
+          {
+            "label": "Control record",
+            "text": "Assumptions and review owner"
+          }
         ],
-        "footer": "Modernization is strongest when participant protection and evidence quality become easier to verify."
+        "footer": "iFeed interpretation stays inside the source boundary."
       },
-      "claimBoundary": "Do not claim FDA endorsement of a specific trial technology or AI approach from this general page; use it as a clinical-trial quality and GCP oversight anchor."
+      "claimBoundary": "This is an EMA platform-evidence discussion signal, not a claim that platform marketing authorisation is available for every therapy type."
     }
   ]
 }
